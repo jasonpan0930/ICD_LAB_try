@@ -455,9 +455,9 @@ module mamba_datapath_new #(
     assign M4_b = dt_scale_valid ? dt_scale_hi_b : xt_arr[idx_d2_i];
 
     assign x_scaled_acc =
-        ($signed({{16{M2_y[31]}}, M2_y}) <<< 16) + $signed({16'b0, M1_y[15:0]});
+        ($signed({{16{M2_y[31]}}, M2_y}) <<< 16) + $signed({{16{M1_y[31]}}, M1_y});
     assign dt_scaled_acc =
-        ($signed({{16{M4_y[31]}}, M4_y}) <<< 16) + $signed({16'b0, M3_y[15:0]});
+        ($signed({{16{M4_y[31]}}, M4_y}) <<< 16) + $signed({{16{M3_y[31]}}, M3_y});
 
     assign dx_val_w = round_q88(M4_y);
 
