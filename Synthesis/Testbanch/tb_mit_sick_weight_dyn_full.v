@@ -168,7 +168,7 @@ module tb_mit_sick_weight_dyn_full();
     initial begin
         `ifdef SDF
         `ifndef SDF_FILE
-        `define SDF_FILE "./Netlist/CHIP_syn.sdf"
+        `define SDF_FILE "./Netlist/CHIP_clkGating_syn.sdf"
         `endif
             $display("[TB] SDF annotation enabled: %s", `SDF_FILE);
             $sdf_annotate(`SDF_FILE, uut);

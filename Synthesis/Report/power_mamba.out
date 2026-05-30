@@ -1,20 +1,16 @@
-Loading db file '/home/raid7_2/userb12/b12193/ICD_LAB/final_project/Synthesis/fsa0m_a_generic_core_tt1p8v25c.db'
-Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
-Warning: Design has unannotated primary inputs. (PWR-414)
-Warning: Design has unannotated sequential cell outputs. (PWR-415)
  
 ****************************************
 Report : power
         -analysis_effort low
 Design : mamba_core
 Version: U-2022.12
-Date   : Fri May 22 17:47:50 2026
+Date   : Sat May 30 20:50:26 2026
 ****************************************
 
 
 Library(s) Used:
 
-    fsa0m_a_generic_core_tt1p8v25c (File: /home/raid7_2/userb12/b12193/ICD_LAB/final_project/Synthesis/fsa0m_a_generic_core_tt1p8v25c.db)
+    fsa0m_a_generic_core_tt1p8v25c (File: /home/raid7_2/userb12/b12193/temp/ICD_LAB_try/Synthesis/fsa0m_a_generic_core_tt1p8v25c.db)
 
 
 Operating Conditions: WCCOM   Library: fsa0m_a_generic_core_ss1p62v125c
@@ -25,137 +21,262 @@ Design        Wire Load Model            Library
 mamba_core             G200K             fsa0m_a_generic_core_tt1p8v25c
 mamba_datapath_new_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_ADDR_WIDTH9
                        enG100K           fsa0m_a_generic_core_tt1p8v25c
+SNPS_CLOCK_GATE_HIGH_mamba_core_0
+                       enG5K             fsa0m_a_generic_core_tt1p8v25c
+SNPS_CLOCK_GATE_HIGH_mamba_core_1
+                       enG5K             fsa0m_a_generic_core_tt1p8v25c
+SNPS_CLOCK_GATE_HIGH_mamba_core_2
+                       enG5K             fsa0m_a_generic_core_tt1p8v25c
+SNPS_CLOCK_GATE_HIGH_mamba_core_3
+                       enG5K             fsa0m_a_generic_core_tt1p8v25c
+SNPS_CLOCK_GATE_HIGH_mamba_core_4
+                       enG5K             fsa0m_a_generic_core_tt1p8v25c
+SNPS_CLOCK_GATE_HIGH_mamba_core_5
+                       enG5K             fsa0m_a_generic_core_tt1p8v25c
+SNPS_CLOCK_GATE_HIGH_mamba_core_6
+                       enG5K             fsa0m_a_generic_core_tt1p8v25c
+SNPS_CLOCK_GATE_HIGH_mamba_core_7
+                       enG5K             fsa0m_a_generic_core_tt1p8v25c
+SNPS_CLOCK_GATE_HIGH_mamba_core_8
+                       enG5K             fsa0m_a_generic_core_tt1p8v25c
+SNPS_CLOCK_GATE_HIGH_mamba_core_9
+                       enG5K             fsa0m_a_generic_core_tt1p8v25c
+SNPS_CLOCK_GATE_HIGH_mamba_core_10
+                       enG5K             fsa0m_a_generic_core_tt1p8v25c
+SNPS_CLOCK_GATE_HIGH_mamba_core_11
+                       enG5K             fsa0m_a_generic_core_tt1p8v25c
+SNPS_CLOCK_GATE_HIGH_mamba_core_12
+                       enG5K             fsa0m_a_generic_core_tt1p8v25c
+SNPS_CLOCK_GATE_HIGH_mamba_core_13
+                       enG5K             fsa0m_a_generic_core_tt1p8v25c
+SNPS_CLOCK_GATE_HIGH_mamba_core_14
+                       enG5K             fsa0m_a_generic_core_tt1p8v25c
+SNPS_CLOCK_GATE_HIGH_mamba_core_15
+                       enG5K             fsa0m_a_generic_core_tt1p8v25c
+SNPS_CLOCK_GATE_HIGH_mamba_core_16
+                       enG5K             fsa0m_a_generic_core_tt1p8v25c
+SNPS_CLOCK_GATE_HIGH_mamba_core_17
+                       enG5K             fsa0m_a_generic_core_tt1p8v25c
+SNPS_CLOCK_GATE_HIGH_mamba_core_18
+                       enG5K             fsa0m_a_generic_core_tt1p8v25c
+SNPS_CLOCK_GATE_HIGH_mamba_core_19
+                       enG5K             fsa0m_a_generic_core_tt1p8v25c
+SNPS_CLOCK_GATE_HIGH_mamba_core_20
+                       enG5K             fsa0m_a_generic_core_tt1p8v25c
+SNPS_CLOCK_GATE_HIGH_mamba_core_21
+                       enG5K             fsa0m_a_generic_core_tt1p8v25c
+SNPS_CLOCK_GATE_HIGH_mamba_core_22
+                       enG5K             fsa0m_a_generic_core_tt1p8v25c
+SNPS_CLOCK_GATE_HIGH_mamba_core_23
+                       enG5K             fsa0m_a_generic_core_tt1p8v25c
+SNPS_CLOCK_GATE_HIGH_mamba_core_24
+                       enG5K             fsa0m_a_generic_core_tt1p8v25c
+SNPS_CLOCK_GATE_HIGH_mamba_core_25
+                       enG5K             fsa0m_a_generic_core_tt1p8v25c
+SNPS_CLOCK_GATE_HIGH_mamba_core_26
+                       enG5K             fsa0m_a_generic_core_tt1p8v25c
+SNPS_CLOCK_GATE_HIGH_mamba_core_27
+                       enG5K             fsa0m_a_generic_core_tt1p8v25c
+SNPS_CLOCK_GATE_HIGH_mamba_core_28
+                       enG5K             fsa0m_a_generic_core_tt1p8v25c
+SNPS_CLOCK_GATE_HIGH_mamba_core_29
+                       enG5K             fsa0m_a_generic_core_tt1p8v25c
+SNPS_CLOCK_GATE_HIGH_mamba_core_30
+                       enG5K             fsa0m_a_generic_core_tt1p8v25c
+SNPS_CLOCK_GATE_HIGH_mamba_core_31
+                       enG5K             fsa0m_a_generic_core_tt1p8v25c
+SNPS_CLOCK_GATE_HIGH_mamba_core_32
+                       enG5K             fsa0m_a_generic_core_tt1p8v25c
+SNPS_CLOCK_GATE_HIGH_mamba_core_33
+                       enG5K             fsa0m_a_generic_core_tt1p8v25c
+SNPS_CLOCK_GATE_HIGH_mamba_core_34
+                       enG5K             fsa0m_a_generic_core_tt1p8v25c
+SNPS_CLOCK_GATE_HIGH_mamba_core_35
+                       enG5K             fsa0m_a_generic_core_tt1p8v25c
+SNPS_CLOCK_GATE_HIGH_mamba_core_36
+                       enG5K             fsa0m_a_generic_core_tt1p8v25c
+SNPS_CLOCK_GATE_HIGH_mamba_core_37
+                       enG5K             fsa0m_a_generic_core_tt1p8v25c
+SNPS_CLOCK_GATE_HIGH_mamba_core_38
+                       enG5K             fsa0m_a_generic_core_tt1p8v25c
+SNPS_CLOCK_GATE_HIGH_mamba_core_39
+                       enG5K             fsa0m_a_generic_core_tt1p8v25c
+SNPS_CLOCK_GATE_HIGH_mamba_core_40
+                       enG5K             fsa0m_a_generic_core_tt1p8v25c
+SNPS_CLOCK_GATE_HIGH_mamba_core_41
+                       enG5K             fsa0m_a_generic_core_tt1p8v25c
+SNPS_CLOCK_GATE_HIGH_mamba_core_42
+                       enG5K             fsa0m_a_generic_core_tt1p8v25c
+SNPS_CLOCK_GATE_HIGH_mamba_core_43
+                       enG5K             fsa0m_a_generic_core_tt1p8v25c
+SNPS_CLOCK_GATE_HIGH_mamba_core_44
+                       enG5K             fsa0m_a_generic_core_tt1p8v25c
+SNPS_CLOCK_GATE_HIGH_mamba_core_45
+                       enG5K             fsa0m_a_generic_core_tt1p8v25c
+SNPS_CLOCK_GATE_HIGH_mamba_core_46
+                       enG5K             fsa0m_a_generic_core_tt1p8v25c
+SNPS_CLOCK_GATE_HIGH_mamba_core_47
+                       enG5K             fsa0m_a_generic_core_tt1p8v25c
+SNPS_CLOCK_GATE_HIGH_mamba_core_48
+                       enG5K             fsa0m_a_generic_core_tt1p8v25c
+SNPS_CLOCK_GATE_HIGH_mamba_core_49
+                       enG5K             fsa0m_a_generic_core_tt1p8v25c
+SNPS_CLOCK_GATE_HIGH_mamba_core_50
+                       enG5K             fsa0m_a_generic_core_tt1p8v25c
+SNPS_CLOCK_GATE_HIGH_mamba_core_51
+                       enG5K             fsa0m_a_generic_core_tt1p8v25c
+SNPS_CLOCK_GATE_HIGH_mamba_core_52
+                       enG5K             fsa0m_a_generic_core_tt1p8v25c
+SNPS_CLOCK_GATE_HIGH_mamba_core_53
+                       enG5K             fsa0m_a_generic_core_tt1p8v25c
+SNPS_CLOCK_GATE_HIGH_mamba_core_54
+                       enG5K             fsa0m_a_generic_core_tt1p8v25c
+SNPS_CLOCK_GATE_HIGH_mamba_core_55
+                       enG5K             fsa0m_a_generic_core_tt1p8v25c
+SNPS_CLOCK_GATE_HIGH_mamba_core_56
+                       enG5K             fsa0m_a_generic_core_tt1p8v25c
+SNPS_CLOCK_GATE_HIGH_mamba_core_57
+                       enG5K             fsa0m_a_generic_core_tt1p8v25c
+SNPS_CLOCK_GATE_HIGH_mamba_core_58
+                       enG5K             fsa0m_a_generic_core_tt1p8v25c
+SNPS_CLOCK_GATE_HIGH_mamba_core_59
+                       enG5K             fsa0m_a_generic_core_tt1p8v25c
+SNPS_CLOCK_GATE_HIGH_mamba_core_60
+                       enG5K             fsa0m_a_generic_core_tt1p8v25c
+SNPS_CLOCK_GATE_HIGH_mamba_core_61
+                       enG5K             fsa0m_a_generic_core_tt1p8v25c
+SNPS_CLOCK_GATE_HIGH_mamba_core_62
+                       enG5K             fsa0m_a_generic_core_tt1p8v25c
+SNPS_CLOCK_GATE_HIGH_mamba_core_63
+                       enG5K             fsa0m_a_generic_core_tt1p8v25c
+SNPS_CLOCK_GATE_HIGH_mamba_core_64
+                       enG5K             fsa0m_a_generic_core_tt1p8v25c
+SNPS_CLOCK_GATE_HIGH_mamba_core_65
+                       enG5K             fsa0m_a_generic_core_tt1p8v25c
 mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_ADDR_WIDTH9
                        enG30K            fsa0m_a_generic_core_tt1p8v25c
-mamba_linear_in1_serial_OUT_DIM8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_1
-                       enG10K            fsa0m_a_generic_core_tt1p8v25c
-regfile_WIDTH16_SIZE8_3
-                       enG5K             fsa0m_a_generic_core_tt1p8v25c
-mamba_linear_in1_serial_OUT_DIM17_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12
-                       enG10K            fsa0m_a_generic_core_tt1p8v25c
-regfile_WIDTH16_SIZE1  enG5K             fsa0m_a_generic_core_tt1p8v25c
-mamba_softplus_DATA_WIDTH16
-                       enG5K             fsa0m_a_generic_core_tt1p8v25c
-mamba_linear_serial_mac_IN_DIM8_OUT_DIM4_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12
-                       enG30K            fsa0m_a_generic_core_tt1p8v25c
-pipeline_elementwise_multiplier_DATA_WIDTH16
-                       enG30K            fsa0m_a_generic_core_tt1p8v25c
-pipeline_yt_mac_D_MODEL8_D_STATE8_DATA_WIDTH16
-                       enG10K            fsa0m_a_generic_core_tt1p8v25c
 elementwise_mul_A_WIDTH16_B_WIDTH16_OUT_WIDTH32_3
-                       enG5K             fsa0m_a_generic_core_tt1p8v25c
-elementwise_add_A_WIDTH16_B_WIDTH16_OUT_WIDTH16
-                       enG5K             fsa0m_a_generic_core_tt1p8v25c
-mamba_exp_DATA_WIDTH16 enG5K             fsa0m_a_generic_core_tt1p8v25c
-mamba_linear_in1_serial_OUT_DIM8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_0
-                       enG10K            fsa0m_a_generic_core_tt1p8v25c
-regfile_WIDTH16_SIZE8_0
-                       enG5K             fsa0m_a_generic_core_tt1p8v25c
-regfile_WIDTH16_SIZE8_1
-                       enG5K             fsa0m_a_generic_core_tt1p8v25c
-regfile_WIDTH16_SIZE8_2
-                       enG5K             fsa0m_a_generic_core_tt1p8v25c
-elementwise_mul_A_WIDTH16_B_WIDTH16_OUT_WIDTH32_0
-                       enG5K             fsa0m_a_generic_core_tt1p8v25c
-elementwise_mul_A_WIDTH16_B_WIDTH16_OUT_WIDTH32_1
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
 elementwise_mul_A_WIDTH16_B_WIDTH16_OUT_WIDTH32_2
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
-mamba_core_DW01_inc_0_DW01_inc_7
+mamba_proj_in_out_shared_IN_DIM8_D_MODEL8_OUT_DIM4_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12
+                       enG30K            fsa0m_a_generic_core_tt1p8v25c
+regfile_WIDTH16_SIZE8_3
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
-mamba_datapath_new_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_ADDR_WIDTH9_DW01_inc_0_DW01_inc_8
+mamba_linear_in1_serial_OUT_DIM17_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
-pipeline_yt_mac_D_MODEL8_D_STATE8_DATA_WIDTH16_DW01_add_0_DW01_add_1
+regfile_WIDTH16_SIZE1  enG5K             fsa0m_a_generic_core_tt1p8v25c
+regfile_WIDTH16_SIZE8_2
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
-mamba_exp_DATA_WIDTH16_DW_rash_0
+regfile_WIDTH16_SIZE8_1
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
-elementwise_add_A_WIDTH16_B_WIDTH16_OUT_WIDTH16_DW01_add_0_DW01_add_7
+mamba_linear_in1_serial_OUT_DIM8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
-mamba_linear_serial_mac_IN_DIM8_OUT_DIM4_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_DW01_add_0_DW01_add_8
+mamba_softplus_DATA_WIDTH16
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
-mamba_linear_serial_mac_IN_DIM8_OUT_DIM4_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_DW01_add_1_DW01_add_9
+regfile_WIDTH16_SIZE8_0
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
-mamba_linear_serial_mac_IN_DIM8_OUT_DIM4_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_DW01_add_2_DW01_add_10
+elementwise_mul_A_WIDTH17_B_WIDTH16_OUT_WIDTH32_1
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
-mamba_linear_serial_mac_IN_DIM8_OUT_DIM4_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_DW01_add_3_DW01_add_11
+elementwise_mul_A_WIDTH16_B_WIDTH16_OUT_WIDTH32_1
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
-mamba_linear_in1_serial_OUT_DIM8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_0_DW01_add_0_DW01_add_14
+elementwise_mul_A_WIDTH17_B_WIDTH16_OUT_WIDTH32_0
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
-mamba_linear_in1_serial_OUT_DIM8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_0_DW01_add_1_DW01_add_15
+elementwise_mul_A_WIDTH16_B_WIDTH16_OUT_WIDTH32_0
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
-mamba_linear_in1_serial_OUT_DIM17_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_DW01_add_0_DW01_add_16
+pipeline_elementwise_multiplier_DATA_WIDTH16
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
-mamba_linear_in1_serial_OUT_DIM17_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_DW01_add_1_DW01_add_17
+pipeline_yt_mac_D_MODEL8_D_STATE8_DATA_WIDTH16
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
-mamba_linear_in1_serial_OUT_DIM8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_1_DW01_add_0_DW01_add_18
+SNPS_CLOCK_GATE_HIGH_mamba_datapath_new_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_ADDR_WIDTH9_0
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
-mamba_linear_in1_serial_OUT_DIM8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_1_DW01_add_1_DW01_add_19
+SNPS_CLOCK_GATE_HIGH_mamba_datapath_new_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_ADDR_WIDTH9_1
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
-elementwise_mul_A_WIDTH16_B_WIDTH16_OUT_WIDTH32_0_DW02_mult_0
+SNPS_CLOCK_GATE_HIGH_mamba_datapath_new_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_ADDR_WIDTH9_2
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
-elementwise_mul_A_WIDTH16_B_WIDTH16_OUT_WIDTH32_0_DW01_add_0_DW01_add_20
+SNPS_CLOCK_GATE_HIGH_mamba_datapath_new_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_ADDR_WIDTH9_3
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
-mamba_linear_serial_mac_IN_DIM8_OUT_DIM4_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_DW02_mult_0_DW02_mult_1
+SNPS_CLOCK_GATE_HIGH_mamba_datapath_new_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_ADDR_WIDTH9_4
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
-mamba_linear_serial_mac_IN_DIM8_OUT_DIM4_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_DW02_mult_1_DW02_mult_2
+SNPS_CLOCK_GATE_HIGH_mamba_datapath_new_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_ADDR_WIDTH9_5
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
-mamba_linear_serial_mac_IN_DIM8_OUT_DIM4_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_DW02_mult_2_DW02_mult_3
+SNPS_CLOCK_GATE_HIGH_mamba_datapath_new_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_ADDR_WIDTH9_6
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
-mamba_linear_serial_mac_IN_DIM8_OUT_DIM4_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_DW01_add_5_DW01_add_21
+SNPS_CLOCK_GATE_HIGH_mamba_datapath_new_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_ADDR_WIDTH9_7
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
-mamba_datapath_new_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_ADDR_WIDTH9_DW02_mult_0_DW02_mult_4
+SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_ADDR_WIDTH9_0
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
-mamba_datapath_new_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_ADDR_WIDTH9_DW01_add_1_DW01_add_22
+mamba_linear_shared_mult16x10_DATA_WIDTH16_W_SHIFTED_W10_MAC_PROD_W26
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
-pipeline_yt_mac_D_MODEL8_D_STATE8_DATA_WIDTH16_DW02_mult_0_DW02_mult_5
+mamba_linear_shared_mult32x17
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
-pipeline_yt_mac_D_MODEL8_D_STATE8_DATA_WIDTH16_DW01_add_1_DW01_add_23
+SNPS_CLOCK_GATE_HIGH_mamba_proj_in_out_shared_IN_DIM8_D_MODEL8_OUT_DIM4_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_0
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
-pipeline_yt_mac_D_MODEL8_D_STATE8_DATA_WIDTH16_DW02_mult_1_DW02_mult_6
+SNPS_CLOCK_GATE_HIGH_mamba_proj_in_out_shared_IN_DIM8_D_MODEL8_OUT_DIM4_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_1
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
-pipeline_yt_mac_D_MODEL8_D_STATE8_DATA_WIDTH16_DW01_add_2_DW01_add_24
+SNPS_CLOCK_GATE_HIGH_mamba_proj_in_out_shared_IN_DIM8_D_MODEL8_OUT_DIM4_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_2
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
-elementwise_mul_A_WIDTH16_B_WIDTH16_OUT_WIDTH32_2_DW02_mult_0_DW02_mult_7
+SNPS_CLOCK_GATE_HIGH_mamba_proj_in_out_shared_IN_DIM8_D_MODEL8_OUT_DIM4_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_3
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
-elementwise_mul_A_WIDTH16_B_WIDTH16_OUT_WIDTH32_2_DW01_add_0_DW01_add_25
+SNPS_CLOCK_GATE_HIGH_mamba_proj_in_out_shared_IN_DIM8_D_MODEL8_OUT_DIM4_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_4
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
-elementwise_mul_A_WIDTH16_B_WIDTH16_OUT_WIDTH32_3_DW02_mult_0_DW02_mult_8
+SNPS_CLOCK_GATE_HIGH_mamba_proj_in_out_shared_IN_DIM8_D_MODEL8_OUT_DIM4_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_5
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
-elementwise_mul_A_WIDTH16_B_WIDTH16_OUT_WIDTH32_3_DW01_add_0_DW01_add_26
+SNPS_CLOCK_GATE_HIGH_mamba_proj_in_out_shared_IN_DIM8_D_MODEL8_OUT_DIM4_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_6
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
-mamba_exp_DATA_WIDTH16_DW02_mult_0_DW02_mult_9
+SNPS_CLOCK_GATE_HIGH_mamba_proj_in_out_shared_IN_DIM8_D_MODEL8_OUT_DIM4_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_7
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
-mamba_linear_in1_serial_OUT_DIM8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_0_DW02_mult_0_DW02_mult_10
+SNPS_CLOCK_GATE_HIGH_mamba_proj_in_out_shared_IN_DIM8_D_MODEL8_OUT_DIM4_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_8
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
-mamba_linear_in1_serial_OUT_DIM8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_0_DW01_add_2_DW01_add_28
+SNPS_CLOCK_GATE_HIGH_mamba_proj_in_out_shared_IN_DIM8_D_MODEL8_OUT_DIM4_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_9
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
-mamba_linear_in1_serial_OUT_DIM8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_0_DW02_mult_1_DW02_mult_11
+SNPS_CLOCK_GATE_HIGH_mamba_proj_in_out_shared_IN_DIM8_D_MODEL8_OUT_DIM4_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_10
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
-mamba_linear_in1_serial_OUT_DIM8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_0_DW01_add_3_DW01_add_29
+SNPS_CLOCK_GATE_HIGH_mamba_proj_in_out_shared_IN_DIM8_D_MODEL8_OUT_DIM4_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_11
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
-mamba_linear_in1_serial_OUT_DIM17_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_DW02_mult_0_DW02_mult_12
+SNPS_CLOCK_GATE_HIGH_mamba_proj_in_out_shared_IN_DIM8_D_MODEL8_OUT_DIM4_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_12
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
-mamba_linear_in1_serial_OUT_DIM17_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_DW01_add_2_DW01_add_30
+SNPS_CLOCK_GATE_HIGH_mamba_proj_in_out_shared_IN_DIM8_D_MODEL8_OUT_DIM4_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_13
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
-mamba_linear_in1_serial_OUT_DIM17_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_DW02_mult_1_DW02_mult_13
+SNPS_CLOCK_GATE_HIGH_regfile_WIDTH16_SIZE8_3_0
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
-mamba_linear_in1_serial_OUT_DIM17_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_DW01_add_3_DW01_add_31
+SNPS_CLOCK_GATE_HIGH_mamba_linear_in1_serial_OUT_DIM17_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_0
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
-mamba_linear_in1_serial_OUT_DIM8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_1_DW02_mult_0_DW02_mult_14
+SNPS_CLOCK_GATE_HIGH_regfile_WIDTH16_SIZE1_0
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
-mamba_linear_in1_serial_OUT_DIM8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_1_DW01_add_2_DW01_add_32
+SNPS_CLOCK_GATE_HIGH_regfile_WIDTH16_SIZE8_2_0
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
-mamba_linear_in1_serial_OUT_DIM8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_1_DW02_mult_1_DW02_mult_15
+SNPS_CLOCK_GATE_HIGH_regfile_WIDTH16_SIZE8_1_0
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
-mamba_linear_in1_serial_OUT_DIM8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_1_DW01_add_3_DW01_add_33
+SNPS_CLOCK_GATE_HIGH_mamba_linear_in1_serial_OUT_DIM8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_0
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
-mamba_linear_serial_mac_IN_DIM8_OUT_DIM4_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_DW02_mult_3_DW02_mult_16
+SNPS_CLOCK_GATE_HIGH_mamba_softplus_DATA_WIDTH16_0
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
-mamba_linear_serial_mac_IN_DIM8_OUT_DIM4_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_DW01_add_6_DW01_add_34
+SNPS_CLOCK_GATE_HIGH_regfile_WIDTH16_SIZE8_0_0
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
-elementwise_mul_A_WIDTH16_B_WIDTH16_OUT_WIDTH32_1_DW02_mult_0_DW02_mult_18
+SNPS_CLOCK_GATE_HIGH_pipeline_elementwise_multiplier_DATA_WIDTH16_0
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
-elementwise_mul_A_WIDTH16_B_WIDTH16_OUT_WIDTH32_1_DW01_add_0_DW01_add_35
+SNPS_CLOCK_GATE_HIGH_pipeline_elementwise_multiplier_DATA_WIDTH16_1
+                       enG5K             fsa0m_a_generic_core_tt1p8v25c
+SNPS_CLOCK_GATE_HIGH_pipeline_elementwise_multiplier_DATA_WIDTH16_2
+                       enG5K             fsa0m_a_generic_core_tt1p8v25c
+SNPS_CLOCK_GATE_HIGH_pipeline_yt_mac_D_MODEL8_D_STATE8_DATA_WIDTH16_0
+                       enG5K             fsa0m_a_generic_core_tt1p8v25c
+SNPS_CLOCK_GATE_HIGH_pipeline_yt_mac_D_MODEL8_D_STATE8_DATA_WIDTH16_1
+                       enG5K             fsa0m_a_generic_core_tt1p8v25c
+SNPS_CLOCK_GATE_HIGH_pipeline_yt_mac_D_MODEL8_D_STATE8_DATA_WIDTH16_2
+                       enG5K             fsa0m_a_generic_core_tt1p8v25c
+SNPS_CLOCK_GATE_HIGH_pipeline_yt_mac_D_MODEL8_D_STATE8_DATA_WIDTH16_3
+                       enG5K             fsa0m_a_generic_core_tt1p8v25c
+SNPS_CLOCK_GATE_HIGH_pipeline_yt_mac_D_MODEL8_D_STATE8_DATA_WIDTH16_4
+                       enG5K             fsa0m_a_generic_core_tt1p8v25c
+SNPS_CLOCK_GATE_HIGH_pipeline_yt_mac_D_MODEL8_D_STATE8_DATA_WIDTH16_5
+                       enG5K             fsa0m_a_generic_core_tt1p8v25c
+SNPS_CLOCK_GATE_HIGH_pipeline_yt_mac_D_MODEL8_D_STATE8_DATA_WIDTH16_6
+                       enG5K             fsa0m_a_generic_core_tt1p8v25c
+SNPS_CLOCK_GATE_HIGH_pipeline_yt_mac_D_MODEL8_D_STATE8_DATA_WIDTH16_7
+                       enG5K             fsa0m_a_generic_core_tt1p8v25c
+SNPS_CLOCK_GATE_HIGH_pipeline_yt_mac_D_MODEL8_D_STATE8_DATA_WIDTH16_8
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
 
 
@@ -173,12 +294,12 @@ Attributes
 i - Including register clock pin internal power
 
 
-  Cell Internal Power  =   2.4050 mW   (91%)
-  Net Switching Power  = 225.7551 uW    (9%)
+  Cell Internal Power  = 464.4627 uW    (6%)
+  Net Switching Power  =   7.7306 mW   (94%)
                          ---------
-Total Dynamic Power    =   2.6308 mW  (100%)
+Total Dynamic Power    =   8.1950 mW  (100%)
 
-Cell Leakage Power     =   2.9466 uW
+Cell Leakage Power     =   2.0797 uW
 
 
                  Internal         Switching           Leakage            Total
@@ -187,10 +308,10 @@ Power Group      Power            Power               Power              Power  
 io_pad             0.0000            0.0000            0.0000            0.0000  (   0.00%)
 memory             0.0000            0.0000            0.0000            0.0000  (   0.00%)
 black_box          0.0000            0.0000            0.0000            0.0000  (   0.00%)
-clock_network      2.3537            0.0000            0.0000            2.3537  (  89.37%)  i
-register       1.0022e-02        4.5122e-03        1.0561e+06        1.5587e-02  (   0.59%)
+clock_network      0.4306            7.5425        2.5771e+04            7.9732  (  97.27%)  i
+register       9.9935e-03        2.8156e-03        1.0070e+06        1.3818e-02  (   0.17%)
 sequential         0.0000            0.0000            0.0000            0.0000  (   0.00%)
-combinational  4.1366e-02            0.2212        1.8905e+06            0.2645  (  10.04%)
+combinational  2.3820e-02            0.1852        1.0469e+06            0.2101  (   2.56%)
 --------------------------------------------------------------------------------------------------
-Total              2.4051 mW         0.2258 mW     2.9466e+06 pW         2.6338 mW
+Total              0.4645 mW         7.7306 mW     2.0797e+06 pW         8.1971 mW
 1

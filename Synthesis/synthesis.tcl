@@ -71,8 +71,7 @@ check_design
 # ==========================================
 # compile -map_effort medium
 # insert_clock_gating
-compile_ultra
-
+compile
 # ==========================================
 # 5. Output Reports (輸出報表)
 # ==========================================

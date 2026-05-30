@@ -25,10 +25,10 @@ module mamba_datapath_new #(
 
     output reg [(D_MODEL*DATA_WIDTH)-1 : 0]     o_next_y_pool_flat,
     output reg [(4*DATA_WIDTH)-1 : 0]           o_logits_flat,
-    output reg                                  o_h_wr_en,
-    output reg [7:0]                            o_h_wr_i,
-    output reg [7:0]                            o_h_wr_j,
-    output reg signed [DATA_WIDTH-1:0]          o_h_wr_data,
+    output wire                                 o_h_wr_en,
+    output wire [7:0]                           o_h_wr_i,
+    output wire [7:0]                           o_h_wr_j,
+    output wire signed [DATA_WIDTH-1:0]         o_h_wr_data,
     output reg                                  o_busy,
     output reg                                  o_done
 );
@@ -56,6 +56,7 @@ module mamba_datapath_new #(
     localparam integer IDX_W_MODEL = clog2(D_MODEL);
     localparam integer IDX_W_STATE = clog2(D_STATE);
     localparam integer TOTAL_ELEMS = D_MODEL * D_STATE;
+    localparam integer FEED_ADDR_W = clog2(TOTAL_ELEMS);
 
     wire [(D_MODEL*WGHT_WIDTH)-1:0]              bus_W_PROJ_IN;
     wire [Z_WIDTH-1:0]                           bus_Z_PROJ_IN;
@@ -122,29 +123,16 @@ module mamba_datapath_new #(
         .o_CONST_D(bus_CONST_D)
     );
 
-    wire signed [DATA_WIDTH-1:0] i_h_reg      [0:D_MODEL-1][0:D_STATE-1];
     wire signed [DATA_WIDTH-1:0] i_y_pool_reg [0:D_MODEL-1];
-    wire signed [DATA_WIDTH-1:0] const_a_2d   [0:D_MODEL-1][0:D_STATE-1];
-    wire signed [DATA_WIDTH-1:0] const_d_1d   [0:D_MODEL-1];
 
     reg signed [DATA_WIDTH-1:0] o_next_y_pool [0:D_MODEL-1];
     wire signed [DATA_WIDTH-1:0] logits_w      [0:3];
 
-    wire signed [DATA_WIDTH-1:0] xt_arr        [0:D_MODEL-1];
-    wire signed [DATA_WIDTH-1:0] dt_arr        [0:D_MODEL-1];
-    wire signed [DATA_WIDTH-1:0] b_arr         [0:D_STATE-1];
-    wire signed [DATA_WIDTH-1:0] c_arr         [0:D_STATE-1];
-
     integer i, j;
-    genvar r, c;
+    genvar r;
     generate
         for (r = 0; r < D_MODEL; r = r + 1) begin : gen_unpack
             assign i_y_pool_reg[r] = i_y_pool_reg_flat[(D_MODEL-r)*DATA_WIDTH-1 -: DATA_WIDTH];
-            assign const_d_1d[r]   = bus_CONST_D[(D_MODEL-r)*DATA_WIDTH-1 -: DATA_WIDTH];
-            for (c = 0; c < D_STATE; c = c + 1) begin : gen_unpack_h
-                assign i_h_reg[r][c]  = i_h_reg_flat[((D_MODEL*D_STATE)-(r*D_STATE+c))*DATA_WIDTH-1 -: DATA_WIDTH];
-                assign const_a_2d[r][c] = bus_CONST_A[((D_MODEL*D_STATE)-(r*D_STATE+c))*DATA_WIDTH-1 -: DATA_WIDTH];
-            end
         end
     endgenerate
 
@@ -404,17 +392,6 @@ module mamba_datapath_new #(
         .data_out_flat(dt_flat)
     );
 
-    generate
-        for (r = 0; r < D_MODEL; r = r + 1) begin : gen_unpack_xt_dt
-            assign xt_arr[r] = xt_flat[(D_MODEL-r)*DATA_WIDTH-1 -: DATA_WIDTH];
-            assign dt_arr[r] = dt_flat[(D_MODEL-r)*DATA_WIDTH-1 -: DATA_WIDTH];
-        end
-        for (r = 0; r < D_STATE; r = r + 1) begin : gen_unpack_bc
-            assign b_arr[r] = b_flat[(D_STATE-r)*DATA_WIDTH-1 -: DATA_WIDTH];
-            assign c_arr[r] = c_flat[(D_STATE-r)*DATA_WIDTH-1 -: DATA_WIDTH];
-        end
-    endgenerate
-
     wire signed [DATA_WIDTH-1:0] elem_next_h;
     wire                         elem_valid;
 
@@ -424,6 +401,20 @@ module mamba_datapath_new #(
     reg c_params_ready;
     wire feed_valid;
     assign feed_valid = o_busy && softplus_done && c_params_ready && (feed_count < TOTAL_ELEMS);
+
+    // Sequential (i,j) feed uses feed_count as a linear index — one part-select each,
+    // instead of flatten→2D unpack→64:1 array mux.
+    wire signed [DATA_WIDTH-1:0] feed_h_val;
+    wire signed [DATA_WIDTH-1:0] feed_const_a_val;
+    wire signed [DATA_WIDTH-1:0] feed_dt_val;
+    wire signed [DATA_WIDTH-1:0] feed_xt_val;
+    wire signed [DATA_WIDTH-1:0] feed_b_val;
+
+    assign feed_h_val      = i_h_reg_flat[(TOTAL_ELEMS - feed_count[FEED_ADDR_W-1:0]) * DATA_WIDTH - 1 -: DATA_WIDTH];
+    assign feed_const_a_val = bus_CONST_A[(TOTAL_ELEMS - feed_count[FEED_ADDR_W-1:0]) * DATA_WIDTH - 1 -: DATA_WIDTH];
+    assign feed_dt_val     = dt_flat[(D_MODEL - feed_i) * DATA_WIDTH - 1 -: DATA_WIDTH];
+    assign feed_xt_val     = xt_flat[(D_MODEL - feed_i) * DATA_WIDTH - 1 -: DATA_WIDTH];
+    assign feed_b_val      = b_flat[(D_STATE - feed_j) * DATA_WIDTH - 1 -: DATA_WIDTH];
 
     reg [IDX_W_MODEL-1:0] idx_d0_i, idx_d1_i, idx_d2_i;
     reg [IDX_W_STATE-1:0] idx_d0_j, idx_d1_j, idx_d2_j;
@@ -438,12 +429,19 @@ module mamba_datapath_new #(
     wire yt_valid;
     assign yt_valid = o_busy && c_params_ready && elem_valid && idx_d2_v;
 
+    // idx_d2_* already tracks elem pipeline delay; do not register again onto
+    // o_h_wr_* (idx_d2_j -> o_h_wr_j_reg is FF-to-FF on the same edge -> hold risk).
+    assign o_h_wr_en   = o_busy && elem_valid && idx_d2_v;
+    assign o_h_wr_i    = {{(8-IDX_W_MODEL){1'b0}}, idx_d2_i};
+    assign o_h_wr_j    = {{(8-IDX_W_STATE){1'b0}}, idx_d2_j};
+    assign o_h_wr_data = elem_next_h;
+
     assign M1_a = x_scale_valid
                 ? x_scale_lo_a
                 : {{elem_mul2_a[15]}, elem_mul2_a};
     assign M1_b = x_scale_valid ? x_scale_lo_b : elem_mul2_b;
 
-    assign M2_a = x_scale_valid ? x_scale_hi_a : c_arr[idx_d2_j];
+    assign M2_a = x_scale_valid ? x_scale_hi_a : c_flat[(D_STATE - idx_d2_j) * DATA_WIDTH - 1 -: DATA_WIDTH];
     assign M2_b = x_scale_valid ? x_scale_hi_b : elem_next_h;
 
     assign M3_a = dt_scale_valid
@@ -451,8 +449,8 @@ module mamba_datapath_new #(
                 : {{elem_mul3_a[15]}, elem_mul3_a};
     assign M3_b = dt_scale_valid ? dt_scale_lo_b : elem_mul3_b;
 
-    assign M4_a = dt_scale_valid ? dt_scale_hi_a : const_d_1d[idx_d2_i];
-    assign M4_b = dt_scale_valid ? dt_scale_hi_b : xt_arr[idx_d2_i];
+    assign M4_a = dt_scale_valid ? dt_scale_hi_a : bus_CONST_D[(D_MODEL - idx_d2_i) * DATA_WIDTH - 1 -: DATA_WIDTH];
+    assign M4_b = dt_scale_valid ? dt_scale_hi_b : xt_flat[(D_MODEL - idx_d2_i) * DATA_WIDTH - 1 -: DATA_WIDTH];
 
     assign x_scaled_acc =
         ($signed({{16{M2_y[31]}}, M2_y}) <<< 16) + $signed({{16{M1_y[31]}}, M1_y});
@@ -505,11 +503,11 @@ module mamba_datapath_new #(
         .i_clk(clk),
         .i_rst_n(rst_n),
         .i_valid(feed_valid),
-        .i_dt(dt_arr[feed_i]),
-        .i_const_a(const_a_2d[feed_i][feed_j]),
-        .i_b(b_arr[feed_j]),
-        .i_h(i_h_reg[feed_i][feed_j]),
-        .i_xt(xt_arr[feed_i]),
+        .i_dt(feed_dt_val),
+        .i_const_a(feed_const_a_val),
+        .i_b(feed_b_val),
+        .i_h(feed_h_val),
+        .i_xt(feed_xt_val),
         .i_mul0_result(shared_mul0_y),
         .i_mul1_result(shared_mul1_y),
         .i_mul2_result(M1_y),
@@ -545,7 +543,7 @@ module mamba_datapath_new #(
         .i_idx_i({5'b0, idx_d2_i}),
         .i_idx_j({5'b0, idx_d2_j}),
         .i_h_val(elem_next_h),
-        .i_c_val(c_arr[idx_d2_j]),
+        .i_c_val(c_flat[(D_STATE - idx_d2_j) * DATA_WIDTH - 1 -: DATA_WIDTH]),
         .i_dx_val(dx_val_w),
         .i_mul_result(M2_y),
         .o_valid(yt_mac_valid),
@@ -576,10 +574,6 @@ module mamba_datapath_new #(
             y_done_count <= 4'd0;
             o_busy <= 1'b0;
             o_done <= 1'b0;
-            o_h_wr_en <= 1'b0;
-            o_h_wr_i <= 8'd0;
-            o_h_wr_j <= 8'd0;
-            o_h_wr_data <= {DATA_WIDTH{1'b0}};
             for (i = 0; i < D_MODEL; i = i + 1) begin
                 o_next_y_pool[i] <= {DATA_WIDTH{1'b0}};
             end
@@ -587,7 +581,6 @@ module mamba_datapath_new #(
             job_start_d <= i_start;
             dt_start <= 1'b0;
             o_done <= 1'b0;
-            o_h_wr_en <= 1'b0;
 
             if (job_start_pulse && !o_busy) begin
                 o_busy <= 1'b1;
@@ -646,13 +639,6 @@ module mamba_datapath_new #(
                 end else begin
                     feed_j <= feed_j + {{(IDX_W_STATE-1){1'b0}}, 1'b1};
                 end
-            end
-
-            if (o_busy && elem_valid && idx_d2_v) begin
-                o_h_wr_en <= 1'b1;
-                o_h_wr_i <= idx_d2_i;
-                o_h_wr_j <= idx_d2_j;
-                o_h_wr_data <= elem_next_h;
             end
 
             if (o_busy && yt_mac_valid) begin
