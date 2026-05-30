@@ -1,0 +1,1 @@
+dc_shell-t -f synthesis.tcl | tee syn.log

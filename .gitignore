@@ -1,0 +1,59 @@
+# ====================================
+# 1. run 資料夾規則
+# ====================================
+# 先忽略 run 底下的所有東西
+run/*
+
+# 然後「白名單」保留這四個重要目錄與檔案
+!run/Core/
+!run/Pattern/
+!run/Testbanch/
+!run/tools/
+!run/README_dynamic_weight.md
+!run/source_run_tb_weight_dyn_full.sh
+!run/source_run.sh
+!run/source_run_tb_weight_dyn.sh
+
+# ====================================
+# 2. Synthesis 資料夾規則
+# ====================================
+# (什麼都不寫，Git 預設就會追蹤並推送裡面所有的合成結果、Netlist 與 Report)
+
+# 忽略 Synthesis 的中間過渡檔
+Synthesis/*
+
+!Synthesis/Core/
+!Synthesis/Netlist/
+!Synthesis/Report/
+!Synthesis/Testbanch/
+!Synthesis/*.sh
+!Synthesis/*.tcl
+
+Synthesis/*.pvl
+Synthesis/*.syn
+Synthesis/*.mr
+Synthesis/*.svf
+Synthesis/*.log
+Synthesis/alib-52/
+Synthesis/command.log
+Synthesis/filenames*
+Synthesis/clog*
+
+Synthesis/*.db
+Synthesis/*.lib
+Synthesis/*.lib.src
+# ====================================
+# 3. 其他工具自動產生的雜項 (建議補充)
+# ====================================
+# Design Compiler 的啟動紀錄與自動備份
+*.v.bak
+*.svf
+# 如果你有用 Verdi 或 nWave 產生的日誌
+novas.conf
+novas.rc
+novas_dump.log
+# VCS 編譯產生的暫存
+ucli.key
+
+cell7.py
+mamba-relu-ste-041591.ipynb

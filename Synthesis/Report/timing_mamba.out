@@ -1,0 +1,276 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : mamba_core
+Version: U-2022.12
+Date   : Fri May 22 17:47:53 2026
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: WCCOM   Library: fsa0m_a_generic_core_ss1p62v125c
+Wire Load Model Mode: enclosed
+
+  Startpoint: datapath_start_reg
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_datapath/u_proj_in_serial/o_y_reg[0]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  mamba_core         G200K                 fsa0m_a_generic_core_tt1p8v25c
+  mamba_datapath_new_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_ADDR_WIDTH9
+                     enG100K               fsa0m_a_generic_core_tt1p8v25c
+  mamba_linear_in1_serial_OUT_DIM8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_1
+                     enG10K                fsa0m_a_generic_core_tt1p8v25c
+  mamba_linear_in1_serial_OUT_DIM8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_1_DW02_mult_1_DW02_mult_15
+                     enG5K                 fsa0m_a_generic_core_tt1p8v25c
+  mamba_linear_in1_serial_OUT_DIM8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_1_DW02_mult_0_DW02_mult_14
+                     enG5K                 fsa0m_a_generic_core_tt1p8v25c
+  mamba_linear_in1_serial_OUT_DIM8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_1_DW01_add_2_DW01_add_32
+                     enG5K                 fsa0m_a_generic_core_tt1p8v25c
+  mamba_linear_in1_serial_OUT_DIM8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_1_DW01_add_0_DW01_add_18
+                     enG5K                 fsa0m_a_generic_core_tt1p8v25c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.50       0.50
+  datapath_start_reg/CK (QDFFRBN)                         0.00 #     0.50 r
+  datapath_start_reg/Q (QDFFRBN)                          0.38       0.88 r
+  u_datapath/i_start (mamba_datapath_new_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_ADDR_WIDTH9)
+                                                          0.00       0.88 r
+  u_datapath/U141/O (AN2B1)                               0.87       1.76 r
+  u_datapath/u_proj_in_serial/i_start (mamba_linear_in1_serial_OUT_DIM8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_1)
+                                                          0.00       1.76 r
+  u_datapath/u_proj_in_serial/U508/O (INV1S)              0.29       2.05 f
+  u_datapath/u_proj_in_serial/U449/O (ND2)                0.50       2.55 r
+  u_datapath/u_proj_in_serial/U547/O (NR3)                0.77       3.32 f
+  u_datapath/u_proj_in_serial/U13/O (BUF1S)               0.81       4.13 f
+  u_datapath/u_proj_in_serial/U306/O (BUF1CK)             0.50       4.63 f
+  u_datapath/u_proj_in_serial/U579/O (AOI22S)             0.27       4.90 r
+  u_datapath/u_proj_in_serial/U583/O (AN2)                0.19       5.08 r
+  u_datapath/u_proj_in_serial/U580/O (ND3)                0.13       5.21 f
+  u_datapath/u_proj_in_serial/U769/O (OR2)                0.21       5.43 f
+  u_datapath/u_proj_in_serial/U535/CO (FA1S)              0.37       5.80 f
+  u_datapath/u_proj_in_serial/U515/CO (FA1S)              0.40       6.20 f
+  u_datapath/u_proj_in_serial/U519/CO (FA1S)              0.40       6.61 f
+  u_datapath/u_proj_in_serial/U523/CO (FA1S)              0.40       7.01 f
+  u_datapath/u_proj_in_serial/U527/CO (FA1S)              0.40       7.42 f
+  u_datapath/u_proj_in_serial/U531/CO (FA1S)              0.40       7.82 f
+  u_datapath/u_proj_in_serial/U511/CO (FA1S)              0.45       8.27 f
+  u_datapath/u_proj_in_serial/U755/O (AN2)                0.25       8.53 f
+  u_datapath/u_proj_in_serial/U753/O (AN2)                0.22       8.75 f
+  u_datapath/u_proj_in_serial/U751/O (AN2)                0.22       8.97 f
+  u_datapath/u_proj_in_serial/U749/O (AN2)                0.22       9.20 f
+  u_datapath/u_proj_in_serial/U747/O (AN2)                0.22       9.42 f
+  u_datapath/u_proj_in_serial/U745/O (AN2)                0.22       9.65 f
+  u_datapath/u_proj_in_serial/U744/O (XOR2HS)             0.16       9.80 f
+  u_datapath/u_proj_in_serial/mult_190/B[14] (mamba_linear_in1_serial_OUT_DIM8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_1_DW02_mult_1_DW02_mult_15)
+                                                          0.00       9.80 f
+  u_datapath/u_proj_in_serial/mult_190/U26/O (INV1S)      0.88      10.68 r
+  u_datapath/u_proj_in_serial/mult_190/U347/O (NR2)       0.16      10.84 f
+  u_datapath/u_proj_in_serial/mult_190/U2/O (AN2)         0.28      11.12 f
+  u_datapath/u_proj_in_serial/mult_190/S2_2_13/S (FA1S)
+                                                          0.54      11.65 r
+  u_datapath/u_proj_in_serial/mult_190/S2_3_12/S (FA1S)
+                                                          0.41      12.07 f
+  u_datapath/u_proj_in_serial/mult_190/S2_4_11/S (FA1S)
+                                                          0.53      12.60 r
+  u_datapath/u_proj_in_serial/mult_190/S2_5_10/S (FA1S)
+                                                          0.41      13.01 f
+  u_datapath/u_proj_in_serial/mult_190/S2_6_9/S (FA1S)
+                                                          0.53      13.54 r
+  u_datapath/u_proj_in_serial/mult_190/S2_7_8/S (FA1S)
+                                                          0.41      13.95 f
+  u_datapath/u_proj_in_serial/mult_190/S2_8_7/S (FA1S)
+                                                          0.53      14.48 r
+  u_datapath/u_proj_in_serial/mult_190/S2_9_6/S (FA1S)
+                                                          0.41      14.89 f
+  u_datapath/u_proj_in_serial/mult_190/S2_10_5/S (FA1S)
+                                                          0.53      15.42 r
+  u_datapath/u_proj_in_serial/mult_190/S2_11_4/S (FA1S)
+                                                          0.41      15.83 f
+  u_datapath/u_proj_in_serial/mult_190/S2_12_3/S (FA1S)
+                                                          0.53      16.36 r
+  u_datapath/u_proj_in_serial/mult_190/S2_13_2/S (FA1S)
+                                                          0.41      16.78 f
+  u_datapath/u_proj_in_serial/mult_190/S2_14_1/S (FA1S)
+                                                          0.53      17.31 r
+  u_datapath/u_proj_in_serial/mult_190/S4_0/S (FA1S)      0.41      17.72 f
+  u_datapath/u_proj_in_serial/mult_190/S14_15_0/S (FA1S)
+                                                          0.50      18.22 r
+  u_datapath/u_proj_in_serial/mult_190/FS_1/A[13] (mamba_linear_in1_serial_OUT_DIM8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_1_DW01_add_3_DW01_add_33)
+                                                          0.00      18.22 r
+  u_datapath/u_proj_in_serial/mult_190/FS_1/U26/O (BUF1CK)
+                                                          0.13      18.35 r
+  u_datapath/u_proj_in_serial/mult_190/FS_1/SUM[13] (mamba_linear_in1_serial_OUT_DIM8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_1_DW01_add_3_DW01_add_33)
+                                                          0.00      18.35 r
+  u_datapath/u_proj_in_serial/mult_190/PRODUCT[15] (mamba_linear_in1_serial_OUT_DIM8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_1_DW02_mult_1_DW02_mult_15)
+                                                          0.00      18.35 r
+  u_datapath/u_proj_in_serial/mult_191/A[15] (mamba_linear_in1_serial_OUT_DIM8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_1_DW02_mult_0_DW02_mult_14)
+                                                          0.00      18.35 r
+  u_datapath/u_proj_in_serial/mult_191/U126/O (INV1S)     0.67      19.02 f
+  u_datapath/u_proj_in_serial/mult_191/U540/O (NR2)       0.38      19.40 r
+  u_datapath/u_proj_in_serial/mult_191/S2_15_13/S (FA1S)
+                                                          0.43      19.83 f
+  u_datapath/u_proj_in_serial/mult_191/S2_16_12/CO (FA1S)
+                                                          0.41      20.24 f
+  u_datapath/u_proj_in_serial/mult_191/S2_17_12/CO (FA1S)
+                                                          0.44      20.68 f
+  u_datapath/u_proj_in_serial/mult_191/S2_18_12/CO (FA1S)
+                                                          0.44      21.13 f
+  u_datapath/u_proj_in_serial/mult_191/S2_19_12/CO (FA1S)
+                                                          0.44      21.57 f
+  u_datapath/u_proj_in_serial/mult_191/S2_20_12/S (FA1S)
+                                                          0.56      22.13 r
+  u_datapath/u_proj_in_serial/mult_191/S2_21_11/S (FA1S)
+                                                          0.41      22.54 f
+  u_datapath/u_proj_in_serial/mult_191/S2_22_10/S (FA1S)
+                                                          0.53      23.07 r
+  u_datapath/u_proj_in_serial/mult_191/S2_23_9/S (FA1S)
+                                                          0.41      23.48 f
+  u_datapath/u_proj_in_serial/mult_191/S2_24_8/S (FA1S)
+                                                          0.53      24.01 r
+  u_datapath/u_proj_in_serial/mult_191/S2_25_7/S (FA1S)
+                                                          0.41      24.43 f
+  u_datapath/u_proj_in_serial/mult_191/S2_26_6/S (FA1S)
+                                                          0.53      24.96 r
+  u_datapath/u_proj_in_serial/mult_191/S2_27_5/S (FA1S)
+                                                          0.41      25.37 f
+  u_datapath/u_proj_in_serial/mult_191/S2_28_4/S (FA1S)
+                                                          0.53      25.90 r
+  u_datapath/u_proj_in_serial/mult_191/S2_29_3/S (FA1S)
+                                                          0.41      26.31 f
+  u_datapath/u_proj_in_serial/mult_191/S2_30_2/S (FA1S)
+                                                          0.53      26.84 r
+  u_datapath/u_proj_in_serial/mult_191/S4_1/S (FA1S)      0.45      27.29 f
+  u_datapath/u_proj_in_serial/mult_191/U19/O (AN2)        0.25      27.54 f
+  u_datapath/u_proj_in_serial/mult_191/FS_1/B[31] (mamba_linear_in1_serial_OUT_DIM8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_1_DW01_add_2_DW01_add_32)
+                                                          0.00      27.54 f
+  u_datapath/u_proj_in_serial/mult_191/FS_1/U113/O (NR2)
+                                                          0.19      27.73 r
+  u_datapath/u_proj_in_serial/mult_191/FS_1/U24/O (INV1S)
+                                                          0.08      27.81 f
+  u_datapath/u_proj_in_serial/mult_191/FS_1/U110/O (AO12)
+                                                          0.26      28.07 f
+  u_datapath/u_proj_in_serial/mult_191/FS_1/U105/O (AO12)
+                                                          0.24      28.31 f
+  u_datapath/u_proj_in_serial/mult_191/FS_1/U100/O (AO12)
+                                                          0.24      28.55 f
+  u_datapath/u_proj_in_serial/mult_191/FS_1/U95/O (AO12)
+                                                          0.24      28.79 f
+  u_datapath/u_proj_in_serial/mult_191/FS_1/U90/O (AO12)
+                                                          0.24      29.02 f
+  u_datapath/u_proj_in_serial/mult_191/FS_1/U85/O (AO12)
+                                                          0.24      29.26 f
+  u_datapath/u_proj_in_serial/mult_191/FS_1/U80/O (AO12)
+                                                          0.24      29.50 f
+  u_datapath/u_proj_in_serial/mult_191/FS_1/U75/O (AO12)
+                                                          0.24      29.74 f
+  u_datapath/u_proj_in_serial/mult_191/FS_1/U70/O (AO12)
+                                                          0.24      29.98 f
+  u_datapath/u_proj_in_serial/mult_191/FS_1/U65/O (AO12)
+                                                          0.24      30.22 f
+  u_datapath/u_proj_in_serial/mult_191/FS_1/U60/O (AO12)
+                                                          0.24      30.46 f
+  u_datapath/u_proj_in_serial/mult_191/FS_1/U55/O (AO12)
+                                                          0.24      30.69 f
+  u_datapath/u_proj_in_serial/mult_191/FS_1/U50/O (AO12)
+                                                          0.25      30.95 f
+  u_datapath/u_proj_in_serial/mult_191/FS_1/U47/O (MOAI1S)
+                                                          0.26      31.20 f
+  u_datapath/u_proj_in_serial/mult_191/FS_1/U46/O (XOR3)
+                                                          0.25      31.46 f
+  u_datapath/u_proj_in_serial/mult_191/FS_1/SUM[45] (mamba_linear_in1_serial_OUT_DIM8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_1_DW01_add_2_DW01_add_32)
+                                                          0.00      31.46 f
+  u_datapath/u_proj_in_serial/mult_191/PRODUCT[47] (mamba_linear_in1_serial_OUT_DIM8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_1_DW02_mult_0_DW02_mult_14)
+                                                          0.00      31.46 f
+  u_datapath/u_proj_in_serial/U302/O (BUF1CK)             0.38      31.84 f
+  u_datapath/u_proj_in_serial/U965/O (MUX3)               0.34      32.18 f
+  u_datapath/u_proj_in_serial/add_196/B[0] (mamba_linear_in1_serial_OUT_DIM8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_1_DW01_add_1_DW01_add_19)
+                                                          0.00      32.18 f
+  u_datapath/u_proj_in_serial/add_196/U58/O (XOR2HS)      0.19      32.37 f
+  u_datapath/u_proj_in_serial/add_196/SUM[0] (mamba_linear_in1_serial_OUT_DIM8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_1_DW01_add_1_DW01_add_19)
+                                                          0.00      32.37 f
+  u_datapath/u_proj_in_serial/U303/O (MOAI1S)             0.31      32.68 f
+  u_datapath/u_proj_in_serial/add_198/A[0] (mamba_linear_in1_serial_OUT_DIM8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_1_DW01_add_0_DW01_add_18)
+                                                          0.00      32.68 f
+  u_datapath/u_proj_in_serial/add_198/U1/O (AN2)          0.30      32.97 f
+  u_datapath/u_proj_in_serial/add_198/U1_1/CO (FA1S)      0.37      33.35 f
+  u_datapath/u_proj_in_serial/add_198/U1_2/CO (FA1S)      0.40      33.74 f
+  u_datapath/u_proj_in_serial/add_198/U1_3/CO (FA1S)      0.40      34.14 f
+  u_datapath/u_proj_in_serial/add_198/U1_4/CO (FA1S)      0.40      34.54 f
+  u_datapath/u_proj_in_serial/add_198/U1_5/CO (FA1S)      0.40      34.94 f
+  u_datapath/u_proj_in_serial/add_198/U1_6/CO (FA1S)      0.40      35.34 f
+  u_datapath/u_proj_in_serial/add_198/U1_7/CO (FA1S)      0.40      35.74 f
+  u_datapath/u_proj_in_serial/add_198/U1_8/CO (FA1S)      0.40      36.13 f
+  u_datapath/u_proj_in_serial/add_198/U1_9/CO (FA1S)      0.40      36.53 f
+  u_datapath/u_proj_in_serial/add_198/U1_10/CO (FA1S)     0.40      36.93 f
+  u_datapath/u_proj_in_serial/add_198/U1_11/CO (FA1S)     0.40      37.33 f
+  u_datapath/u_proj_in_serial/add_198/U1_12/CO (FA1S)     0.41      37.74 f
+  u_datapath/u_proj_in_serial/add_198/U1_13/CO (FA1S)     0.40      38.14 f
+  u_datapath/u_proj_in_serial/add_198/U1_14/CO (FA1S)     0.40      38.54 f
+  u_datapath/u_proj_in_serial/add_198/U1_15/CO (FA1S)     0.40      38.94 f
+  u_datapath/u_proj_in_serial/add_198/U1_16/CO (FA1S)     0.40      39.34 f
+  u_datapath/u_proj_in_serial/add_198/U1_17/CO (FA1S)     0.40      39.74 f
+  u_datapath/u_proj_in_serial/add_198/U1_18/CO (FA1S)     0.40      40.14 f
+  u_datapath/u_proj_in_serial/add_198/U1_19/CO (FA1S)     0.40      40.54 f
+  u_datapath/u_proj_in_serial/add_198/U1_20/CO (FA1S)     0.40      40.95 f
+  u_datapath/u_proj_in_serial/add_198/U1_21/CO (FA1S)     0.40      41.35 f
+  u_datapath/u_proj_in_serial/add_198/U1_22/CO (FA1S)     0.40      41.75 f
+  u_datapath/u_proj_in_serial/add_198/U1_23/CO (FA1S)     0.40      42.16 f
+  u_datapath/u_proj_in_serial/add_198/U1_24/CO (FA1S)     0.40      42.56 f
+  u_datapath/u_proj_in_serial/add_198/U1_25/CO (FA1S)     0.40      42.96 f
+  u_datapath/u_proj_in_serial/add_198/U1_26/CO (FA1S)     0.40      43.37 f
+  u_datapath/u_proj_in_serial/add_198/U1_27/CO (FA1S)     0.40      43.77 f
+  u_datapath/u_proj_in_serial/add_198/U1_28/CO (FA1S)     0.40      44.18 f
+  u_datapath/u_proj_in_serial/add_198/U1_29/CO (FA1S)     0.40      44.58 f
+  u_datapath/u_proj_in_serial/add_198/U1_30/CO (FA1S)     0.40      44.98 f
+  u_datapath/u_proj_in_serial/add_198/U1_31/CO (FA1S)     0.40      45.39 f
+  u_datapath/u_proj_in_serial/add_198/U1_32/CO (FA1S)     0.40      45.79 f
+  u_datapath/u_proj_in_serial/add_198/U1_33/CO (FA1S)     0.40      46.20 f
+  u_datapath/u_proj_in_serial/add_198/U1_34/CO (FA1S)     0.40      46.60 f
+  u_datapath/u_proj_in_serial/add_198/U1_35/CO (FA1S)     0.40      47.00 f
+  u_datapath/u_proj_in_serial/add_198/U1_36/CO (FA1S)     0.40      47.41 f
+  u_datapath/u_proj_in_serial/add_198/U1_37/CO (FA1S)     0.41      47.81 f
+  u_datapath/u_proj_in_serial/add_198/U1_38/CO (FA1S)     0.41      48.22 f
+  u_datapath/u_proj_in_serial/add_198/U1_39/CO (FA1S)     0.41      48.62 f
+  u_datapath/u_proj_in_serial/add_198/U1_40/CO (FA1S)     0.41      49.03 f
+  u_datapath/u_proj_in_serial/add_198/U1_41/CO (FA1S)     0.41      49.44 f
+  u_datapath/u_proj_in_serial/add_198/U1_42/CO (FA1S)     0.41      49.84 f
+  u_datapath/u_proj_in_serial/add_198/U1_43/CO (FA1S)     0.41      50.25 f
+  u_datapath/u_proj_in_serial/add_198/U1_44/CO (FA1S)     0.41      50.66 f
+  u_datapath/u_proj_in_serial/add_198/U1_45/CO (FA1S)     0.41      51.06 f
+  u_datapath/u_proj_in_serial/add_198/U1_46/S (FA1S)      0.57      51.64 r
+  u_datapath/u_proj_in_serial/add_198/SUM[46] (mamba_linear_in1_serial_OUT_DIM8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_1_DW01_add_0_DW01_add_18)
+                                                          0.00      51.64 r
+  u_datapath/u_proj_in_serial/U795/O (NR2)                0.08      51.72 f
+  u_datapath/u_proj_in_serial/U796/O (AN3B2S)             0.20      51.92 f
+  u_datapath/u_proj_in_serial/U797/O (ND3)                0.15      52.07 r
+  u_datapath/u_proj_in_serial/U798/O (AN4B1S)             0.11      52.19 f
+  u_datapath/u_proj_in_serial/U799/O (AOI13HS)            0.28      52.47 r
+  u_datapath/u_proj_in_serial/U15/O (ND2)                 0.69      53.16 f
+  u_datapath/u_proj_in_serial/U589/O (ND3)                0.31      53.47 r
+  u_datapath/u_proj_in_serial/o_y_reg[0]/D (QDFFRBN)      0.00      53.47 r
+  data arrival time                                                 53.47
+
+  clock clk (rise edge)                                 100.00     100.00
+  clock network delay (ideal)                             0.50     100.50
+  clock uncertainty                                      -0.10     100.40
+  u_datapath/u_proj_in_serial/o_y_reg[0]/CK (QDFFRBN)     0.00     100.40 r
+  library setup time                                     -0.11     100.29
+  data required time                                               100.29
+  --------------------------------------------------------------------------
+  data required time                                               100.29
+  data arrival time                                                -53.47
+  --------------------------------------------------------------------------
+  slack (MET)                                                       46.82
+
+
+1
