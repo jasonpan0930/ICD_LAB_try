@@ -1,48 +1,33 @@
-# Simulation flow (32-pin `mamba_core`: mode / strobe)
+# Simulation (32-pin `mamba_core`: mode / strobe)
 
-## Top-level interface
+## Pattern (`Pattern/`)
 
-| Signal | Role |
-|--------|------|
-| `mode=1` | Weight-load: each `strobe` writes `w_data[7:0]` to auto-increment address |
-| `mode=0` | Inference: `strobe` = sample valid, `i_data[15:0]` = ECG feature |
-| `o_ready` / `o_valid` / `o_class` | Handshake and classification result |
+- `weights_ram.hex` — 285-byte weight image
+- `test_features.hex` — sample features
+- `test_mit_ground_truth.hex` — golden labels
 
-## Pattern files (`Pattern/`)
-
-| File | Role |
-|------|------|
-| `weights_ram.hex` | 285 bytes weight image |
-| `test_features.hex` | All sample features |
-| `test_mit_ground_truth.hex` | 2-bit golden class per sample |
-
-Regenerate weights: `python3 tools/gen_weights_ram_hex.py`
-
-## Testbenches (`Testbanch/`)
-
-| File | Description |
-|------|-------------|
-| `tb_smoke_18118.v` | **1 sample** (18118) — quick smoke test |
-| `tb_batch_w0_18118.v` | Batch eval, samples **18118 → end** |
-| `tb_batch_body.inc.v` | Shared batch logic |
-| `tb_define.vh` | Clock / FSDB options |
-
-## RTL sim (from `run/`)
+## RTL (`run/`)
 
 ```bash
-source source_run_smoke.sh              # 1 sample
-source source_run_batch_18118.sh        # 18118 → end
-source source_run_smoke.sh +fsdb +fsdbfile=wave.fsdb
+source source_run_smoke.sh           # tb_smoke_18118.v, 1 sample
+source source_run_batch_18118.sh     # tb_batch_w0_18118.v, 18118 → end
 ```
 
-## Gate-level sim (from `Synthesis/`)
+## Gate (`Synthesis/`)
+
+Netlist path is hard-coded in each `.sh` — edit if you use `CHIP_syn.v` instead of `CHIP_clkGating_syn.v`.
 
 ```bash
-cp -r ../run/Pattern .
-bash synthesis.sh
-
 source gate_sim_smoke.sh
 source gate_sim_batch_18118.sh
+```
 
-setenv GATE_SDF 1; source gate_sim_smoke.sh   # optional SDF
+Gate + SDF example (edit netlist/SDF path in the command as needed):
+
+```bash
+vcs -full64 -debug_access+all +v2k -sverilog +incdir+Testbanch \
+  +define+GATE_SIM +define+SDF +define+SDF_FILE=\"Netlist/CHIP_clkGating_syn.sdf\" \
+  +neg_tchk +notimingcheck +no_notifier +vcs+fsdbon \
+  Testbanch/tb_smoke_18118.v ./Netlist/CHIP_clkGating_syn.v \
+  fsa0m_a_generic_core_21.lib.src -R
 ```
