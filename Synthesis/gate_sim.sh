@@ -1,21 +1,13 @@
 #!/bin/csh
 # Gate-level simulation. Run from Synthesis/ after synthesis.tcl.
 #
-# Usage:
-#   source gate_sim.sh                              # smoke (sample 18118)
-#   source gate_sim.sh tb_batch_w0_18118.v          # batch from 18118
-#   source gate_sim.sh tb_batch_w0_full.v           # full batch
-#   source gate_sim.sh tb_batch_w143_18118.v
-#   source gate_sim.sh tb_batch_w143_full.v
-#   source gate_sim.sh tb_smoke_18118.v +fsdb +fsdbfile=gate.fsdb
-#
-# Or use convenience wrappers:
 #   source gate_sim_smoke.sh
 #   source gate_sim_batch_18118.sh
+#   source gate_sim_batch_18118.sh +fsdb +fsdbfile=gate.fsdb
 #
 # With SDF timing:
 #   setenv GATE_SDF 1
-#   source gate_sim.sh
+#   source gate_sim_smoke.sh
 #
 source /usr/cad/synopsys/CIC/vcs.cshrc
 
