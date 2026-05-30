@@ -6,283 +6,73 @@ Report : timing
         -max_paths 1
 Design : mamba_core
 Version: U-2022.12
-Date   : Sat May 30 20:50:27 2026
+Date   : Sun May 31 00:22:11 2026
 ****************************************
-
- # A fanout number of 1000 was used for high fanout net computations.
 
 Operating Conditions: WCCOM   Library: fsa0m_a_generic_core_ss1p62v125c
 Wire Load Model Mode: enclosed
 
-  Startpoint: u_datapath/u_proj_in_out_shared/out_row_reg[0]
+  Startpoint: u_datapath/u_x_proj_serial/idx_out_reg[1]
               (rising edge-triggered flip-flop clocked by clk)
-  Endpoint: u_datapath/u_proj_in_out_shared/o_proj_out_y_flat_reg[0]
-            (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_datapath/u_c_regfile/clk_gate_data_negedge_reg/latch
+            (positive level-sensitive latch clocked by clk)
   Path Group: clk
   Path Type: max
 
   Des/Clust/Port     Wire Load Model       Library
   ------------------------------------------------
-  mamba_core         G200K                 fsa0m_a_generic_core_tt1p8v25c
-  mamba_proj_in_out_shared_IN_DIM8_D_MODEL8_OUT_DIM4_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12
-                     enG30K                fsa0m_a_generic_core_tt1p8v25c
-  mamba_linear_shared_mult16x10_DATA_WIDTH16_W_SHIFTED_W10_MAC_PROD_W26
+  mamba_linear_in1_serial_OUT_DIM17_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12
                      enG5K                 fsa0m_a_generic_core_tt1p8v25c
-  mamba_linear_shared_mult32x17
-                     enG5K                 fsa0m_a_generic_core_tt1p8v25c
+  mamba_datapath_new_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_ADDR_WIDTH9
+                     enG100K               fsa0m_a_generic_core_tt1p8v25c
 
   Point                                                   Incr       Path
   --------------------------------------------------------------------------
   clock clk (rise edge)                                   0.00       0.00
   clock network delay (ideal)                             0.50       0.50
-  u_datapath/u_proj_in_out_shared/out_row_reg[0]/CK (QDFFRBN)
+  u_datapath/u_x_proj_serial/idx_out_reg[1]/CK (QDFFRBS)
                                                           0.00       0.50 r
-  u_datapath/u_proj_in_out_shared/out_row_reg[0]/Q (QDFFRBN)
-                                                          0.45       0.95 f
-  u_datapath/u_proj_in_out_shared/U32/O (NR2P)            0.75       1.70 r
-  u_datapath/u_proj_in_out_shared/U894/O (ND2S)           0.76       2.46 f
-  u_datapath/u_proj_in_out_shared/U895/O (ND3)            0.87       3.32 r
-  u_datapath/u_proj_in_out_shared/U910/O (NR2)            0.55       3.87 f
-  u_datapath/u_proj_in_out_shared/U911/O (AOI22S)         0.32       4.19 r
-  u_datapath/u_proj_in_out_shared/U921/O (ND3)            0.11       4.30 f
-  u_datapath/u_proj_in_out_shared/U922/O (AN4B1S)         0.15       4.46 r
-  u_datapath/u_proj_in_out_shared/U953/O (AN4B1S)         0.32       4.78 r
-  u_datapath/u_proj_in_out_shared/U954/O (ND2S)           0.16       4.93 f
-  u_datapath/u_proj_in_out_shared/sub_219/U2_1/CO (FA1S)
-                                                          0.43       5.36 f
-  u_datapath/u_proj_in_out_shared/sub_219/U2_2/CO (FA1S)
-                                                          0.42       5.79 f
-  u_datapath/u_proj_in_out_shared/sub_219/U2_3/CO (FA1S)
-                                                          0.42       6.21 f
-  u_datapath/u_proj_in_out_shared/sub_219/U2_4/CO (FA1S)
-                                                          0.42       6.64 f
-  u_datapath/u_proj_in_out_shared/sub_219/U2_5/CO (FA1S)
-                                                          0.42       7.06 f
-  u_datapath/u_proj_in_out_shared/sub_219/U2_6/CO (FA1S)
-                                                          0.42       7.48 f
-  u_datapath/u_proj_in_out_shared/sub_219/U2_7/CO (FA1S)
-                                                          0.46       7.95 f
-  u_datapath/u_proj_in_out_shared/U66/O (OR2)             0.22       8.17 f
-  u_datapath/u_proj_in_out_shared/U74/O (OAI22S)          0.63       8.80 r
-  u_datapath/u_proj_in_out_shared/U521/O (AOI13HS)        0.09       8.89 f
-  u_datapath/u_proj_in_out_shared/U522/O (ND2S)           0.42       9.31 r
-  u_datapath/u_proj_in_out_shared/u_shared_mac16x10/b[8] (mamba_linear_shared_mult16x10_DATA_WIDTH16_W_SHIFTED_W10_MAC_PROD_W26)
-                                                          0.00       9.31 r
-  u_datapath/u_proj_in_out_shared/u_shared_mac16x10/U82/O (INV1S)
-                                                          0.73      10.04 f
-  u_datapath/u_proj_in_out_shared/u_shared_mac16x10/U169/O (NR2)
-                                                          0.32      10.35 r
-  u_datapath/u_proj_in_out_shared/u_shared_mac16x10/mult_17/S3_2_8/S (FA1S)
-                                                          0.42      10.78 f
-  u_datapath/u_proj_in_out_shared/u_shared_mac16x10/mult_17/S2_3_7/CO (FA1S)
-                                                          0.41      11.19 f
-  u_datapath/u_proj_in_out_shared/u_shared_mac16x10/mult_17/S2_4_7/CO (FA1S)
-                                                          0.44      11.63 f
-  u_datapath/u_proj_in_out_shared/u_shared_mac16x10/mult_17/S2_5_7/CO (FA1S)
-                                                          0.44      12.08 f
-  u_datapath/u_proj_in_out_shared/u_shared_mac16x10/mult_17/S2_6_7/CO (FA1S)
-                                                          0.44      12.52 f
-  u_datapath/u_proj_in_out_shared/u_shared_mac16x10/mult_17/S2_7_7/CO (FA1S)
-                                                          0.44      12.97 f
-  u_datapath/u_proj_in_out_shared/u_shared_mac16x10/mult_17/S2_8_7/S (FA1S)
-                                                          0.56      13.52 r
-  u_datapath/u_proj_in_out_shared/u_shared_mac16x10/mult_17/S2_9_6/S (FA1S)
-                                                          0.41      13.94 f
-  u_datapath/u_proj_in_out_shared/u_shared_mac16x10/mult_17/S2_10_5/S (FA1S)
-                                                          0.53      14.47 r
-  u_datapath/u_proj_in_out_shared/u_shared_mac16x10/mult_17/S2_11_4/S (FA1S)
-                                                          0.41      14.88 f
-  u_datapath/u_proj_in_out_shared/u_shared_mac16x10/mult_17/S2_12_3/S (FA1S)
-                                                          0.53      15.41 r
-  u_datapath/u_proj_in_out_shared/u_shared_mac16x10/mult_17/S2_13_2/S (FA1S)
-                                                          0.41      15.82 f
-  u_datapath/u_proj_in_out_shared/u_shared_mac16x10/mult_17/S2_14_1/S (FA1S)
-                                                          0.53      16.35 r
-  u_datapath/u_proj_in_out_shared/u_shared_mac16x10/mult_17/S4_0/S (FA1S)
-                                                          0.45      16.80 f
-  u_datapath/u_proj_in_out_shared/u_shared_mac16x10/U17/O (MOAI1S)
-                                                          0.41      17.21 r
-  u_datapath/u_proj_in_out_shared/u_shared_mac16x10/U18/O (NR2)
-                                                          0.20      17.41 f
-  u_datapath/u_proj_in_out_shared/u_shared_mac16x10/intadd_14/U7/CO (FA1S)
-                                                          0.45      17.87 f
-  u_datapath/u_proj_in_out_shared/u_shared_mac16x10/intadd_14/U6/CO (FA1S)
-                                                          0.40      18.27 f
-  u_datapath/u_proj_in_out_shared/u_shared_mac16x10/intadd_14/U5/CO (FA1S)
-                                                          0.40      18.66 f
-  u_datapath/u_proj_in_out_shared/u_shared_mac16x10/intadd_14/U4/CO (FA1S)
-                                                          0.40      19.06 f
-  u_datapath/u_proj_in_out_shared/u_shared_mac16x10/intadd_14/U3/CO (FA1S)
-                                                          0.40      19.46 f
-  u_datapath/u_proj_in_out_shared/u_shared_mac16x10/intadd_14/U2/CO (FA1S)
-                                                          0.36      19.82 f
-  u_datapath/u_proj_in_out_shared/u_shared_mac16x10/U2/O (AO12)
-                                                          0.28      20.10 f
-  u_datapath/u_proj_in_out_shared/u_shared_mac16x10/U77/CO (FA1S)
-                                                          0.37      20.48 f
-  u_datapath/u_proj_in_out_shared/u_shared_mac16x10/U6/CO (FA1S)
-                                                          0.47      20.95 f
-  u_datapath/u_proj_in_out_shared/u_shared_mac16x10/U3/O (MAO222)
-                                                          0.29      21.24 f
-  u_datapath/u_proj_in_out_shared/u_shared_mac16x10/U4/O (MOAI1)
-                                                          0.97      22.20 r
-  u_datapath/u_proj_in_out_shared/u_shared_mac16x10/p[25] (mamba_linear_shared_mult16x10_DATA_WIDTH16_W_SHIFTED_W10_MAC_PROD_W26)
-                                                          0.00      22.20 r
-  u_datapath/u_proj_in_out_shared/U49/O (INV1S)           1.11      23.31 f
-  u_datapath/u_proj_in_out_shared/U1866/O (MOAI1S)        0.52      23.83 r
-  u_datapath/u_proj_in_out_shared/u_shared_scale32x17/a[25] (mamba_linear_shared_mult32x17)
-                                                          0.00      23.83 r
-  u_datapath/u_proj_in_out_shared/u_shared_scale32x17/U386/O (INV1S)
-                                                          0.83      24.67 f
-  u_datapath/u_proj_in_out_shared/u_shared_scale32x17/U389/O (NR2)
-                                                          0.40      25.06 r
-  u_datapath/u_proj_in_out_shared/u_shared_scale32x17/mult_28/S2_25_7/S (FA1S)
-                                                          0.43      25.49 f
-  u_datapath/u_proj_in_out_shared/u_shared_scale32x17/mult_28/S2_26_6/S (FA1S)
-                                                          0.53      26.02 r
-  u_datapath/u_proj_in_out_shared/u_shared_scale32x17/mult_28/S2_27_5/S (FA1S)
-                                                          0.41      26.43 f
-  u_datapath/u_proj_in_out_shared/u_shared_scale32x17/mult_28/S2_28_4/S (FA1S)
-                                                          0.53      26.96 r
-  u_datapath/u_proj_in_out_shared/u_shared_scale32x17/mult_28/S2_29_3/S (FA1S)
-                                                          0.41      27.37 f
-  u_datapath/u_proj_in_out_shared/u_shared_scale32x17/mult_28/S2_30_2/S (FA1S)
-                                                          0.53      27.90 r
-  u_datapath/u_proj_in_out_shared/u_shared_scale32x17/mult_28/S4_1/S (FA1S)
-                                                          0.45      28.36 f
-  u_datapath/u_proj_in_out_shared/u_shared_scale32x17/U30/O (MOAI1S)
-                                                          0.41      28.77 r
-  u_datapath/u_proj_in_out_shared/u_shared_scale32x17/U31/O (NR2)
-                                                          0.20      28.97 f
-  u_datapath/u_proj_in_out_shared/u_shared_scale32x17/intadd_15/U14/CO (FA1S)
-                                                          0.45      29.42 f
-  u_datapath/u_proj_in_out_shared/u_shared_scale32x17/intadd_15/U13/CO (FA1S)
-                                                          0.40      29.82 f
-  u_datapath/u_proj_in_out_shared/u_shared_scale32x17/intadd_15/U12/CO (FA1S)
-                                                          0.40      30.22 f
-  u_datapath/u_proj_in_out_shared/u_shared_scale32x17/intadd_15/U11/CO (FA1S)
-                                                          0.40      30.61 f
-  u_datapath/u_proj_in_out_shared/u_shared_scale32x17/intadd_15/U10/CO (FA1S)
-                                                          0.40      31.01 f
-  u_datapath/u_proj_in_out_shared/u_shared_scale32x17/intadd_15/U9/CO (FA1S)
-                                                          0.40      31.41 f
-  u_datapath/u_proj_in_out_shared/u_shared_scale32x17/intadd_15/U8/CO (FA1S)
-                                                          0.40      31.81 f
-  u_datapath/u_proj_in_out_shared/u_shared_scale32x17/intadd_15/U7/CO (FA1S)
-                                                          0.40      32.21 f
-  u_datapath/u_proj_in_out_shared/u_shared_scale32x17/intadd_15/U6/CO (FA1S)
-                                                          0.40      32.61 f
-  u_datapath/u_proj_in_out_shared/u_shared_scale32x17/intadd_15/U5/CO (FA1S)
-                                                          0.40      33.00 f
-  u_datapath/u_proj_in_out_shared/u_shared_scale32x17/intadd_15/U4/CO (FA1S)
-                                                          0.40      33.40 f
-  u_datapath/u_proj_in_out_shared/u_shared_scale32x17/intadd_15/U3/CO (FA1S)
-                                                          0.40      33.80 f
-  u_datapath/u_proj_in_out_shared/u_shared_scale32x17/intadd_15/U2/CO (FA1S)
-                                                          0.37      34.17 f
-  u_datapath/u_proj_in_out_shared/u_shared_scale32x17/U13/O (NR2)
-                                                          0.22      34.39 r
-  u_datapath/u_proj_in_out_shared/u_shared_scale32x17/U17/O (NR2)
-                                                          0.19      34.57 f
-  u_datapath/u_proj_in_out_shared/u_shared_scale32x17/U21/O (MOAI1S)
-                                                          1.27      35.85 r
-  u_datapath/u_proj_in_out_shared/u_shared_scale32x17/p[47] (mamba_linear_shared_mult32x17)
-                                                          0.00      35.85 r
-  u_datapath/u_proj_in_out_shared/U15/O (INV1S)           1.44      37.29 f
-  u_datapath/u_proj_in_out_shared/U16/O (INV1S)           1.70      38.99 r
-  u_datapath/u_proj_in_out_shared/U88/O (AOI22S)          0.17      39.16 f
-  u_datapath/u_proj_in_out_shared/U95/O (ND2S)            0.62      39.78 r
-  u_datapath/u_proj_in_out_shared/U278/O (AOI22S)         0.16      39.93 f
-  u_datapath/u_proj_in_out_shared/U279/O (ND2S)           0.30      40.24 r
-  u_datapath/u_proj_in_out_shared/U280/O (AO22)           0.31      40.55 r
-  u_datapath/u_proj_in_out_shared/U1935/O (MOAI1S)        0.20      40.75 f
-  u_datapath/u_proj_in_out_shared/add_229/U1_16/CO (FA1S)
-                                                          0.48      41.23 f
-  u_datapath/u_proj_in_out_shared/add_229/U1_17/CO (FA1S)
-                                                          0.43      41.66 f
-  u_datapath/u_proj_in_out_shared/add_229/U1_18/CO (FA1S)
-                                                          0.43      42.09 f
-  u_datapath/u_proj_in_out_shared/add_229/U1_19/CO (FA1S)
-                                                          0.43      42.51 f
-  u_datapath/u_proj_in_out_shared/add_229/U1_20/CO (FA1S)
-                                                          0.43      42.94 f
-  u_datapath/u_proj_in_out_shared/add_229/U1_21/CO (FA1S)
-                                                          0.43      43.37 f
-  u_datapath/u_proj_in_out_shared/add_229/U1_22/CO (FA1S)
-                                                          0.43      43.80 f
-  u_datapath/u_proj_in_out_shared/add_229/U1_23/CO (FA1S)
-                                                          0.43      44.22 f
-  u_datapath/u_proj_in_out_shared/add_229/U1_24/CO (FA1S)
-                                                          0.43      44.65 f
-  u_datapath/u_proj_in_out_shared/add_229/U1_25/CO (FA1S)
-                                                          0.43      45.08 f
-  u_datapath/u_proj_in_out_shared/add_229/U1_26/CO (FA1S)
-                                                          0.43      45.51 f
-  u_datapath/u_proj_in_out_shared/add_229/U1_27/CO (FA1S)
-                                                          0.43      45.93 f
-  u_datapath/u_proj_in_out_shared/add_229/U1_28/CO (FA1S)
-                                                          0.43      46.36 f
-  u_datapath/u_proj_in_out_shared/add_229/U1_29/CO (FA1S)
-                                                          0.43      46.79 f
-  u_datapath/u_proj_in_out_shared/add_229/U1_30/CO (FA1S)
-                                                          0.43      47.22 f
-  u_datapath/u_proj_in_out_shared/add_229/U1_31/CO (FA1S)
-                                                          0.43      47.64 f
-  u_datapath/u_proj_in_out_shared/add_229/U1_32/CO (FA1S)
-                                                          0.43      48.07 f
-  u_datapath/u_proj_in_out_shared/add_229/U1_33/CO (FA1S)
-                                                          0.43      48.50 f
-  u_datapath/u_proj_in_out_shared/add_229/U1_34/CO (FA1S)
-                                                          0.43      48.93 f
-  u_datapath/u_proj_in_out_shared/add_229/U1_35/CO (FA1S)
-                                                          0.43      49.35 f
-  u_datapath/u_proj_in_out_shared/add_229/U1_36/CO (FA1S)
-                                                          0.43      49.78 f
-  u_datapath/u_proj_in_out_shared/add_229/U1_37/CO (FA1S)
-                                                          0.43      50.21 f
-  u_datapath/u_proj_in_out_shared/add_229/U1_38/CO (FA1S)
-                                                          0.43      50.64 f
-  u_datapath/u_proj_in_out_shared/add_229/U1_39/CO (FA1S)
-                                                          0.43      51.06 f
-  u_datapath/u_proj_in_out_shared/add_229/U1_40/CO (FA1S)
-                                                          0.43      51.49 f
-  u_datapath/u_proj_in_out_shared/add_229/U1_41/CO (FA1S)
-                                                          0.43      51.92 f
-  u_datapath/u_proj_in_out_shared/add_229/U1_42/CO (FA1S)
-                                                          0.43      52.35 f
-  u_datapath/u_proj_in_out_shared/add_229/U1_43/CO (FA1S)
-                                                          0.43      52.77 f
-  u_datapath/u_proj_in_out_shared/add_229/U1_44/CO (FA1S)
-                                                          0.43      53.20 f
-  u_datapath/u_proj_in_out_shared/add_229/U1_45/CO (FA1S)
-                                                          0.43      53.63 f
-  u_datapath/u_proj_in_out_shared/add_229/U1_46/S (FA1S)
-                                                          0.62      54.25 r
-  u_datapath/u_proj_in_out_shared/U1130/O (ND3)           0.12      54.37 f
-  u_datapath/u_proj_in_out_shared/U1134/O (NR2)           0.17      54.54 r
-  u_datapath/u_proj_in_out_shared/U1135/O (ND3)           0.10      54.64 f
-  u_datapath/u_proj_in_out_shared/U1136/O (NR2)           0.16      54.80 r
-  u_datapath/u_proj_in_out_shared/U1137/O (ND3)           0.10      54.90 f
-  u_datapath/u_proj_in_out_shared/U1138/O (NR2)           0.16      55.06 r
-  u_datapath/u_proj_in_out_shared/U1139/O (ND3)           0.10      55.17 f
-  u_datapath/u_proj_in_out_shared/U1140/O (ND2S)          1.16      56.32 r
-  u_datapath/u_proj_in_out_shared/U1821/O (OA12)          0.41      56.73 r
-  u_datapath/u_proj_in_out_shared/o_proj_out_y_flat_reg[0]/D (QDFFRBN)
-                                                          0.00      56.73 r
-  data arrival time                                                 56.73
+  u_datapath/u_x_proj_serial/idx_out_reg[1]/Q (QDFFRBS)
+                                                          0.33       0.83 f
+  u_datapath/u_x_proj_serial/o_index[1] (mamba_linear_in1_serial_OUT_DIM17_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12)
+                                                          0.00       0.83 f
+  u_datapath/U2552/O (NR3)                                0.33       1.16 r
+  u_datapath/U2553/O (AN2)                                0.29       1.45 r
+  u_datapath/U2554/O (ND3S)                               0.22       1.67 f
+  u_datapath/U2972/O (ND2)                                0.23       1.90 r
+  u_datapath/u_c_regfile/input_valid (regfile_WIDTH16_SIZE8_1)
+                                                          0.00       1.90 r
+  u_datapath/u_c_regfile/clk_gate_data_negedge_reg/EN (SNPS_CLOCK_GATE_LOW_regfile_WIDTH16_SIZE8_0_1)
+                                                          0.00       1.90 r
+  u_datapath/u_c_regfile/clk_gate_data_negedge_reg/latch/D (QDLHN)
+                                                          0.00       1.90 r
+  data arrival time                                                  1.90
 
-  clock clk (rise edge)                                 100.00     100.00
-  clock network delay (ideal)                             0.50     100.50
-  clock uncertainty                                      -0.10     100.40
-  u_datapath/u_proj_in_out_shared/o_proj_out_y_flat_reg[0]/CK (QDFFRBN)
-                                                          0.00     100.40 r
-  library setup time                                     -0.11     100.29
-  data required time                                               100.29
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.50       0.50
+  clock uncertainty                                      -0.10       0.40
+  u_datapath/u_c_regfile/clk_gate_data_negedge_reg/latch/CK (QDLHN)
+                                                          0.00       0.40 r
+  time borrowed from endpoint                             1.50       1.90
+  data required time                                                 1.90
   --------------------------------------------------------------------------
-  data required time                                               100.29
-  data arrival time                                                -56.73
+  data required time                                                 1.90
+  data arrival time                                                 -1.90
   --------------------------------------------------------------------------
-  slack (MET)                                                       43.56
+  slack (MET)                                                        0.00
+
+  Time Borrowing Information
+  --------------------------------------------------------------
+  clk nominal pulse width                                50.00   
+  library setup time                                     -0.03   
+  --------------------------------------------------------------
+  max time borrow                                        49.97   
+  --------------------------------------------------------------
+  actual time borrow                                      1.50   
+  clock uncertainty                                      -0.10   
+  --------------------------------------------------------------
+  time given to startpoint                                1.40   
+  --------------------------------------------------------------
 
 
 1
