@@ -6,7 +6,7 @@ Report : timing
         -max_paths 1
 Design : mamba_core
 Version: U-2022.12
-Date   : Sun May 31 00:22:11 2026
+Date   : Sun May 31 04:21:19 2026
 ****************************************
 
 Operating Conditions: WCCOM   Library: fsa0m_a_generic_core_ss1p62v125c
@@ -14,7 +14,7 @@ Wire Load Model Mode: enclosed
 
   Startpoint: u_datapath/u_x_proj_serial/idx_out_reg[1]
               (rising edge-triggered flip-flop clocked by clk)
-  Endpoint: u_datapath/u_c_regfile/clk_gate_data_negedge_reg/latch
+  Endpoint: u_datapath/u_dt_raw_regfile/clk_gate_data_negedge_reg/latch
             (positive level-sensitive latch clocked by clk)
   Path Group: clk
   Path Type: max
@@ -29,49 +29,50 @@ Wire Load Model Mode: enclosed
   Point                                                   Incr       Path
   --------------------------------------------------------------------------
   clock clk (rise edge)                                   0.00       0.00
-  clock network delay (ideal)                             0.50       0.50
+  clock network delay (ideal)                             0.00       0.00
   u_datapath/u_x_proj_serial/idx_out_reg[1]/CK (QDFFRBS)
-                                                          0.00       0.50 r
+                                                          0.00       0.00 r
   u_datapath/u_x_proj_serial/idx_out_reg[1]/Q (QDFFRBS)
-                                                          0.33       0.83 f
+                                                          0.33       0.33 f
   u_datapath/u_x_proj_serial/o_index[1] (mamba_linear_in1_serial_OUT_DIM17_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12)
-                                                          0.00       0.83 f
-  u_datapath/U2552/O (NR3)                                0.33       1.16 r
-  u_datapath/U2553/O (AN2)                                0.29       1.45 r
-  u_datapath/U2554/O (ND3S)                               0.22       1.67 f
-  u_datapath/U2972/O (ND2)                                0.23       1.90 r
-  u_datapath/u_c_regfile/input_valid (regfile_WIDTH16_SIZE8_1)
-                                                          0.00       1.90 r
-  u_datapath/u_c_regfile/clk_gate_data_negedge_reg/EN (SNPS_CLOCK_GATE_LOW_regfile_WIDTH16_SIZE8_0_1)
-                                                          0.00       1.90 r
-  u_datapath/u_c_regfile/clk_gate_data_negedge_reg/latch/D (QDLHN)
-                                                          0.00       1.90 r
-  data arrival time                                                  1.90
+                                                          0.00       0.33 f
+  u_datapath/U647/O (INV1S)                               0.11       0.44 r
+  u_datapath/U648/O (ND3)                                 0.15       0.59 f
+  u_datapath/U649/O (NR2)                                 0.26       0.85 r
+  u_datapath/U650/O (INV1S)                               0.18       1.04 f
+  u_datapath/U651/O (NR2)                                 0.39       1.43 r
+  u_datapath/u_dt_raw_regfile/input_valid (regfile_WIDTH16_SIZE1)
+                                                          0.00       1.43 r
+  u_datapath/u_dt_raw_regfile/clk_gate_data_negedge_reg/EN (SNPS_CLOCK_GATE_LOW_regfile_WIDTH16_SIZE1)
+                                                          0.00       1.43 r
+  u_datapath/u_dt_raw_regfile/clk_gate_data_negedge_reg/latch/D (QDLHN)
+                                                          0.00       1.43 r
+  data arrival time                                                  1.43
 
   clock clk (rise edge)                                   0.00       0.00
-  clock network delay (ideal)                             0.50       0.50
-  clock uncertainty                                      -0.10       0.40
-  u_datapath/u_c_regfile/clk_gate_data_negedge_reg/latch/CK (QDLHN)
-                                                          0.00       0.40 r
-  time borrowed from endpoint                             1.50       1.90
-  data required time                                                 1.90
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                      -0.05      -0.05
+  u_datapath/u_dt_raw_regfile/clk_gate_data_negedge_reg/latch/CK (QDLHN)
+                                                          0.00      -0.05 r
+  time borrowed from endpoint                             1.48       1.43
+  data required time                                                 1.43
   --------------------------------------------------------------------------
-  data required time                                                 1.90
-  data arrival time                                                 -1.90
+  data required time                                                 1.43
+  data arrival time                                                 -1.43
   --------------------------------------------------------------------------
   slack (MET)                                                        0.00
 
   Time Borrowing Information
   --------------------------------------------------------------
-  clk nominal pulse width                                50.00   
-  library setup time                                     -0.03   
+  clk nominal pulse width                                15.00   
+  library setup time                                     -0.05   
   --------------------------------------------------------------
-  max time borrow                                        49.97   
+  max time borrow                                        14.95   
   --------------------------------------------------------------
-  actual time borrow                                      1.50   
-  clock uncertainty                                      -0.10   
+  actual time borrow                                      1.48   
+  clock uncertainty                                      -0.05   
   --------------------------------------------------------------
-  time given to startpoint                                1.40   
+  time given to startpoint                                1.43   
   --------------------------------------------------------------
 
 

@@ -8,7 +8,7 @@
 `endif
 `ifdef SDF
 `ifndef SDF_FILE
-`define SDF_FILE "Netlist/CHIP_syn.sdf"
+`define SDF_FILE "Netlist/CHIP_cldGating_syn.sdf"
 `endif
 `endif
 

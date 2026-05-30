@@ -31,7 +31,7 @@ link
 # 2. Optimization Constraints (時序與環境約束)
 # ==========================================
 # ⚠️ 注意：這裡假設你的 Mamba 時鐘腳位叫做 "clk"。如果叫其他名字，請把 "clk" 換掉。
-create_clock -period 100 -name "clk" -waveform {0 50} [get_ports clk]
+create_clock -period 30 -name "clk" -waveform {0 15} [get_ports clk]
 set_dont_touch_network [get_ports clk]
 # set_fix_hold [get_clocks clk]
 
