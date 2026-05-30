@@ -82,11 +82,9 @@ check_design
 
 set_clock_gating_style \
     -minimum_bitwidth 8 \
-    -max_fanout 64 \
-    -control
+    -max_fanout 64 
 
 set_app_var compile_ultra_ungroup_dw false
-set_app_var compile_auto_ungroup_delay_num_cells 0
 
 compile_ultra -gate_clock -area_high_effort_script
 compile_ultra -incremental -area_high_effort_script
