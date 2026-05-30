@@ -10,4 +10,4 @@ set CORE_FILES = ( \
     Core/regfile.v \
 )
 set VCS_OPTS = (-full64 +v2k -sverilog +vcs+fsdbon +incdir+Core +incdir+Testbanch)
-vcs $VCS_OPTS $CORE_FILES Testbanch/tb_gate_sdf_18118.v -R $argv
+vcs $VCS_OPTS $CORE_FILES Testbanch/tb_batch_w0_18118.v -R $argv

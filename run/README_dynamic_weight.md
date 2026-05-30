@@ -1,78 +1,76 @@
-# Dynamic weight loading (run flow)
+# Simulation flow (32-pin `mamba_core`: mode / strobe)
 
-This document describes how weights are supplied to `mamba_core` without baking them into RTL compile, and how to simulate it.
+## Top-level interface
 
-## Reset: `rst_n` vs `rst_weights_n`
+| Signal | Role |
+|--------|------|
+| `mode=1` | Weight-load: each `strobe` writes `w_data[7:0]` to auto-increment address |
+| `mode=0` | Inference: `strobe` = sample valid, `i_data[15:0]` = ECG feature |
+| `o_ready` / `o_valid` / `o_class` | Handshake and classification result |
 
-- **`rst_n`**: Resets the **core FSM** (`mamba_core` sequential logic: `step_cnt`, `h_reg`, `y_pool_reg`, `o_valid`, etc.) and the **datapath** (`mamba_datapath_new` internal registers). Use **once per inference sample** so each ECG starts from a clean hidden state.
-- **`rst_weights_n`**: Resets **only** `mamba_weight_storage` (all weight / constant registers to zero). Assert low when you want to discard bus-loaded weights; otherwise keep it high so **one 369-byte bus load** can be reused across many samples while you only pulse **`rst_n`** between samples.
-- **Legacy testbenches** that do not load weights over the bus tie `rst_weights_n` to `rst_n` so behavior matches a single global reset.
-
-## RTL behavior
-
-- **`mamba_weight_storage`** holds all trainable constants as registers. On **`rst_weights_n` low** (async), every weight register is cleared to **zero**. **`rst_n` does not clear weights.** There is **no** `` `include `` of weight constants in the `run/Core` simulation RTL.
-- **`run/tools/mamba_datapath_params.vh`** is a **reference only** copy of the original weight/bias constants (for humans, scripts, and optional legacy `` `include `` in `Synthesis/Core/mamba_datapath.v`). Design Compiler resolves it via `search_path` in `Synthesis/synthesis.tcl` (`../run/tools`).
-- Before first meaningful inference, assert **`rst_weights_n` low then high**, **bus-write 369 bytes**, then release **`rst_n`**. Between samples, pulse **`rst_n` only** if weights are already loaded.
-- Load port: **`w_we`** (strobe), **`w_addr`** byte `0..368`, **`w_data`** 8-bit (see `mamba_weight_storage.v` map).
-- **`mamba_core`** exposes `rst_n`, **`rst_weights_n`**, `w_we`, `w_addr`, `w_data` (width `ADDR_WIDTH`, default 9).
-
-## Pattern files
+## Pattern files (`Pattern/`)
 
 | File | Role |
 |------|------|
-| `Pattern/weights_ram.hex` | 369 lines, one hex byte per line, same byte order as `w_addr` in `mamba_weight_storage`. |
-| `Pattern/test_features.hex` | Features for all test samples. |
-| `Pattern/test_mit_ground_truth.hex` | 2-bit class per sample (golden). |
+| `weights_ram.hex` | 285 bytes, default weight set |
+| `weights_ram_143.hex` | Alternate weight set |
+| `test_features.hex` | All sample features |
+| `test_mit_ground_truth.hex` | 2-bit golden class per sample |
 
-Regenerate `weights_ram.hex` from the Python reference (constants aligned with `run/tools/mamba_datapath_params.vh`):
+Regenerate weights:
 
 ```bash
 python3 tools/gen_weights_ram_hex.py
+python3 tools/gen_weights_ram_143_hex.py
 ```
 
-(Run from the `run/` directory.)
+## Testbenches (`Testbanch/`)
 
-## Testbenches
+| File | Description |
+|------|-------------|
+| `tb_smoke_18118.v` | **1 sample** (18118) — quick RTL / gate smoke test |
+| `tb_batch_w0_18118.v` | Batch with `weights_ram.hex`, samples **18118 → end** |
+| `tb_batch_w0_full.v` | Batch with `weights_ram.hex`, samples **0 → end** |
+| `tb_batch_w143_18118.v` | Batch with `weights_ram_143.hex`, from **18118** |
+| `tb_batch_w143_full.v` | Batch with `weights_ram_143.hex`, from **0** |
+| `tb_batch_body.inc.v` | Shared batch logic (included by `tb_batch_*.v`) |
+| `tb_define.vh` | Clock / FSDB compile-time options |
 
-### `Testbanch/tb_mit_sick.v` (batch MIT-BIH, `source_run.sh`)
+## Run scripts (from `run/`)
 
-Weights are **bus-loaded once** after `rst_weights_n` / `rst_n` power-up; each sample only **pulses `rst_n`** (datapath + FSM) before feeding 187 beats—**no per-sample weight reload**.
+| Script | TB | Use case |
+|--------|-----|----------|
+| `source_run_smoke.sh` | `tb_smoke_18118.v` | Fast sanity check (1 sample) |
+| `source_run_batch_18118.sh` | `tb_batch_w0_18118.v` | Main batch eval from 18118 |
+| `source_run_batch_full.sh` | `tb_batch_w0_full.v` | Full dataset batch eval |
+| `source_run_batch_w143_18118.sh` | `tb_batch_w143_18118.v` | w143 weights, from 18118 |
+| `source_run_batch_w143_full.sh` | `tb_batch_w143_full.v` | w143 weights, full dataset |
 
 ```bash
-source source_run.sh
+source source_run_smoke.sh
+source source_run_batch_18118.sh
+source source_run_smoke.sh +fsdb +fsdbfile=wave.fsdb
 ```
 
-### `Testbanch/tb_mit_sick_weight_dyn.v` (quick, default 100 samples)
+## Gate-level sim (from `Synthesis/`)
 
-- **Phase 1–2**: After POR (`rst_weights_n` / `rst_n`), **bus-load once**; each of `SAMPLE_COUNT` samples: **`rst_n` only → feed** vs golden.
-- **Phase 3–4**: XOR `weight_mem`, **bus-reload once** into DUT, same per-sample **`rst_n` → feed**; compare vs Phase 1–2 baseline.
-- **Phase 5**: `$readmemh`, **bus-reload once**, one-sample **`rst_n` → feed** check.
-
-Compile/run (CIC environment):
+After `bash synthesis.sh` produces `Netlist/CHIP_syn.v`:
 
 ```bash
-source source_run_tb_weight_dyn.sh
+cp -r ../run/Pattern .
+
+# smoke (1 sample)
+source gate_sim_smoke.sh
+
+# batch (same TBs as RTL run/)
+source gate_sim_batch_18118.sh
+source gate_sim_batch_full.sh
+source gate_sim_batch_w143_18118.sh
+source gate_sim_batch_w143_full.sh
+
+# or pass TB name directly
+source gate_sim.sh tb_batch_w0_18118.v
+
+# optional SDF timing
+setenv GATE_SDF 1; source gate_sim_smoke.sh
 ```
-
-### `Testbanch/tb_mit_sick_weight_dyn_full.v` (18118 → end, single pass)
-
-- **`$readmemh`** then **`rst_weights_n` deassert → bus-load 369B once → `rst_n` high**; for each sample **`rst_n` pulse only → feed** (weights stay loaded). **Every sample prints one `[WEIGHT_TAIL] OK` or `NG` line.**
-
-```bash
-source source_run_tb_weight_dyn_full.sh
-```
-
-## Compile-time pattern path overrides
-
-`tb_mit_sick_weight_dyn.v` and `tb_mit_sick_weight_dyn_full.v` use `` `define `` defaults for `$readmemh` paths. Override at **VCS compile** time, for example:
-
-```bash
-vcs ... +define+PATTERN_WEIGHTS_HEX=\"/path/to/other_weights.hex\"
-```
-
-Similarly: `PATTERN_FEATURES_HEX`, `PATTERN_GOLDEN_HEX`. Escape quotes as required by your shell. (`tb_mit_sick.v` uses fixed paths unless you edit it.)
-
-## Notes
-
-- Any TB that relies on golden vectors **must** load weights after **`rst_weights_n`** release; otherwise the DUT runs with all-zero weights.
-- Legacy **`Synthesis/Core/mamba_datapath.v`** still `` `include "mamba_datapath_params.vh"``; the file is resolved from **`run/tools/`** when using the updated `synthesis.tcl` / `synthesis_quick.tcl` `search_path`. The main synthesis flow uses **`mamba_datapath_new.v`**, which does not include the params header.

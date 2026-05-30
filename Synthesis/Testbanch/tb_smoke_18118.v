@@ -1,41 +1,30 @@
 `timescale 1ns / 1ps
 //
-// Sample 18118 only: load weights -> reset -> 187 beats -> OK/NG -> $finish.
+// Smoke test: sample 18118 only — load weights, reset, 187 beats, OK/NG, $finish.
+// Works for RTL (default) and gate-level (+define+GATE_SIM).
 //
 // RTL (from run/):
-//   source source_run_18118.sh
-//   source source_run_18118.sh +fsdb
-//   source source_run_18118.sh +fsdb +fsdbfile=tb_18118.fsdb
+//   source source_run_smoke.sh
+//   source source_run_smoke.sh +fsdb +fsdbfile=tb_smoke_18118.fsdb
 //
-//   verdi -sv Testbanch/tb_gate_sdf_18118.v Core/mamba_core.v \
-//     -ssf tb_18118.fsdb -top tb_gate_sdf_18118 &
-//
-// Gate, no SDF (from Synthesis/, after cp ../run/Testbanch and ../run/Pattern):
-//   vcs ./Testbanch/tb_gate_sdf_18118.v ./Netlist/mamba_core_syn.v \
-//     fsa0m_a_generic_core_21.lib.src -full64 -debug_access+all +v2k -sverilog \
-//     +incdir+Testbanch +define+GATE_SIM +define+GATE_TB_FSDB +vcs+fsdbon \
-//     -o simv_gate18118_nosdf
-//   ./simv_gate18118_nosdf +fsdbfile=gate_18118_nosdf.fsdb
-//
-// Gate + SDF:
-//   vcs ... +define+GATE_SIM +define+GATE_TB_FSDB +define+SDF +vcs+fsdbon \
-//     +neg_tchk +notimingcheck +no_notifier -o simv_gate18118_sdf
-//   ./simv_gate18118_sdf +fsdbfile=gate_18118_sdf.fsdb
+// Gate (from Synthesis/, after synthesis + Pattern/ copied):
+//   source gate_sim.sh
+//   source gate_sim.sh +fsdb +fsdbfile=gate_smoke_18118.fsdb
 //
 
 `include "tb_define.vh"
 
 `ifndef FSDB_OUT_FILE
-`define FSDB_OUT_FILE "tb_18118.fsdb"
+`define FSDB_OUT_FILE "tb_smoke_18118.fsdb"
 `endif
 
 `ifdef SDF
 `ifndef SDF_FILE
-`define SDF_FILE "Netlist/mamba_core_syn.sdf"
+`define SDF_FILE "Netlist/CHIP_syn.sdf"
 `endif
 `endif
 
-module tb_gate_sdf_18118;
+module tb_smoke_18118;
 
     localparam integer SAMPLE_ID    = 18118;
     localparam integer SEQ_LEN      = 187;
@@ -103,7 +92,7 @@ module tb_gate_sdf_18118;
             else begin
                 if (!$value$plusargs("fsdbfile=%s", fsdb_path))
                     fsdb_path = `FSDB_OUT_FILE;
-                $display("[GATE18118] FSDB -> %s", fsdb_path);
+                $display("[SMOKE18118] FSDB -> %s", fsdb_path);
                 $fsdbDumpfile(fsdb_path);
 `ifdef GATE_SIM
                 $fsdbDumpvars(0, clk);
@@ -117,7 +106,7 @@ module tb_gate_sdf_18118;
                 $fsdbDumpvars(0, i_data);
                 $fsdbDumpvars(0, pred_class);
 `else
-                $fsdbDumpvars(0, tb_gate_sdf_18118, "+mda");
+                $fsdbDumpvars(0, tb_smoke_18118, "+mda");
                 $fsdbDumpvars;
                 $fsdbDumpon;
 `endif
@@ -135,7 +124,7 @@ module tb_gate_sdf_18118;
                 wait_cycles = wait_cycles + 1;
             end
             if (o_ready !== 1'b1) begin
-                $display("[GATE18118] TIMEOUT load o_ready");
+                $display("[SMOKE18118] TIMEOUT load o_ready");
                 $finish(1);
             end
             @(negedge clk);
@@ -165,7 +154,7 @@ module tb_gate_sdf_18118;
                 wait_cycles = wait_cycles + 1;
             end
             if (o_ready !== 1'b1) begin
-                $display("[GATE18118] TIMEOUT wrapper load ready");
+                $display("[SMOKE18118] TIMEOUT wrapper load ready");
                 $finish(1);
             end
             for (k = 0; k < WEIGHT_BYTES; k = k + 1)
@@ -177,7 +166,7 @@ module tb_gate_sdf_18118;
                 wait_cycles = wait_cycles + 1;
             end
             if (o_valid !== 1'b1) begin
-                $display("[GATE18118] TIMEOUT load done o_valid");
+                $display("[SMOKE18118] TIMEOUT load done o_valid");
                 $finish(1);
             end
             @(negedge clk);
@@ -224,7 +213,7 @@ module tb_gate_sdf_18118;
                 wait_cycles = wait_cycles + 1;
             end
             if (o_valid !== 1'b1) begin
-                $display("[GATE18118] TIMEOUT inference o_valid");
+                $display("[SMOKE18118] TIMEOUT inference o_valid");
                 $finish(1);
             end
             #5;
@@ -236,7 +225,7 @@ module tb_gate_sdf_18118;
         fsdb_setup();
 
 `ifdef SDF
-        $display("[GATE18118] SDF -> %s", `SDF_FILE);
+        $display("[SMOKE18118] SDF -> %s", `SDF_FILE);
         $sdf_annotate(`SDF_FILE, uut);
 `endif
 
@@ -258,9 +247,9 @@ module tb_gate_sdf_18118;
         feed_sample_18118;
 
         if (pred_class === golden_mem[SAMPLE_ID])
-            $display("[GATE18118] OK pred=%0d golden=%0d", pred_class, golden_mem[SAMPLE_ID]);
+            $display("[SMOKE18118] OK pred=%0d golden=%0d", pred_class, golden_mem[SAMPLE_ID]);
         else
-            $display("[GATE18118] NG pred=%0d golden=%0d", pred_class, golden_mem[SAMPLE_ID]);
+            $display("[SMOKE18118] NG pred=%0d golden=%0d", pred_class, golden_mem[SAMPLE_ID]);
 
         $fsdbDumpflush;
         #100;

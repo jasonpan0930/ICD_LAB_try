@@ -15,8 +15,8 @@
 //   ./simv +fsdb
 //   ./simv +fsdb +fsdbfile=tb_18118.fsdb
 //
-// RTL sample-18118 only (from run/):
-//   source source_run_18118.sh +fsdb +fsdbfile=tb_18118.fsdb
+// RTL smoke test (from run/):
+//   source source_run_smoke.sh +fsdb +fsdbfile=tb_smoke_18118.fsdb
 //
 // Gate sim single-sample window (compile-time, keeps fsdb small):
 //   bash:  FSDB_SAMPLE=18118 bash gate_sim.sh +fsdb +fsdbfile=gate.fsdb

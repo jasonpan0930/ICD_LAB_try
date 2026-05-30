@@ -1,4 +1,4 @@
-// Included by tb_dyn_*.v — 32-I/O wrapper load-mode bus stream, per-sample OK/NG, confusion matrix.
+// Shared by tb_batch_*.v — 32-I/O mode/strobe protocol, per-sample OK/NG, confusion matrix.
 `include "tb_define.vh"
 `ifndef PATTERN_FEATURES_HEX
 `define PATTERN_FEATURES_HEX "Pattern/test_features.hex"
@@ -8,7 +8,7 @@
 `endif
 `ifdef SDF
 `ifndef SDF_FILE
-`define SDF_FILE "Netlist/mamba_core_syn.sdf"
+`define SDF_FILE "Netlist/CHIP_syn.sdf"
 `endif
 `endif
 
@@ -20,7 +20,7 @@
     parameter WGHT_WIDTH     = 8;
     parameter ADDR_WIDTH     = 9;
     parameter TOTAL_SAMPLES  = 21336;
-    parameter integer SAMPLE_START = `DYN_SAMPLE_START;
+    parameter integer SAMPLE_START = `BATCH_SAMPLE_START;
 
     localparam integer WEIGHT_BYTES = 285;
 
@@ -74,11 +74,11 @@
     );
 `endif
 
-`ifndef DYN_TB_TOP_MODULE
-`define DYN_TB_TOP_MODULE tb_dyn_uut
+`ifndef TB_TOP_MODULE
+`define TB_TOP_MODULE tb_batch_uut
 `endif
 `ifndef FSDB_OUT_FILE
-`define FSDB_OUT_FILE "tb_dyn.fsdb"
+`define FSDB_OUT_FILE "tb_batch.fsdb"
 `endif
 
     string fsdb_path;
@@ -101,12 +101,12 @@
             if (!$value$plusargs("fsdbfile=%s", fsdb_path)) begin
                 fsdb_path = `FSDB_OUT_FILE;
             end
-            $display("%s FSDB dump enabled: %s", `DYN_TB_TAG, fsdb_path);
+            $display("%s FSDB dump enabled: %s", `TB_TAG, fsdb_path);
             $fsdbDumpfile(fsdb_path);
-            $fsdbDumpvars(0, `DYN_TB_TOP_MODULE);
+            $fsdbDumpvars(0, `TB_TOP_MODULE);
 `ifdef DUMP_FSDB_SAMPLE
             $fsdbDumpoff;
-            $display("%s FSDB window: sample %0d only", `DYN_TB_TAG, `DUMP_FSDB_SAMPLE);
+            $display("%s FSDB window: sample %0d only", `TB_TAG, `DUMP_FSDB_SAMPLE);
 `endif
         end
     endtask
@@ -120,7 +120,7 @@
             if (sid == `DUMP_FSDB_SAMPLE) begin
                 $fsdbDumpon;
                 fsdb_window_active = 1'b1;
-                $display("%s FSDB recording sample %0d", `DYN_TB_TAG, sid);
+                $display("%s FSDB recording sample %0d", `TB_TAG, sid);
             end
 `endif
         end
@@ -135,7 +135,7 @@
             if (fsdb_window_active && sid == `DUMP_FSDB_SAMPLE) begin
                 $fsdbDumpoff;
                 fsdb_window_active = 1'b0;
-                $display("%s FSDB stopped after sample %0d", `DYN_TB_TAG, sid);
+                $display("%s FSDB stopped after sample %0d", `TB_TAG, sid);
             end
 `endif
         end
@@ -159,7 +159,7 @@
 
 `ifdef SDF
     initial begin
-        $display("%s SDF annotation enabled: %s", `DYN_TB_TAG, `SDF_FILE);
+        $display("%s SDF annotation enabled: %s", `TB_TAG, `SDF_FILE);
         $sdf_annotate(`SDF_FILE, uut);
     end
 `endif
@@ -174,7 +174,7 @@
                 wait_cycles = wait_cycles + 1;
             end
             if (o_ready !== 1'b1) begin
-                $display("%s TIMEOUT waiting load o_ready", `DYN_TB_TAG);
+                $display("%s TIMEOUT waiting load o_ready", `TB_TAG);
                 $finish(1);
             end
 
@@ -206,7 +206,7 @@
                 wait_cycles = wait_cycles + 1;
             end
             if (o_ready !== 1'b1) begin
-                $display("%s TIMEOUT waiting wrapper load mode ready", `DYN_TB_TAG);
+                $display("%s TIMEOUT waiting wrapper load mode ready", `TB_TAG);
                 $finish(1);
             end
 
@@ -220,7 +220,7 @@
                 wait_cycles = wait_cycles + 1;
             end
             if (o_valid !== 1'b1) begin
-                $display("%s TIMEOUT waiting wrapper load done", `DYN_TB_TAG);
+                $display("%s TIMEOUT waiting wrapper load done", `TB_TAG);
                 $finish(1);
             end
 
@@ -269,7 +269,7 @@
                 wait_cycles = wait_cycles + 1;
             end
             if (o_valid !== 1'b1) begin
-                $display("%s TIMEOUT waiting o_valid sample %0d", `DYN_TB_TAG, sid);
+                $display("%s TIMEOUT waiting o_valid sample %0d", `TB_TAG, sid);
                 $finish(1);
             end
             pred_class = o_class;
@@ -292,7 +292,7 @@
 
         if (SAMPLE_START < 0 || SAMPLE_START >= TOTAL_SAMPLES) begin
             $display("%s FATAL: SAMPLE_START(%0d) out of range [0,%0d)",
-                     `DYN_TB_TAG, SAMPLE_START, TOTAL_SAMPLES);
+                     `TB_TAG, SAMPLE_START, TOTAL_SAMPLES);
             $finish(1);
         end
 
@@ -310,7 +310,7 @@
 
         run_total = TOTAL_SAMPLES - SAMPLE_START;
         $display("\n%s weights=%s; bus-loaded once; samples %0d .. %0d (%0d total)",
-                 `DYN_TB_TAG, `PATTERN_WEIGHTS_HEX, SAMPLE_START, TOTAL_SAMPLES - 1, run_total);
+                 `TB_TAG, `PATTERN_WEIGHTS_HEX, SAMPLE_START, TOTAL_SAMPLES - 1, run_total);
         correct_cnt = 0;
         for (c = 0; c < 4; c = c + 1) begin
             class_total[c]   = 0;
@@ -325,9 +325,9 @@
             fsdb_on_sample_done(s);
             golden_val = golden_mem[s];
             if (pred_class !== golden_val)
-                $display("%s NG sample %0d pred=%0d golden=%0d", `DYN_TB_TAG, s, pred_class, golden_val);
+                $display("%s NG sample %0d pred=%0d golden=%0d", `TB_TAG, s, pred_class, golden_val);
             else
-                $display("%s OK sample %0d pred=%0d golden=%0d", `DYN_TB_TAG, s, pred_class, golden_val);
+                $display("%s OK sample %0d pred=%0d golden=%0d", `TB_TAG, s, pred_class, golden_val);
             class_total[golden_val] = class_total[golden_val] + 1;
             conf_matrix[golden_val][pred_class] = conf_matrix[golden_val][pred_class] + 1;
             if (pred_class === golden_val) begin
@@ -338,7 +338,7 @@
 
         $display("\n=====================================================================");
         $display("%s summary: correct %0d / %0d (%.4f %%)",
-                 `DYN_TB_TAG, correct_cnt, run_total, (correct_cnt * 100.0) / run_total);
+                 `TB_TAG, correct_cnt, run_total, (correct_cnt * 100.0) / run_total);
         $display("---------------------------------------------------------------------");
         $display("Normalized confusion matrix (row=true class):");
         $display("                 | Pred 0 | Pred 1 | Pred 2 | Pred 3 |");
@@ -357,6 +357,6 @@
         $display("=====================================================================\n");
 
         #50;
-        $display("%s Done.\n", `DYN_TB_TAG);
+        $display("%s Done.\n", `TB_TAG);
         $finish(0);
     end

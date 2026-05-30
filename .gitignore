@@ -10,9 +10,6 @@ run/*
 !run/Testbanch/
 !run/tools/
 !run/README_dynamic_weight.md
-!run/source_run_tb_weight_dyn_full.sh
-!run/source_run.sh
-!run/source_run_tb_weight_dyn.sh
 !run/*.sh
 
 # ====================================
