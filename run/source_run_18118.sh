@@ -9,7 +9,7 @@ set CORE_FILES = ( \
     Core/mamba_elementwise.v \
     Core/regfile.v \
 )
-set VCS_OPTS = (-full64 +v2k +incdir+Core +incdir+Testbanch)
+set VCS_OPTS = (-full64 +v2k -sverilog +incdir+Core +incdir+Testbanch)
 foreach arg ($argv)
     if ("$arg" == "+fsdb") then
         set VCS_OPTS = ($VCS_OPTS +vcs+fsdbon)
