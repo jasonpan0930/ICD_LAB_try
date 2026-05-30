@@ -24,7 +24,7 @@ elaborate mamba_core
 
 # 設定目前設計為頂層模組
 current_design mamba_core
-uniquify
+# uniquify
 link
 
 # ==========================================
@@ -33,25 +33,33 @@ link
 # ⚠️ 注意：這裡假設你的 Mamba 時鐘腳位叫做 "clk"。如果叫其他名字，請把 "clk" 換掉。
 create_clock -period 100 -name "clk" -waveform {0 50} [get_ports clk]
 set_dont_touch_network [get_ports clk]
-set_fix_hold [get_clocks clk]
+# set_fix_hold [get_clocks clk]
 
-set_clock_uncertainty  0.1  [get_clocks clk]
-set_clock_latency      0.5  [get_clocks clk]
+set_clock_uncertainty 0.05 [get_clocks clk]
 
 # 標準做法：設定 Input Delay 時要排除 Clock 腳位，避免 DC 報 Warning
-set_input_delay -max 1 -clock clk [remove_from_collection [all_inputs] [get_ports clk]]
-set_output_delay -min 0.5 -clock clk [all_outputs]
 
-set_drive 1  [all_inputs]
-set_load  10 [all_outputs]
+set non_clk_inputs [remove_from_collection [all_inputs] [get_ports clk]]
+
+set_input_delay  -max 5.0 -clock clk $non_clk_inputs
+set_input_delay  -min 0.0 -clock clk $non_clk_inputs
+
+set_output_delay -max 5.0 -clock clk [all_outputs]
+set_output_delay -min 0.0 -clock clk [all_outputs]
+
+
+set_drive 1  $non_clk_inputs
+set_load  1 [all_outputs]
 
 set_fix_multiple_port_nets -all -buffer_constants
 
 # 整個 design 設較寬鬆 fanout
-set_max_fanout 16 [current_design]
-# 所有 input 排除 clock 後設 fanout 6
+
+set_max_fanout 32 [current_design]
+
 set non_clk_inputs [remove_from_collection [all_inputs] [get_ports clk]]
-set_max_fanout 6 $non_clk_inputs
+set_max_fanout 32 $non_clk_inputs
+
 # set_max_fanout 6 [all_inputs]
 
 # ==========================================
@@ -61,7 +69,7 @@ set_operating_conditions -min_library fsa0m_a_generic_core_ff1p98vm40c -min BCCO
 set_wire_load_model -name G200K -library fsa0m_a_generic_core_tt1p8v25c
 
 set_max_area 0
-set_boundary_optimization {"*"}
+set_boundary_optimization [current_design] true
 
 # 檢查設計是否有懸空或多重驅動的問題
 check_design
@@ -71,9 +79,19 @@ check_design
 # ==========================================
 # compile -map_effort medium
 # insert_clock_gating
-compile_ultra -gate_clock
-compile_ultra -inc
-compile_ultra -inc 
+
+set_clock_gating_style \
+    -minimum_bitwidth 8 \
+    -max_fanout 64 \
+    -control
+
+set_app_var compile_ultra_ungroup_dw false
+set_app_var compile_auto_ungroup_delay_num_cells 0
+
+compile_ultra -gate_clock -area_high_effort_script
+compile_ultra -incremental -area_high_effort_script
+compile_ultra -incremental -area_high_effort_script
+
 # ==========================================
 # 5. Output Reports (輸出報表)
 # ==========================================
