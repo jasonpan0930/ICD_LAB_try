@@ -172,6 +172,39 @@ module mamba_datapath_new #(
     wire signed [DATA_WIDTH-1:0] elem_mul1_a;
     wire signed [DATA_WIDTH-1:0] elem_mul1_b;
     wire                         elem_mul1_valid;
+    wire signed [DATA_WIDTH-1:0] elem_mul2_a;
+    wire signed [DATA_WIDTH-1:0] elem_mul2_b;
+    wire                         elem_mul2_valid;
+    wire signed [DATA_WIDTH-1:0] elem_mul3_a;
+    wire signed [DATA_WIDTH-1:0] elem_mul3_b;
+    wire                         elem_mul3_valid;
+
+    wire signed [DATA_WIDTH-1:0] x_scale_hi_a;
+    wire signed [DATA_WIDTH-1:0] x_scale_hi_b;
+    wire signed [16:0]           x_scale_lo_a;
+    wire signed [DATA_WIDTH-1:0] x_scale_lo_b;
+    wire                         x_scale_valid;
+    wire signed [DATA_WIDTH-1:0] dt_scale_hi_a;
+    wire signed [DATA_WIDTH-1:0] dt_scale_hi_b;
+    wire signed [16:0]           dt_scale_lo_a;
+    wire signed [DATA_WIDTH-1:0] dt_scale_lo_b;
+    wire                         dt_scale_valid;
+
+    wire signed [16:0]           M1_a;
+    wire signed [DATA_WIDTH-1:0] M1_b;
+    wire signed [31:0]           M1_y;
+    wire signed [DATA_WIDTH-1:0] M2_a;
+    wire signed [DATA_WIDTH-1:0] M2_b;
+    wire signed [31:0]           M2_y;
+    wire signed [16:0]           M3_a;
+    wire signed [DATA_WIDTH-1:0] M3_b;
+    wire signed [31:0]           M3_y;
+    wire signed [DATA_WIDTH-1:0] M4_a;
+    wire signed [DATA_WIDTH-1:0] M4_b;
+    wire signed [31:0]           M4_y;
+
+    wire signed [47:0]           x_scaled_acc;
+    wire signed [47:0]           dt_scaled_acc;
 
     wire signed [DATA_WIDTH-1:0] shared_mul0_a;
     wire signed [DATA_WIDTH-1:0] shared_mul0_b;
@@ -283,9 +316,15 @@ module mamba_datapath_new #(
         .i_scale_m_flat(bus_M_MERGED_X_PROJ_FLAT),
         .i_scale_n_flat(bus_N_MERGED_X_PROJ_FLAT),
         .i_mul_result(shared_mul0_y),
+        .i_scaled_acc(x_scaled_acc),
         .o_mul_a(x_proj_mul_a),
         .o_mul_b(x_proj_mul_b),
         .o_mul_valid(x_proj_mul_valid),
+        .o_scale_hi_a(x_scale_hi_a),
+        .o_scale_hi_b(x_scale_hi_b),
+        .o_scale_lo_a(x_scale_lo_a),
+        .o_scale_lo_b(x_scale_lo_b),
+        .o_scale_valid(x_scale_valid),
         .o_y(merged_o_y),
         .o_out_start(),
         .o_valid(merged_o_valid),
@@ -333,9 +372,15 @@ module mamba_datapath_new #(
         .i_scale_m_flat(bus_M_DT_PROJ_FLAT),
         .i_scale_n_flat(bus_N_DT_PROJ_FLAT),
         .i_mul_result(shared_mul1_y),
+        .i_scaled_acc(dt_scaled_acc),
         .o_mul_a(dt_proj_mul_a),
         .o_mul_b(dt_proj_mul_b),
         .o_mul_valid(dt_proj_mul_valid),
+        .o_scale_hi_a(dt_scale_hi_a),
+        .o_scale_hi_b(dt_scale_hi_b),
+        .o_scale_lo_a(dt_scale_lo_a),
+        .o_scale_lo_b(dt_scale_lo_b),
+        .o_scale_valid(dt_scale_valid),
         .o_y(dt_proj_o_y),
         .o_out_start(),
         .o_valid(dt_proj_o_valid),
@@ -387,7 +432,74 @@ module mamba_datapath_new #(
     wire yt_mac_valid;
     wire [7:0] yt_mac_idx_i;
     wire signed [DATA_WIDTH-1:0] yt_mac_final;
+    wire signed [DATA_WIDTH-1:0] dx_val_w;
     reg [3:0] y_done_count;
+
+    wire yt_valid;
+    assign yt_valid = o_busy && c_params_ready && elem_valid && idx_d2_v;
+
+    assign M1_a = x_scale_valid
+                ? x_scale_lo_a
+                : {{elem_mul2_a[15]}, elem_mul2_a};
+    assign M1_b = x_scale_valid ? x_scale_lo_b : elem_mul2_b;
+
+    assign M2_a = x_scale_valid ? x_scale_hi_a : c_arr[idx_d2_j];
+    assign M2_b = x_scale_valid ? x_scale_hi_b : elem_next_h;
+
+    assign M3_a = dt_scale_valid
+                ? dt_scale_lo_a
+                : {{elem_mul3_a[15]}, elem_mul3_a};
+    assign M3_b = dt_scale_valid ? dt_scale_lo_b : elem_mul3_b;
+
+    assign M4_a = dt_scale_valid ? dt_scale_hi_a : const_d_1d[idx_d2_i];
+    assign M4_b = dt_scale_valid ? dt_scale_hi_b : xt_arr[idx_d2_i];
+
+    assign x_scaled_acc =
+        ($signed({{16{M2_y[31]}}, M2_y}) <<< 16) + $signed({16'b0, M1_y[15:0]});
+    assign dt_scaled_acc =
+        ($signed({{16{M4_y[31]}}, M4_y}) <<< 16) + $signed({16'b0, M3_y[15:0]});
+
+    assign dx_val_w = round_q88(M4_y);
+
+    elementwise_mul #(
+        .A_WIDTH(17),
+        .B_WIDTH(DATA_WIDTH),
+        .OUT_WIDTH(2*DATA_WIDTH)
+    ) u_shared_M1 (
+        .i_a(M1_a),
+        .i_b(M1_b),
+        .o_y(M1_y)
+    );
+
+    elementwise_mul #(
+        .A_WIDTH(DATA_WIDTH),
+        .B_WIDTH(DATA_WIDTH),
+        .OUT_WIDTH(2*DATA_WIDTH)
+    ) u_shared_M2 (
+        .i_a(M2_a),
+        .i_b(M2_b),
+        .o_y(M2_y)
+    );
+
+    elementwise_mul #(
+        .A_WIDTH(17),
+        .B_WIDTH(DATA_WIDTH),
+        .OUT_WIDTH(2*DATA_WIDTH)
+    ) u_shared_M3 (
+        .i_a(M3_a),
+        .i_b(M3_b),
+        .o_y(M3_y)
+    );
+
+    elementwise_mul #(
+        .A_WIDTH(DATA_WIDTH),
+        .B_WIDTH(DATA_WIDTH),
+        .OUT_WIDTH(2*DATA_WIDTH)
+    ) u_shared_M4 (
+        .i_a(M4_a),
+        .i_b(M4_b),
+        .o_y(M4_y)
+    );
 
     pipeline_elementwise_multiplier #(.DATA_WIDTH(DATA_WIDTH)) u_elem (
         .i_clk(clk),
@@ -400,12 +512,20 @@ module mamba_datapath_new #(
         .i_xt(xt_arr[feed_i]),
         .i_mul0_result(shared_mul0_y),
         .i_mul1_result(shared_mul1_y),
+        .i_mul2_result(M1_y),
+        .i_mul3_result(M3_y),
         .o_mul0_a(elem_mul0_a),
         .o_mul0_b(elem_mul0_b),
         .o_mul0_valid(elem_mul0_valid),
         .o_mul1_a(elem_mul1_a),
         .o_mul1_b(elem_mul1_b),
         .o_mul1_valid(elem_mul1_valid),
+        .o_mul2_a(elem_mul2_a),
+        .o_mul2_b(elem_mul2_b),
+        .o_mul2_valid(elem_mul2_valid),
+        .o_mul3_a(elem_mul3_a),
+        .o_mul3_b(elem_mul3_b),
+        .o_mul3_valid(elem_mul3_valid),
         .o_valid(elem_valid),
         .o_dA(),
         .o_dB(),
@@ -421,12 +541,13 @@ module mamba_datapath_new #(
     ) u_yt_mac (
         .i_clk(clk),
         .i_rst_n(rst_n),
-        .i_valid(o_busy && c_params_ready && elem_valid && idx_d2_v),
+        .i_valid(yt_valid),
         .i_idx_i({5'b0, idx_d2_i}),
         .i_idx_j({5'b0, idx_d2_j}),
         .i_h_val(elem_next_h),
         .i_c_val(c_arr[idx_d2_j]),
-        .i_dx_val(round_q88(const_d_1d[idx_d2_i] * xt_arr[idx_d2_i])),
+        .i_dx_val(dx_val_w),
+        .i_mul_result(M2_y),
         .o_valid(yt_mac_valid),
         .o_idx_i(yt_mac_idx_i),
         .o_yt_final(yt_mac_final)

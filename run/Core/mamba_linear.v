@@ -19,10 +19,16 @@ module mamba_linear_in1_serial #(
     input  wire [(OUT_DIM*16)-1:0]            i_scale_m_flat,
     input  wire [(OUT_DIM*5)-1:0]             i_scale_n_flat,
     input  wire signed [2*DATA_WIDTH-1:0]     i_mul_result,
+    input  wire signed [47:0]                 i_scaled_acc,
 
     output wire signed [DATA_WIDTH-1:0]       o_mul_a,
     output wire signed [DATA_WIDTH-1:0]       o_mul_b,
     output wire                               o_mul_valid,
+    output wire signed [DATA_WIDTH-1:0]       o_scale_hi_a,
+    output wire signed [DATA_WIDTH-1:0]       o_scale_hi_b,
+    output wire signed [16:0]                 o_scale_lo_a,
+    output wire signed [DATA_WIDTH-1:0]       o_scale_lo_b,
+    output wire                               o_scale_valid,
     output reg  signed [DATA_WIDTH-1:0]       o_y,
     output reg                                o_out_start,
     output reg                                o_valid,
@@ -74,9 +80,22 @@ module mamba_linear_in1_serial #(
         :  $signed({1'b0, i_z[Z_WIDTH-2:0]});
     assign w_shifted_c = $signed({1'b0, w_sel_c}) - $signed(z_dec_c);
 
-    assign o_mul_a     = i_x0;
-    assign o_mul_b     = {{(DATA_WIDTH-W_SHIFTED_W){w_shifted_c[W_SHIFTED_W-1]}}, w_shifted_c};
-    assign o_mul_valid = i_start || busy;
+    wire [15:0]                  scale_m_sel_c;
+    wire signed [DATA_WIDTH-1:0] scale_m_s_c;
+    wire signed [31:0]           mac_acc_c;
+
+    assign scale_m_sel_c = i_scale_m_flat[(OUT_DIM - flat_idx_c) * 16 - 1 -: 16];
+    assign scale_m_s_c   = $signed({1'b0, scale_m_sel_c[14:0]});
+    assign mac_acc_c     = i_mul_result[31:0];
+
+    assign o_mul_a        = i_x0;
+    assign o_mul_b        = {{(DATA_WIDTH-W_SHIFTED_W){w_shifted_c[W_SHIFTED_W-1]}}, w_shifted_c};
+    assign o_mul_valid    = i_start || busy;
+    assign o_scale_hi_a   = mac_acc_c[31:16];
+    assign o_scale_hi_b   = scale_m_s_c;
+    assign o_scale_lo_a   = {1'b0, mac_acc_c[15:0]};
+    assign o_scale_lo_b   = scale_m_s_c;
+    assign o_scale_valid  = o_mul_valid;
 
     always @(posedge clk or negedge rst_n) begin
         if (!rst_n) begin
@@ -104,8 +123,8 @@ module mamba_linear_in1_serial #(
                     ? -$signed({1'b0, i_z[Z_WIDTH-2:0]})
                     :  $signed({1'b0, i_z[Z_WIDTH-2:0]});
                 w_shifted = w_shifted_c;
-                mac_acc    = i_mul_result[31:0];
-                scaled_acc = mac_acc * $signed({1'b0, scale_m_sel});
+                mac_acc    = mac_acc_c;
+                scaled_acc = i_scaled_acc;
 
                 if (scale_n_sel == 5'd0)
                     rounded_acc = scaled_acc;

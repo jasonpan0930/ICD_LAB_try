@@ -47,6 +47,8 @@ module pipeline_elementwise_multiplier #(
     input  wire signed [DATA_WIDTH-1:0] i_xt,
     input  wire signed [2*DATA_WIDTH-1:0] i_mul0_result,
     input  wire signed [2*DATA_WIDTH-1:0] i_mul1_result,
+    input  wire signed [2*DATA_WIDTH-1:0] i_mul2_result,
+    input  wire signed [2*DATA_WIDTH-1:0] i_mul3_result,
 
     output wire signed [DATA_WIDTH-1:0] o_mul0_a,
     output wire signed [DATA_WIDTH-1:0] o_mul0_b,
@@ -54,6 +56,12 @@ module pipeline_elementwise_multiplier #(
     output wire signed [DATA_WIDTH-1:0] o_mul1_a,
     output wire signed [DATA_WIDTH-1:0] o_mul1_b,
     output wire                         o_mul1_valid,
+    output wire signed [DATA_WIDTH-1:0] o_mul2_a,
+    output wire signed [DATA_WIDTH-1:0] o_mul2_b,
+    output wire                         o_mul2_valid,
+    output wire signed [DATA_WIDTH-1:0] o_mul3_a,
+    output wire signed [DATA_WIDTH-1:0] o_mul3_b,
+    output wire                         o_mul3_valid,
     output reg                          o_valid,
     output reg  signed [DATA_WIDTH-1:0] o_dA,
     output reg  signed [DATA_WIDTH-1:0] o_dB,
@@ -82,8 +90,6 @@ module pipeline_elementwise_multiplier #(
     reg  signed [DATA_WIDTH-1:0] s1_Abar_h;
     reg  signed [DATA_WIDTH-1:0] s1_Bxt;
 
-    wire signed [(2*DATA_WIDTH)-1:0] mul_da_h_w;
-    wire signed [(2*DATA_WIDTH)-1:0] mul_db_xt_w;
     wire signed [DATA_WIDTH-1:0]     add_next_h_w;
 
     assign o_mul0_a     = i_dt;
@@ -92,26 +98,12 @@ module pipeline_elementwise_multiplier #(
     assign o_mul1_a     = i_dt;
     assign o_mul1_b     = i_b;
     assign o_mul1_valid = i_valid;
-
-    elementwise_mul #(
-        .A_WIDTH(DATA_WIDTH),
-        .B_WIDTH(DATA_WIDTH),
-        .OUT_WIDTH(2*DATA_WIDTH)
-    ) u_mul_da_h (
-        .i_a(s1_dA_w),
-        .i_b(s0_h),
-        .o_y(mul_da_h_w)
-    );
-
-    elementwise_mul #(
-        .A_WIDTH(DATA_WIDTH),
-        .B_WIDTH(DATA_WIDTH),
-        .OUT_WIDTH(2*DATA_WIDTH)
-    ) u_mul_db_xt (
-        .i_a(s0_dB),
-        .i_b(s0_xt),
-        .o_y(mul_db_xt_w)
-    );
+    assign o_mul2_a     = s1_dA_w;
+    assign o_mul2_b     = s0_h;
+    assign o_mul2_valid = s0_valid;
+    assign o_mul3_a     = s0_dB;
+    assign o_mul3_b     = s0_xt;
+    assign o_mul3_valid = s0_valid;
 
     elementwise_add #(
         .A_WIDTH(DATA_WIDTH),
@@ -156,8 +148,8 @@ module pipeline_elementwise_multiplier #(
             if (s0_valid) begin
                 s1_dA     <= s1_dA_w;
                 s1_dB     <= s0_dB;
-                s1_Abar_h <= round_q88(mul_da_h_w);
-                s1_Bxt    <= round_q88(mul_db_xt_w);
+                s1_Abar_h <= round_q88(i_mul2_result);
+                s1_Bxt    <= round_q88(i_mul3_result);
             end
 
             // S2
@@ -186,7 +178,11 @@ module pipeline_yt_mac #(
     input  wire signed [DATA_WIDTH-1:0]        i_h_val,    
     input  wire signed [DATA_WIDTH-1:0]        i_c_val,    
     input  wire signed [DATA_WIDTH-1:0]        i_dx_val,
+    input  wire signed [2*DATA_WIDTH-1:0]      i_mul_result,
 
+    output wire signed [DATA_WIDTH-1:0]        o_mul_a,
+    output wire signed [DATA_WIDTH-1:0]        o_mul_b,
+    output wire                                o_mul_valid,
     output reg                                 o_valid,    // 第 i 個 Channel 徹底算完了
     output reg  [7:0]                          o_idx_i,    // 告訴外面是哪一個 Channel 算完
     output reg  signed [DATA_WIDTH-1:0]        o_yt_final  
@@ -204,6 +200,9 @@ module pipeline_yt_mac #(
     reg signed [31:0] temp_acc;
     reg signed [31:0] temp_final;
 
+    assign o_mul_a     = i_c_val;
+    assign o_mul_b     = i_h_val;
+    assign o_mul_valid = i_valid;
 
     integer k;
     always @(posedge i_clk or negedge i_rst_n) begin 
@@ -219,7 +218,7 @@ module pipeline_yt_mac #(
         end else begin
             o_valid <= 1'b0;
             if(i_valid) begin
-                temp_prod = i_c_val * i_h_val;
+                temp_prod = i_mul_result;
                 if (i_idx_j == 0) begin
                     temp_acc = temp_prod;
                 end else begin 
