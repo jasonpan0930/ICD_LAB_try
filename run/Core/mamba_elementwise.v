@@ -199,6 +199,9 @@ module pipeline_yt_mac #(
     reg signed [31:0] temp_prod;
     reg signed [31:0] temp_acc;
     reg signed [31:0] temp_final;
+    // Latch channel index at j==0; o_idx_i uses this on j==D_STATE-1 so we
+    // never register i_idx_i on the same edge as the parent's idx_d2 FF.
+    reg [7:0] channel_idx_hold;
 
     assign o_mul_a     = i_c_val;
     assign o_mul_b     = i_h_val;
@@ -210,6 +213,7 @@ module pipeline_yt_mac #(
             o_valid <= 1'b0;
             o_idx_i <= 8'd0;
             o_yt_final <= {DATA_WIDTH{1'b0}};
+            channel_idx_hold <= 8'd0;
 
             for (k = 0; k < D_MODEL; k = k + 1) begin
                 yt_acc_reg[k] <= 32'd0;
@@ -221,6 +225,7 @@ module pipeline_yt_mac #(
                 temp_prod = i_mul_result;
                 if (i_idx_j == 0) begin
                     temp_acc = temp_prod;
+                    channel_idx_hold <= i_idx_i;
                 end else begin 
                     temp_acc = yt_acc_reg[i_idx_i] + temp_prod;
                 end
@@ -236,7 +241,7 @@ module pipeline_yt_mac #(
                     else 
                         o_yt_final <= temp_final[15:0];
 
-                    o_idx_i <= i_idx_i;
+                    o_idx_i <= channel_idx_hold;
                     o_valid <= 1'b1;
                 end
             end

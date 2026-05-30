@@ -71,10 +71,9 @@ check_design
 # ==========================================
 # compile -map_effort medium
 # insert_clock_gating
-compile
-set_clock_gating_style -minimum_bitwidth 16
-set_clock_gating_check -setup 0.1 -hold 0.05 [get_clocks clk]
 compile_ultra -gate_clock
+compile_ultra -inc
+compile_ultra -inc 
 # ==========================================
 # 5. Output Reports (輸出報表)
 # ==========================================
