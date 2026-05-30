@@ -13,6 +13,7 @@ run/*
 !run/source_run_tb_weight_dyn_full.sh
 !run/source_run.sh
 !run/source_run_tb_weight_dyn.sh
+!run/*.sh
 
 # ====================================
 # 2. Synthesis 資料夾規則
