@@ -1,6 +1,6 @@
 ###################################################################
 
-# Created by write_sdc on Sun May 31 11:47:01 2026
+# Created by write_sdc on Sun May 31 13:51:42 2026
 
 ###################################################################
 set sdc_version 1.8
@@ -136,541 +136,541 @@ set_drive 1  [get_ports {w_data[2]}]
 set_drive 1  [get_ports {w_data[1]}]
 set_drive 1  [get_ports {w_data[0]}]
 set_clock_gating_check -rise -setup 0 [get_cells                               \
-{clk_gate_y_pool_reg_reg[5]/main_gate}]
+clk_gate_y_pool_reg_reg_5_/main_gate]
 set_clock_gating_check -fall -setup 0 [get_cells                               \
-{clk_gate_y_pool_reg_reg[5]/main_gate}]
+clk_gate_y_pool_reg_reg_5_/main_gate]
 set_clock_gating_check -rise -hold 0 [get_cells                                \
-{clk_gate_y_pool_reg_reg[5]/main_gate}]
+clk_gate_y_pool_reg_reg_5_/main_gate]
 set_clock_gating_check -fall -hold 0 [get_cells                                \
-{clk_gate_y_pool_reg_reg[5]/main_gate}]
+clk_gate_y_pool_reg_reg_5_/main_gate]
 set_clock_gating_check -rise -setup 0 [get_cells                               \
-{clk_gate_y_pool_reg_reg[2]/main_gate}]
+clk_gate_y_pool_reg_reg_2_/main_gate]
 set_clock_gating_check -fall -setup 0 [get_cells                               \
-{clk_gate_y_pool_reg_reg[2]/main_gate}]
+clk_gate_y_pool_reg_reg_2_/main_gate]
 set_clock_gating_check -rise -hold 0 [get_cells                                \
-{clk_gate_y_pool_reg_reg[2]/main_gate}]
+clk_gate_y_pool_reg_reg_2_/main_gate]
 set_clock_gating_check -fall -hold 0 [get_cells                                \
-{clk_gate_y_pool_reg_reg[2]/main_gate}]
+clk_gate_y_pool_reg_reg_2_/main_gate]
 set_clock_gating_check -rise -setup 0 [get_cells                               \
-{clk_gate_y_pool_reg_reg[0]/main_gate}]
+clk_gate_y_pool_reg_reg_0_/main_gate]
 set_clock_gating_check -fall -setup 0 [get_cells                               \
-{clk_gate_y_pool_reg_reg[0]/main_gate}]
+clk_gate_y_pool_reg_reg_0_/main_gate]
 set_clock_gating_check -rise -hold 0 [get_cells                                \
-{clk_gate_y_pool_reg_reg[0]/main_gate}]
+clk_gate_y_pool_reg_reg_0_/main_gate]
 set_clock_gating_check -fall -hold 0 [get_cells                                \
-{clk_gate_y_pool_reg_reg[0]/main_gate}]
+clk_gate_y_pool_reg_reg_0_/main_gate]
 set_clock_gating_check -rise -setup 0 [get_cells                               \
-{clk_gate_h_reg_reg[7][7]/main_gate}]
+clk_gate_h_reg_reg_7__7_/main_gate]
 set_clock_gating_check -fall -setup 0 [get_cells                               \
-{clk_gate_h_reg_reg[7][7]/main_gate}]
+clk_gate_h_reg_reg_7__7_/main_gate]
 set_clock_gating_check -rise -hold 0 [get_cells                                \
-{clk_gate_h_reg_reg[7][7]/main_gate}]
+clk_gate_h_reg_reg_7__7_/main_gate]
 set_clock_gating_check -fall -hold 0 [get_cells                                \
-{clk_gate_h_reg_reg[7][7]/main_gate}]
+clk_gate_h_reg_reg_7__7_/main_gate]
 set_clock_gating_check -rise -setup 0 [get_cells                               \
-{clk_gate_h_reg_reg[7][6]/main_gate}]
+clk_gate_h_reg_reg_7__6_/main_gate]
 set_clock_gating_check -fall -setup 0 [get_cells                               \
-{clk_gate_h_reg_reg[7][6]/main_gate}]
+clk_gate_h_reg_reg_7__6_/main_gate]
 set_clock_gating_check -rise -hold 0 [get_cells                                \
-{clk_gate_h_reg_reg[7][6]/main_gate}]
+clk_gate_h_reg_reg_7__6_/main_gate]
 set_clock_gating_check -fall -hold 0 [get_cells                                \
-{clk_gate_h_reg_reg[7][6]/main_gate}]
+clk_gate_h_reg_reg_7__6_/main_gate]
 set_clock_gating_check -rise -setup 0 [get_cells                               \
-{clk_gate_h_reg_reg[7][5]/main_gate}]
+clk_gate_h_reg_reg_7__5_/main_gate]
 set_clock_gating_check -fall -setup 0 [get_cells                               \
-{clk_gate_h_reg_reg[7][5]/main_gate}]
+clk_gate_h_reg_reg_7__5_/main_gate]
 set_clock_gating_check -rise -hold 0 [get_cells                                \
-{clk_gate_h_reg_reg[7][5]/main_gate}]
+clk_gate_h_reg_reg_7__5_/main_gate]
 set_clock_gating_check -fall -hold 0 [get_cells                                \
-{clk_gate_h_reg_reg[7][5]/main_gate}]
+clk_gate_h_reg_reg_7__5_/main_gate]
 set_clock_gating_check -rise -setup 0 [get_cells                               \
-{clk_gate_h_reg_reg[7][4]/main_gate}]
+clk_gate_h_reg_reg_7__4_/main_gate]
 set_clock_gating_check -fall -setup 0 [get_cells                               \
-{clk_gate_h_reg_reg[7][4]/main_gate}]
+clk_gate_h_reg_reg_7__4_/main_gate]
 set_clock_gating_check -rise -hold 0 [get_cells                                \
-{clk_gate_h_reg_reg[7][4]/main_gate}]
+clk_gate_h_reg_reg_7__4_/main_gate]
 set_clock_gating_check -fall -hold 0 [get_cells                                \
-{clk_gate_h_reg_reg[7][4]/main_gate}]
+clk_gate_h_reg_reg_7__4_/main_gate]
 set_clock_gating_check -rise -setup 0 [get_cells                               \
-{clk_gate_h_reg_reg[7][3]/main_gate}]
+clk_gate_h_reg_reg_7__3_/main_gate]
 set_clock_gating_check -fall -setup 0 [get_cells                               \
-{clk_gate_h_reg_reg[7][3]/main_gate}]
+clk_gate_h_reg_reg_7__3_/main_gate]
 set_clock_gating_check -rise -hold 0 [get_cells                                \
-{clk_gate_h_reg_reg[7][3]/main_gate}]
+clk_gate_h_reg_reg_7__3_/main_gate]
 set_clock_gating_check -fall -hold 0 [get_cells                                \
-{clk_gate_h_reg_reg[7][3]/main_gate}]
+clk_gate_h_reg_reg_7__3_/main_gate]
 set_clock_gating_check -rise -setup 0 [get_cells                               \
-{clk_gate_h_reg_reg[7][2]/main_gate}]
+clk_gate_h_reg_reg_7__2_/main_gate]
 set_clock_gating_check -fall -setup 0 [get_cells                               \
-{clk_gate_h_reg_reg[7][2]/main_gate}]
+clk_gate_h_reg_reg_7__2_/main_gate]
 set_clock_gating_check -rise -hold 0 [get_cells                                \
-{clk_gate_h_reg_reg[7][2]/main_gate}]
+clk_gate_h_reg_reg_7__2_/main_gate]
 set_clock_gating_check -fall -hold 0 [get_cells                                \
-{clk_gate_h_reg_reg[7][2]/main_gate}]
+clk_gate_h_reg_reg_7__2_/main_gate]
 set_clock_gating_check -rise -setup 0 [get_cells                               \
-{clk_gate_h_reg_reg[7][1]/main_gate}]
+clk_gate_h_reg_reg_7__1_/main_gate]
 set_clock_gating_check -fall -setup 0 [get_cells                               \
-{clk_gate_h_reg_reg[7][1]/main_gate}]
+clk_gate_h_reg_reg_7__1_/main_gate]
 set_clock_gating_check -rise -hold 0 [get_cells                                \
-{clk_gate_h_reg_reg[7][1]/main_gate}]
+clk_gate_h_reg_reg_7__1_/main_gate]
 set_clock_gating_check -fall -hold 0 [get_cells                                \
-{clk_gate_h_reg_reg[7][1]/main_gate}]
+clk_gate_h_reg_reg_7__1_/main_gate]
 set_clock_gating_check -rise -setup 0 [get_cells                               \
-{clk_gate_h_reg_reg[7][0]/main_gate}]
+clk_gate_h_reg_reg_7__0_/main_gate]
 set_clock_gating_check -fall -setup 0 [get_cells                               \
-{clk_gate_h_reg_reg[7][0]/main_gate}]
+clk_gate_h_reg_reg_7__0_/main_gate]
 set_clock_gating_check -rise -hold 0 [get_cells                                \
-{clk_gate_h_reg_reg[7][0]/main_gate}]
+clk_gate_h_reg_reg_7__0_/main_gate]
 set_clock_gating_check -fall -hold 0 [get_cells                                \
-{clk_gate_h_reg_reg[7][0]/main_gate}]
+clk_gate_h_reg_reg_7__0_/main_gate]
 set_clock_gating_check -rise -setup 0 [get_cells                               \
-{clk_gate_h_reg_reg[6][7]/main_gate}]
+clk_gate_h_reg_reg_6__7_/main_gate]
 set_clock_gating_check -fall -setup 0 [get_cells                               \
-{clk_gate_h_reg_reg[6][7]/main_gate}]
+clk_gate_h_reg_reg_6__7_/main_gate]
 set_clock_gating_check -rise -hold 0 [get_cells                                \
-{clk_gate_h_reg_reg[6][7]/main_gate}]
+clk_gate_h_reg_reg_6__7_/main_gate]
 set_clock_gating_check -fall -hold 0 [get_cells                                \
-{clk_gate_h_reg_reg[6][7]/main_gate}]
+clk_gate_h_reg_reg_6__7_/main_gate]
 set_clock_gating_check -rise -setup 0 [get_cells                               \
-{clk_gate_h_reg_reg[6][6]/main_gate}]
+clk_gate_h_reg_reg_6__6_/main_gate]
 set_clock_gating_check -fall -setup 0 [get_cells                               \
-{clk_gate_h_reg_reg[6][6]/main_gate}]
+clk_gate_h_reg_reg_6__6_/main_gate]
 set_clock_gating_check -rise -hold 0 [get_cells                                \
-{clk_gate_h_reg_reg[6][6]/main_gate}]
+clk_gate_h_reg_reg_6__6_/main_gate]
 set_clock_gating_check -fall -hold 0 [get_cells                                \
-{clk_gate_h_reg_reg[6][6]/main_gate}]
+clk_gate_h_reg_reg_6__6_/main_gate]
 set_clock_gating_check -rise -setup 0 [get_cells                               \
-{clk_gate_h_reg_reg[6][5]/main_gate}]
+clk_gate_h_reg_reg_6__5_/main_gate]
 set_clock_gating_check -fall -setup 0 [get_cells                               \
-{clk_gate_h_reg_reg[6][5]/main_gate}]
+clk_gate_h_reg_reg_6__5_/main_gate]
 set_clock_gating_check -rise -hold 0 [get_cells                                \
-{clk_gate_h_reg_reg[6][5]/main_gate}]
+clk_gate_h_reg_reg_6__5_/main_gate]
 set_clock_gating_check -fall -hold 0 [get_cells                                \
-{clk_gate_h_reg_reg[6][5]/main_gate}]
+clk_gate_h_reg_reg_6__5_/main_gate]
 set_clock_gating_check -rise -setup 0 [get_cells                               \
-{clk_gate_h_reg_reg[6][4]/main_gate}]
+clk_gate_h_reg_reg_6__4_/main_gate]
 set_clock_gating_check -fall -setup 0 [get_cells                               \
-{clk_gate_h_reg_reg[6][4]/main_gate}]
+clk_gate_h_reg_reg_6__4_/main_gate]
 set_clock_gating_check -rise -hold 0 [get_cells                                \
-{clk_gate_h_reg_reg[6][4]/main_gate}]
+clk_gate_h_reg_reg_6__4_/main_gate]
 set_clock_gating_check -fall -hold 0 [get_cells                                \
-{clk_gate_h_reg_reg[6][4]/main_gate}]
+clk_gate_h_reg_reg_6__4_/main_gate]
 set_clock_gating_check -rise -setup 0 [get_cells                               \
-{clk_gate_h_reg_reg[6][3]/main_gate}]
+clk_gate_h_reg_reg_6__3_/main_gate]
 set_clock_gating_check -fall -setup 0 [get_cells                               \
-{clk_gate_h_reg_reg[6][3]/main_gate}]
+clk_gate_h_reg_reg_6__3_/main_gate]
 set_clock_gating_check -rise -hold 0 [get_cells                                \
-{clk_gate_h_reg_reg[6][3]/main_gate}]
+clk_gate_h_reg_reg_6__3_/main_gate]
 set_clock_gating_check -fall -hold 0 [get_cells                                \
-{clk_gate_h_reg_reg[6][3]/main_gate}]
+clk_gate_h_reg_reg_6__3_/main_gate]
 set_clock_gating_check -rise -setup 0 [get_cells                               \
-{clk_gate_h_reg_reg[6][2]/main_gate}]
+clk_gate_h_reg_reg_6__2_/main_gate]
 set_clock_gating_check -fall -setup 0 [get_cells                               \
-{clk_gate_h_reg_reg[6][2]/main_gate}]
+clk_gate_h_reg_reg_6__2_/main_gate]
 set_clock_gating_check -rise -hold 0 [get_cells                                \
-{clk_gate_h_reg_reg[6][2]/main_gate}]
+clk_gate_h_reg_reg_6__2_/main_gate]
 set_clock_gating_check -fall -hold 0 [get_cells                                \
-{clk_gate_h_reg_reg[6][2]/main_gate}]
+clk_gate_h_reg_reg_6__2_/main_gate]
 set_clock_gating_check -rise -setup 0 [get_cells                               \
-{clk_gate_h_reg_reg[6][1]/main_gate}]
+clk_gate_h_reg_reg_6__1_/main_gate]
 set_clock_gating_check -fall -setup 0 [get_cells                               \
-{clk_gate_h_reg_reg[6][1]/main_gate}]
+clk_gate_h_reg_reg_6__1_/main_gate]
 set_clock_gating_check -rise -hold 0 [get_cells                                \
-{clk_gate_h_reg_reg[6][1]/main_gate}]
+clk_gate_h_reg_reg_6__1_/main_gate]
 set_clock_gating_check -fall -hold 0 [get_cells                                \
-{clk_gate_h_reg_reg[6][1]/main_gate}]
+clk_gate_h_reg_reg_6__1_/main_gate]
 set_clock_gating_check -rise -setup 0 [get_cells                               \
-{clk_gate_h_reg_reg[6][0]/main_gate}]
+clk_gate_h_reg_reg_6__0_/main_gate]
 set_clock_gating_check -fall -setup 0 [get_cells                               \
-{clk_gate_h_reg_reg[6][0]/main_gate}]
+clk_gate_h_reg_reg_6__0_/main_gate]
 set_clock_gating_check -rise -hold 0 [get_cells                                \
-{clk_gate_h_reg_reg[6][0]/main_gate}]
+clk_gate_h_reg_reg_6__0_/main_gate]
 set_clock_gating_check -fall -hold 0 [get_cells                                \
-{clk_gate_h_reg_reg[6][0]/main_gate}]
+clk_gate_h_reg_reg_6__0_/main_gate]
 set_clock_gating_check -rise -setup 0 [get_cells                               \
-{clk_gate_h_reg_reg[5][7]/main_gate}]
+clk_gate_h_reg_reg_5__7_/main_gate]
 set_clock_gating_check -fall -setup 0 [get_cells                               \
-{clk_gate_h_reg_reg[5][7]/main_gate}]
+clk_gate_h_reg_reg_5__7_/main_gate]
 set_clock_gating_check -rise -hold 0 [get_cells                                \
-{clk_gate_h_reg_reg[5][7]/main_gate}]
+clk_gate_h_reg_reg_5__7_/main_gate]
 set_clock_gating_check -fall -hold 0 [get_cells                                \
-{clk_gate_h_reg_reg[5][7]/main_gate}]
+clk_gate_h_reg_reg_5__7_/main_gate]
 set_clock_gating_check -rise -setup 0 [get_cells                               \
-{clk_gate_h_reg_reg[5][6]/main_gate}]
+clk_gate_h_reg_reg_5__6_/main_gate]
 set_clock_gating_check -fall -setup 0 [get_cells                               \
-{clk_gate_h_reg_reg[5][6]/main_gate}]
+clk_gate_h_reg_reg_5__6_/main_gate]
 set_clock_gating_check -rise -hold 0 [get_cells                                \
-{clk_gate_h_reg_reg[5][6]/main_gate}]
+clk_gate_h_reg_reg_5__6_/main_gate]
 set_clock_gating_check -fall -hold 0 [get_cells                                \
-{clk_gate_h_reg_reg[5][6]/main_gate}]
+clk_gate_h_reg_reg_5__6_/main_gate]
 set_clock_gating_check -rise -setup 0 [get_cells                               \
-{clk_gate_h_reg_reg[5][5]/main_gate}]
+clk_gate_h_reg_reg_5__5_/main_gate]
 set_clock_gating_check -fall -setup 0 [get_cells                               \
-{clk_gate_h_reg_reg[5][5]/main_gate}]
+clk_gate_h_reg_reg_5__5_/main_gate]
 set_clock_gating_check -rise -hold 0 [get_cells                                \
-{clk_gate_h_reg_reg[5][5]/main_gate}]
+clk_gate_h_reg_reg_5__5_/main_gate]
 set_clock_gating_check -fall -hold 0 [get_cells                                \
-{clk_gate_h_reg_reg[5][5]/main_gate}]
+clk_gate_h_reg_reg_5__5_/main_gate]
 set_clock_gating_check -rise -setup 0 [get_cells                               \
-{clk_gate_h_reg_reg[5][4]/main_gate}]
+clk_gate_h_reg_reg_5__4_/main_gate]
 set_clock_gating_check -fall -setup 0 [get_cells                               \
-{clk_gate_h_reg_reg[5][4]/main_gate}]
+clk_gate_h_reg_reg_5__4_/main_gate]
 set_clock_gating_check -rise -hold 0 [get_cells                                \
-{clk_gate_h_reg_reg[5][4]/main_gate}]
+clk_gate_h_reg_reg_5__4_/main_gate]
 set_clock_gating_check -fall -hold 0 [get_cells                                \
-{clk_gate_h_reg_reg[5][4]/main_gate}]
+clk_gate_h_reg_reg_5__4_/main_gate]
 set_clock_gating_check -rise -setup 0 [get_cells                               \
-{clk_gate_h_reg_reg[5][3]/main_gate}]
+clk_gate_h_reg_reg_5__3_/main_gate]
 set_clock_gating_check -fall -setup 0 [get_cells                               \
-{clk_gate_h_reg_reg[5][3]/main_gate}]
+clk_gate_h_reg_reg_5__3_/main_gate]
 set_clock_gating_check -rise -hold 0 [get_cells                                \
-{clk_gate_h_reg_reg[5][3]/main_gate}]
+clk_gate_h_reg_reg_5__3_/main_gate]
 set_clock_gating_check -fall -hold 0 [get_cells                                \
-{clk_gate_h_reg_reg[5][3]/main_gate}]
+clk_gate_h_reg_reg_5__3_/main_gate]
 set_clock_gating_check -rise -setup 0 [get_cells                               \
-{clk_gate_h_reg_reg[5][2]/main_gate}]
+clk_gate_h_reg_reg_5__2_/main_gate]
 set_clock_gating_check -fall -setup 0 [get_cells                               \
-{clk_gate_h_reg_reg[5][2]/main_gate}]
+clk_gate_h_reg_reg_5__2_/main_gate]
 set_clock_gating_check -rise -hold 0 [get_cells                                \
-{clk_gate_h_reg_reg[5][2]/main_gate}]
+clk_gate_h_reg_reg_5__2_/main_gate]
 set_clock_gating_check -fall -hold 0 [get_cells                                \
-{clk_gate_h_reg_reg[5][2]/main_gate}]
+clk_gate_h_reg_reg_5__2_/main_gate]
 set_clock_gating_check -rise -setup 0 [get_cells                               \
-{clk_gate_h_reg_reg[5][1]/main_gate}]
+clk_gate_h_reg_reg_5__1_/main_gate]
 set_clock_gating_check -fall -setup 0 [get_cells                               \
-{clk_gate_h_reg_reg[5][1]/main_gate}]
+clk_gate_h_reg_reg_5__1_/main_gate]
 set_clock_gating_check -rise -hold 0 [get_cells                                \
-{clk_gate_h_reg_reg[5][1]/main_gate}]
+clk_gate_h_reg_reg_5__1_/main_gate]
 set_clock_gating_check -fall -hold 0 [get_cells                                \
-{clk_gate_h_reg_reg[5][1]/main_gate}]
+clk_gate_h_reg_reg_5__1_/main_gate]
 set_clock_gating_check -rise -setup 0 [get_cells                               \
-{clk_gate_h_reg_reg[5][0]/main_gate}]
+clk_gate_h_reg_reg_5__0_/main_gate]
 set_clock_gating_check -fall -setup 0 [get_cells                               \
-{clk_gate_h_reg_reg[5][0]/main_gate}]
+clk_gate_h_reg_reg_5__0_/main_gate]
 set_clock_gating_check -rise -hold 0 [get_cells                                \
-{clk_gate_h_reg_reg[5][0]/main_gate}]
+clk_gate_h_reg_reg_5__0_/main_gate]
 set_clock_gating_check -fall -hold 0 [get_cells                                \
-{clk_gate_h_reg_reg[5][0]/main_gate}]
+clk_gate_h_reg_reg_5__0_/main_gate]
 set_clock_gating_check -rise -setup 0 [get_cells                               \
-{clk_gate_h_reg_reg[4][7]/main_gate}]
+clk_gate_h_reg_reg_4__7_/main_gate]
 set_clock_gating_check -fall -setup 0 [get_cells                               \
-{clk_gate_h_reg_reg[4][7]/main_gate}]
+clk_gate_h_reg_reg_4__7_/main_gate]
 set_clock_gating_check -rise -hold 0 [get_cells                                \
-{clk_gate_h_reg_reg[4][7]/main_gate}]
+clk_gate_h_reg_reg_4__7_/main_gate]
 set_clock_gating_check -fall -hold 0 [get_cells                                \
-{clk_gate_h_reg_reg[4][7]/main_gate}]
+clk_gate_h_reg_reg_4__7_/main_gate]
 set_clock_gating_check -rise -setup 0 [get_cells                               \
-{clk_gate_h_reg_reg[4][6]/main_gate}]
+clk_gate_h_reg_reg_4__6_/main_gate]
 set_clock_gating_check -fall -setup 0 [get_cells                               \
-{clk_gate_h_reg_reg[4][6]/main_gate}]
+clk_gate_h_reg_reg_4__6_/main_gate]
 set_clock_gating_check -rise -hold 0 [get_cells                                \
-{clk_gate_h_reg_reg[4][6]/main_gate}]
+clk_gate_h_reg_reg_4__6_/main_gate]
 set_clock_gating_check -fall -hold 0 [get_cells                                \
-{clk_gate_h_reg_reg[4][6]/main_gate}]
+clk_gate_h_reg_reg_4__6_/main_gate]
 set_clock_gating_check -rise -setup 0 [get_cells                               \
-{clk_gate_h_reg_reg[4][5]/main_gate}]
+clk_gate_h_reg_reg_4__5_/main_gate]
 set_clock_gating_check -fall -setup 0 [get_cells                               \
-{clk_gate_h_reg_reg[4][5]/main_gate}]
+clk_gate_h_reg_reg_4__5_/main_gate]
 set_clock_gating_check -rise -hold 0 [get_cells                                \
-{clk_gate_h_reg_reg[4][5]/main_gate}]
+clk_gate_h_reg_reg_4__5_/main_gate]
 set_clock_gating_check -fall -hold 0 [get_cells                                \
-{clk_gate_h_reg_reg[4][5]/main_gate}]
+clk_gate_h_reg_reg_4__5_/main_gate]
 set_clock_gating_check -rise -setup 0 [get_cells                               \
-{clk_gate_h_reg_reg[4][4]/main_gate}]
+clk_gate_h_reg_reg_4__4_/main_gate]
 set_clock_gating_check -fall -setup 0 [get_cells                               \
-{clk_gate_h_reg_reg[4][4]/main_gate}]
+clk_gate_h_reg_reg_4__4_/main_gate]
 set_clock_gating_check -rise -hold 0 [get_cells                                \
-{clk_gate_h_reg_reg[4][4]/main_gate}]
+clk_gate_h_reg_reg_4__4_/main_gate]
 set_clock_gating_check -fall -hold 0 [get_cells                                \
-{clk_gate_h_reg_reg[4][4]/main_gate}]
+clk_gate_h_reg_reg_4__4_/main_gate]
 set_clock_gating_check -rise -setup 0 [get_cells                               \
-{clk_gate_h_reg_reg[4][3]/main_gate}]
+clk_gate_h_reg_reg_4__3_/main_gate]
 set_clock_gating_check -fall -setup 0 [get_cells                               \
-{clk_gate_h_reg_reg[4][3]/main_gate}]
+clk_gate_h_reg_reg_4__3_/main_gate]
 set_clock_gating_check -rise -hold 0 [get_cells                                \
-{clk_gate_h_reg_reg[4][3]/main_gate}]
+clk_gate_h_reg_reg_4__3_/main_gate]
 set_clock_gating_check -fall -hold 0 [get_cells                                \
-{clk_gate_h_reg_reg[4][3]/main_gate}]
+clk_gate_h_reg_reg_4__3_/main_gate]
 set_clock_gating_check -rise -setup 0 [get_cells                               \
-{clk_gate_h_reg_reg[4][2]/main_gate}]
+clk_gate_h_reg_reg_4__2_/main_gate]
 set_clock_gating_check -fall -setup 0 [get_cells                               \
-{clk_gate_h_reg_reg[4][2]/main_gate}]
+clk_gate_h_reg_reg_4__2_/main_gate]
 set_clock_gating_check -rise -hold 0 [get_cells                                \
-{clk_gate_h_reg_reg[4][2]/main_gate}]
+clk_gate_h_reg_reg_4__2_/main_gate]
 set_clock_gating_check -fall -hold 0 [get_cells                                \
-{clk_gate_h_reg_reg[4][2]/main_gate}]
+clk_gate_h_reg_reg_4__2_/main_gate]
 set_clock_gating_check -rise -setup 0 [get_cells                               \
-{clk_gate_h_reg_reg[4][1]/main_gate}]
+clk_gate_h_reg_reg_4__1_/main_gate]
 set_clock_gating_check -fall -setup 0 [get_cells                               \
-{clk_gate_h_reg_reg[4][1]/main_gate}]
+clk_gate_h_reg_reg_4__1_/main_gate]
 set_clock_gating_check -rise -hold 0 [get_cells                                \
-{clk_gate_h_reg_reg[4][1]/main_gate}]
+clk_gate_h_reg_reg_4__1_/main_gate]
 set_clock_gating_check -fall -hold 0 [get_cells                                \
-{clk_gate_h_reg_reg[4][1]/main_gate}]
+clk_gate_h_reg_reg_4__1_/main_gate]
 set_clock_gating_check -rise -setup 0 [get_cells                               \
-{clk_gate_h_reg_reg[4][0]/main_gate}]
+clk_gate_h_reg_reg_4__0_/main_gate]
 set_clock_gating_check -fall -setup 0 [get_cells                               \
-{clk_gate_h_reg_reg[4][0]/main_gate}]
+clk_gate_h_reg_reg_4__0_/main_gate]
 set_clock_gating_check -rise -hold 0 [get_cells                                \
-{clk_gate_h_reg_reg[4][0]/main_gate}]
+clk_gate_h_reg_reg_4__0_/main_gate]
 set_clock_gating_check -fall -hold 0 [get_cells                                \
-{clk_gate_h_reg_reg[4][0]/main_gate}]
+clk_gate_h_reg_reg_4__0_/main_gate]
 set_clock_gating_check -rise -setup 0 [get_cells                               \
-{clk_gate_h_reg_reg[3][7]/main_gate}]
+clk_gate_h_reg_reg_3__7_/main_gate]
 set_clock_gating_check -fall -setup 0 [get_cells                               \
-{clk_gate_h_reg_reg[3][7]/main_gate}]
+clk_gate_h_reg_reg_3__7_/main_gate]
 set_clock_gating_check -rise -hold 0 [get_cells                                \
-{clk_gate_h_reg_reg[3][7]/main_gate}]
+clk_gate_h_reg_reg_3__7_/main_gate]
 set_clock_gating_check -fall -hold 0 [get_cells                                \
-{clk_gate_h_reg_reg[3][7]/main_gate}]
+clk_gate_h_reg_reg_3__7_/main_gate]
 set_clock_gating_check -rise -setup 0 [get_cells                               \
-{clk_gate_h_reg_reg[3][6]/main_gate}]
+clk_gate_h_reg_reg_3__6_/main_gate]
 set_clock_gating_check -fall -setup 0 [get_cells                               \
-{clk_gate_h_reg_reg[3][6]/main_gate}]
+clk_gate_h_reg_reg_3__6_/main_gate]
 set_clock_gating_check -rise -hold 0 [get_cells                                \
-{clk_gate_h_reg_reg[3][6]/main_gate}]
+clk_gate_h_reg_reg_3__6_/main_gate]
 set_clock_gating_check -fall -hold 0 [get_cells                                \
-{clk_gate_h_reg_reg[3][6]/main_gate}]
+clk_gate_h_reg_reg_3__6_/main_gate]
 set_clock_gating_check -rise -setup 0 [get_cells                               \
-{clk_gate_h_reg_reg[3][5]/main_gate}]
+clk_gate_h_reg_reg_3__5_/main_gate]
 set_clock_gating_check -fall -setup 0 [get_cells                               \
-{clk_gate_h_reg_reg[3][5]/main_gate}]
+clk_gate_h_reg_reg_3__5_/main_gate]
 set_clock_gating_check -rise -hold 0 [get_cells                                \
-{clk_gate_h_reg_reg[3][5]/main_gate}]
+clk_gate_h_reg_reg_3__5_/main_gate]
 set_clock_gating_check -fall -hold 0 [get_cells                                \
-{clk_gate_h_reg_reg[3][5]/main_gate}]
+clk_gate_h_reg_reg_3__5_/main_gate]
 set_clock_gating_check -rise -setup 0 [get_cells                               \
-{clk_gate_h_reg_reg[3][4]/main_gate}]
+clk_gate_h_reg_reg_3__4_/main_gate]
 set_clock_gating_check -fall -setup 0 [get_cells                               \
-{clk_gate_h_reg_reg[3][4]/main_gate}]
+clk_gate_h_reg_reg_3__4_/main_gate]
 set_clock_gating_check -rise -hold 0 [get_cells                                \
-{clk_gate_h_reg_reg[3][4]/main_gate}]
+clk_gate_h_reg_reg_3__4_/main_gate]
 set_clock_gating_check -fall -hold 0 [get_cells                                \
-{clk_gate_h_reg_reg[3][4]/main_gate}]
+clk_gate_h_reg_reg_3__4_/main_gate]
 set_clock_gating_check -rise -setup 0 [get_cells                               \
-{clk_gate_h_reg_reg[3][3]/main_gate}]
+clk_gate_h_reg_reg_3__3_/main_gate]
 set_clock_gating_check -fall -setup 0 [get_cells                               \
-{clk_gate_h_reg_reg[3][3]/main_gate}]
+clk_gate_h_reg_reg_3__3_/main_gate]
 set_clock_gating_check -rise -hold 0 [get_cells                                \
-{clk_gate_h_reg_reg[3][3]/main_gate}]
+clk_gate_h_reg_reg_3__3_/main_gate]
 set_clock_gating_check -fall -hold 0 [get_cells                                \
-{clk_gate_h_reg_reg[3][3]/main_gate}]
+clk_gate_h_reg_reg_3__3_/main_gate]
 set_clock_gating_check -rise -setup 0 [get_cells                               \
-{clk_gate_h_reg_reg[3][2]/main_gate}]
+clk_gate_h_reg_reg_3__2_/main_gate]
 set_clock_gating_check -fall -setup 0 [get_cells                               \
-{clk_gate_h_reg_reg[3][2]/main_gate}]
+clk_gate_h_reg_reg_3__2_/main_gate]
 set_clock_gating_check -rise -hold 0 [get_cells                                \
-{clk_gate_h_reg_reg[3][2]/main_gate}]
+clk_gate_h_reg_reg_3__2_/main_gate]
 set_clock_gating_check -fall -hold 0 [get_cells                                \
-{clk_gate_h_reg_reg[3][2]/main_gate}]
+clk_gate_h_reg_reg_3__2_/main_gate]
 set_clock_gating_check -rise -setup 0 [get_cells                               \
-{clk_gate_h_reg_reg[3][1]/main_gate}]
+clk_gate_h_reg_reg_3__1_/main_gate]
 set_clock_gating_check -fall -setup 0 [get_cells                               \
-{clk_gate_h_reg_reg[3][1]/main_gate}]
+clk_gate_h_reg_reg_3__1_/main_gate]
 set_clock_gating_check -rise -hold 0 [get_cells                                \
-{clk_gate_h_reg_reg[3][1]/main_gate}]
+clk_gate_h_reg_reg_3__1_/main_gate]
 set_clock_gating_check -fall -hold 0 [get_cells                                \
-{clk_gate_h_reg_reg[3][1]/main_gate}]
+clk_gate_h_reg_reg_3__1_/main_gate]
 set_clock_gating_check -rise -setup 0 [get_cells                               \
-{clk_gate_h_reg_reg[3][0]/main_gate}]
+clk_gate_h_reg_reg_3__0_/main_gate]
 set_clock_gating_check -fall -setup 0 [get_cells                               \
-{clk_gate_h_reg_reg[3][0]/main_gate}]
+clk_gate_h_reg_reg_3__0_/main_gate]
 set_clock_gating_check -rise -hold 0 [get_cells                                \
-{clk_gate_h_reg_reg[3][0]/main_gate}]
+clk_gate_h_reg_reg_3__0_/main_gate]
 set_clock_gating_check -fall -hold 0 [get_cells                                \
-{clk_gate_h_reg_reg[3][0]/main_gate}]
+clk_gate_h_reg_reg_3__0_/main_gate]
 set_clock_gating_check -rise -setup 0 [get_cells                               \
-{clk_gate_h_reg_reg[2][7]/main_gate}]
+clk_gate_h_reg_reg_2__7_/main_gate]
 set_clock_gating_check -fall -setup 0 [get_cells                               \
-{clk_gate_h_reg_reg[2][7]/main_gate}]
+clk_gate_h_reg_reg_2__7_/main_gate]
 set_clock_gating_check -rise -hold 0 [get_cells                                \
-{clk_gate_h_reg_reg[2][7]/main_gate}]
+clk_gate_h_reg_reg_2__7_/main_gate]
 set_clock_gating_check -fall -hold 0 [get_cells                                \
-{clk_gate_h_reg_reg[2][7]/main_gate}]
+clk_gate_h_reg_reg_2__7_/main_gate]
 set_clock_gating_check -rise -setup 0 [get_cells                               \
-{clk_gate_h_reg_reg[2][6]/main_gate}]
+clk_gate_h_reg_reg_2__6_/main_gate]
 set_clock_gating_check -fall -setup 0 [get_cells                               \
-{clk_gate_h_reg_reg[2][6]/main_gate}]
+clk_gate_h_reg_reg_2__6_/main_gate]
 set_clock_gating_check -rise -hold 0 [get_cells                                \
-{clk_gate_h_reg_reg[2][6]/main_gate}]
+clk_gate_h_reg_reg_2__6_/main_gate]
 set_clock_gating_check -fall -hold 0 [get_cells                                \
-{clk_gate_h_reg_reg[2][6]/main_gate}]
+clk_gate_h_reg_reg_2__6_/main_gate]
 set_clock_gating_check -rise -setup 0 [get_cells                               \
-{clk_gate_h_reg_reg[2][5]/main_gate}]
+clk_gate_h_reg_reg_2__5_/main_gate]
 set_clock_gating_check -fall -setup 0 [get_cells                               \
-{clk_gate_h_reg_reg[2][5]/main_gate}]
+clk_gate_h_reg_reg_2__5_/main_gate]
 set_clock_gating_check -rise -hold 0 [get_cells                                \
-{clk_gate_h_reg_reg[2][5]/main_gate}]
+clk_gate_h_reg_reg_2__5_/main_gate]
 set_clock_gating_check -fall -hold 0 [get_cells                                \
-{clk_gate_h_reg_reg[2][5]/main_gate}]
+clk_gate_h_reg_reg_2__5_/main_gate]
 set_clock_gating_check -rise -setup 0 [get_cells                               \
-{clk_gate_h_reg_reg[2][4]/main_gate}]
+clk_gate_h_reg_reg_2__4_/main_gate]
 set_clock_gating_check -fall -setup 0 [get_cells                               \
-{clk_gate_h_reg_reg[2][4]/main_gate}]
+clk_gate_h_reg_reg_2__4_/main_gate]
 set_clock_gating_check -rise -hold 0 [get_cells                                \
-{clk_gate_h_reg_reg[2][4]/main_gate}]
+clk_gate_h_reg_reg_2__4_/main_gate]
 set_clock_gating_check -fall -hold 0 [get_cells                                \
-{clk_gate_h_reg_reg[2][4]/main_gate}]
+clk_gate_h_reg_reg_2__4_/main_gate]
 set_clock_gating_check -rise -setup 0 [get_cells                               \
-{clk_gate_h_reg_reg[2][3]/main_gate}]
+clk_gate_h_reg_reg_2__3_/main_gate]
 set_clock_gating_check -fall -setup 0 [get_cells                               \
-{clk_gate_h_reg_reg[2][3]/main_gate}]
+clk_gate_h_reg_reg_2__3_/main_gate]
 set_clock_gating_check -rise -hold 0 [get_cells                                \
-{clk_gate_h_reg_reg[2][3]/main_gate}]
+clk_gate_h_reg_reg_2__3_/main_gate]
 set_clock_gating_check -fall -hold 0 [get_cells                                \
-{clk_gate_h_reg_reg[2][3]/main_gate}]
+clk_gate_h_reg_reg_2__3_/main_gate]
 set_clock_gating_check -rise -setup 0 [get_cells                               \
-{clk_gate_h_reg_reg[2][2]/main_gate}]
+clk_gate_h_reg_reg_2__2_/main_gate]
 set_clock_gating_check -fall -setup 0 [get_cells                               \
-{clk_gate_h_reg_reg[2][2]/main_gate}]
+clk_gate_h_reg_reg_2__2_/main_gate]
 set_clock_gating_check -rise -hold 0 [get_cells                                \
-{clk_gate_h_reg_reg[2][2]/main_gate}]
+clk_gate_h_reg_reg_2__2_/main_gate]
 set_clock_gating_check -fall -hold 0 [get_cells                                \
-{clk_gate_h_reg_reg[2][2]/main_gate}]
+clk_gate_h_reg_reg_2__2_/main_gate]
 set_clock_gating_check -rise -setup 0 [get_cells                               \
-{clk_gate_h_reg_reg[2][1]/main_gate}]
+clk_gate_h_reg_reg_2__1_/main_gate]
 set_clock_gating_check -fall -setup 0 [get_cells                               \
-{clk_gate_h_reg_reg[2][1]/main_gate}]
+clk_gate_h_reg_reg_2__1_/main_gate]
 set_clock_gating_check -rise -hold 0 [get_cells                                \
-{clk_gate_h_reg_reg[2][1]/main_gate}]
+clk_gate_h_reg_reg_2__1_/main_gate]
 set_clock_gating_check -fall -hold 0 [get_cells                                \
-{clk_gate_h_reg_reg[2][1]/main_gate}]
+clk_gate_h_reg_reg_2__1_/main_gate]
 set_clock_gating_check -rise -setup 0 [get_cells                               \
-{clk_gate_h_reg_reg[2][0]/main_gate}]
+clk_gate_h_reg_reg_2__0_/main_gate]
 set_clock_gating_check -fall -setup 0 [get_cells                               \
-{clk_gate_h_reg_reg[2][0]/main_gate}]
+clk_gate_h_reg_reg_2__0_/main_gate]
 set_clock_gating_check -rise -hold 0 [get_cells                                \
-{clk_gate_h_reg_reg[2][0]/main_gate}]
+clk_gate_h_reg_reg_2__0_/main_gate]
 set_clock_gating_check -fall -hold 0 [get_cells                                \
-{clk_gate_h_reg_reg[2][0]/main_gate}]
+clk_gate_h_reg_reg_2__0_/main_gate]
 set_clock_gating_check -rise -setup 0 [get_cells                               \
-{clk_gate_h_reg_reg[1][7]/main_gate}]
+clk_gate_h_reg_reg_1__7_/main_gate]
 set_clock_gating_check -fall -setup 0 [get_cells                               \
-{clk_gate_h_reg_reg[1][7]/main_gate}]
+clk_gate_h_reg_reg_1__7_/main_gate]
 set_clock_gating_check -rise -hold 0 [get_cells                                \
-{clk_gate_h_reg_reg[1][7]/main_gate}]
+clk_gate_h_reg_reg_1__7_/main_gate]
 set_clock_gating_check -fall -hold 0 [get_cells                                \
-{clk_gate_h_reg_reg[1][7]/main_gate}]
+clk_gate_h_reg_reg_1__7_/main_gate]
 set_clock_gating_check -rise -setup 0 [get_cells                               \
-{clk_gate_h_reg_reg[1][6]/main_gate}]
+clk_gate_h_reg_reg_1__6_/main_gate]
 set_clock_gating_check -fall -setup 0 [get_cells                               \
-{clk_gate_h_reg_reg[1][6]/main_gate}]
+clk_gate_h_reg_reg_1__6_/main_gate]
 set_clock_gating_check -rise -hold 0 [get_cells                                \
-{clk_gate_h_reg_reg[1][6]/main_gate}]
+clk_gate_h_reg_reg_1__6_/main_gate]
 set_clock_gating_check -fall -hold 0 [get_cells                                \
-{clk_gate_h_reg_reg[1][6]/main_gate}]
+clk_gate_h_reg_reg_1__6_/main_gate]
 set_clock_gating_check -rise -setup 0 [get_cells                               \
-{clk_gate_h_reg_reg[1][5]/main_gate}]
+clk_gate_h_reg_reg_1__5_/main_gate]
 set_clock_gating_check -fall -setup 0 [get_cells                               \
-{clk_gate_h_reg_reg[1][5]/main_gate}]
+clk_gate_h_reg_reg_1__5_/main_gate]
 set_clock_gating_check -rise -hold 0 [get_cells                                \
-{clk_gate_h_reg_reg[1][5]/main_gate}]
+clk_gate_h_reg_reg_1__5_/main_gate]
 set_clock_gating_check -fall -hold 0 [get_cells                                \
-{clk_gate_h_reg_reg[1][5]/main_gate}]
+clk_gate_h_reg_reg_1__5_/main_gate]
 set_clock_gating_check -rise -setup 0 [get_cells                               \
-{clk_gate_h_reg_reg[1][4]/main_gate}]
+clk_gate_h_reg_reg_1__4_/main_gate]
 set_clock_gating_check -fall -setup 0 [get_cells                               \
-{clk_gate_h_reg_reg[1][4]/main_gate}]
+clk_gate_h_reg_reg_1__4_/main_gate]
 set_clock_gating_check -rise -hold 0 [get_cells                                \
-{clk_gate_h_reg_reg[1][4]/main_gate}]
+clk_gate_h_reg_reg_1__4_/main_gate]
 set_clock_gating_check -fall -hold 0 [get_cells                                \
-{clk_gate_h_reg_reg[1][4]/main_gate}]
+clk_gate_h_reg_reg_1__4_/main_gate]
 set_clock_gating_check -rise -setup 0 [get_cells                               \
-{clk_gate_h_reg_reg[1][3]/main_gate}]
+clk_gate_h_reg_reg_1__3_/main_gate]
 set_clock_gating_check -fall -setup 0 [get_cells                               \
-{clk_gate_h_reg_reg[1][3]/main_gate}]
+clk_gate_h_reg_reg_1__3_/main_gate]
 set_clock_gating_check -rise -hold 0 [get_cells                                \
-{clk_gate_h_reg_reg[1][3]/main_gate}]
+clk_gate_h_reg_reg_1__3_/main_gate]
 set_clock_gating_check -fall -hold 0 [get_cells                                \
-{clk_gate_h_reg_reg[1][3]/main_gate}]
+clk_gate_h_reg_reg_1__3_/main_gate]
 set_clock_gating_check -rise -setup 0 [get_cells                               \
-{clk_gate_h_reg_reg[1][2]/main_gate}]
+clk_gate_h_reg_reg_1__2_/main_gate]
 set_clock_gating_check -fall -setup 0 [get_cells                               \
-{clk_gate_h_reg_reg[1][2]/main_gate}]
+clk_gate_h_reg_reg_1__2_/main_gate]
 set_clock_gating_check -rise -hold 0 [get_cells                                \
-{clk_gate_h_reg_reg[1][2]/main_gate}]
+clk_gate_h_reg_reg_1__2_/main_gate]
 set_clock_gating_check -fall -hold 0 [get_cells                                \
-{clk_gate_h_reg_reg[1][2]/main_gate}]
+clk_gate_h_reg_reg_1__2_/main_gate]
 set_clock_gating_check -rise -setup 0 [get_cells                               \
-{clk_gate_h_reg_reg[1][1]/main_gate}]
+clk_gate_h_reg_reg_1__1_/main_gate]
 set_clock_gating_check -fall -setup 0 [get_cells                               \
-{clk_gate_h_reg_reg[1][1]/main_gate}]
+clk_gate_h_reg_reg_1__1_/main_gate]
 set_clock_gating_check -rise -hold 0 [get_cells                                \
-{clk_gate_h_reg_reg[1][1]/main_gate}]
+clk_gate_h_reg_reg_1__1_/main_gate]
 set_clock_gating_check -fall -hold 0 [get_cells                                \
-{clk_gate_h_reg_reg[1][1]/main_gate}]
+clk_gate_h_reg_reg_1__1_/main_gate]
 set_clock_gating_check -rise -setup 0 [get_cells                               \
-{clk_gate_h_reg_reg[1][0]/main_gate}]
+clk_gate_h_reg_reg_1__0_/main_gate]
 set_clock_gating_check -fall -setup 0 [get_cells                               \
-{clk_gate_h_reg_reg[1][0]/main_gate}]
+clk_gate_h_reg_reg_1__0_/main_gate]
 set_clock_gating_check -rise -hold 0 [get_cells                                \
-{clk_gate_h_reg_reg[1][0]/main_gate}]
+clk_gate_h_reg_reg_1__0_/main_gate]
 set_clock_gating_check -fall -hold 0 [get_cells                                \
-{clk_gate_h_reg_reg[1][0]/main_gate}]
+clk_gate_h_reg_reg_1__0_/main_gate]
 set_clock_gating_check -rise -setup 0 [get_cells                               \
-{clk_gate_h_reg_reg[0][7]/main_gate}]
+clk_gate_h_reg_reg_0__7_/main_gate]
 set_clock_gating_check -fall -setup 0 [get_cells                               \
-{clk_gate_h_reg_reg[0][7]/main_gate}]
+clk_gate_h_reg_reg_0__7_/main_gate]
 set_clock_gating_check -rise -hold 0 [get_cells                                \
-{clk_gate_h_reg_reg[0][7]/main_gate}]
+clk_gate_h_reg_reg_0__7_/main_gate]
 set_clock_gating_check -fall -hold 0 [get_cells                                \
-{clk_gate_h_reg_reg[0][7]/main_gate}]
+clk_gate_h_reg_reg_0__7_/main_gate]
 set_clock_gating_check -rise -setup 0 [get_cells                               \
-{clk_gate_h_reg_reg[0][6]/main_gate}]
+clk_gate_h_reg_reg_0__6_/main_gate]
 set_clock_gating_check -fall -setup 0 [get_cells                               \
-{clk_gate_h_reg_reg[0][6]/main_gate}]
+clk_gate_h_reg_reg_0__6_/main_gate]
 set_clock_gating_check -rise -hold 0 [get_cells                                \
-{clk_gate_h_reg_reg[0][6]/main_gate}]
+clk_gate_h_reg_reg_0__6_/main_gate]
 set_clock_gating_check -fall -hold 0 [get_cells                                \
-{clk_gate_h_reg_reg[0][6]/main_gate}]
+clk_gate_h_reg_reg_0__6_/main_gate]
 set_clock_gating_check -rise -setup 0 [get_cells                               \
-{clk_gate_h_reg_reg[0][5]/main_gate}]
+clk_gate_h_reg_reg_0__5_/main_gate]
 set_clock_gating_check -fall -setup 0 [get_cells                               \
-{clk_gate_h_reg_reg[0][5]/main_gate}]
+clk_gate_h_reg_reg_0__5_/main_gate]
 set_clock_gating_check -rise -hold 0 [get_cells                                \
-{clk_gate_h_reg_reg[0][5]/main_gate}]
+clk_gate_h_reg_reg_0__5_/main_gate]
 set_clock_gating_check -fall -hold 0 [get_cells                                \
-{clk_gate_h_reg_reg[0][5]/main_gate}]
+clk_gate_h_reg_reg_0__5_/main_gate]
 set_clock_gating_check -rise -setup 0 [get_cells                               \
-{clk_gate_h_reg_reg[0][4]/main_gate}]
+clk_gate_h_reg_reg_0__4_/main_gate]
 set_clock_gating_check -fall -setup 0 [get_cells                               \
-{clk_gate_h_reg_reg[0][4]/main_gate}]
+clk_gate_h_reg_reg_0__4_/main_gate]
 set_clock_gating_check -rise -hold 0 [get_cells                                \
-{clk_gate_h_reg_reg[0][4]/main_gate}]
+clk_gate_h_reg_reg_0__4_/main_gate]
 set_clock_gating_check -fall -hold 0 [get_cells                                \
-{clk_gate_h_reg_reg[0][4]/main_gate}]
+clk_gate_h_reg_reg_0__4_/main_gate]
 set_clock_gating_check -rise -setup 0 [get_cells                               \
-{clk_gate_h_reg_reg[0][3]/main_gate}]
+clk_gate_h_reg_reg_0__3_/main_gate]
 set_clock_gating_check -fall -setup 0 [get_cells                               \
-{clk_gate_h_reg_reg[0][3]/main_gate}]
+clk_gate_h_reg_reg_0__3_/main_gate]
 set_clock_gating_check -rise -hold 0 [get_cells                                \
-{clk_gate_h_reg_reg[0][3]/main_gate}]
+clk_gate_h_reg_reg_0__3_/main_gate]
 set_clock_gating_check -fall -hold 0 [get_cells                                \
-{clk_gate_h_reg_reg[0][3]/main_gate}]
+clk_gate_h_reg_reg_0__3_/main_gate]
 set_clock_gating_check -rise -setup 0 [get_cells                               \
-{clk_gate_h_reg_reg[0][2]/main_gate}]
+clk_gate_h_reg_reg_0__2_/main_gate]
 set_clock_gating_check -fall -setup 0 [get_cells                               \
-{clk_gate_h_reg_reg[0][2]/main_gate}]
+clk_gate_h_reg_reg_0__2_/main_gate]
 set_clock_gating_check -rise -hold 0 [get_cells                                \
-{clk_gate_h_reg_reg[0][2]/main_gate}]
+clk_gate_h_reg_reg_0__2_/main_gate]
 set_clock_gating_check -fall -hold 0 [get_cells                                \
-{clk_gate_h_reg_reg[0][2]/main_gate}]
+clk_gate_h_reg_reg_0__2_/main_gate]
 set_clock_gating_check -rise -setup 0 [get_cells                               \
-{clk_gate_h_reg_reg[0][1]/main_gate}]
+clk_gate_h_reg_reg_0__1_/main_gate]
 set_clock_gating_check -fall -setup 0 [get_cells                               \
-{clk_gate_h_reg_reg[0][1]/main_gate}]
+clk_gate_h_reg_reg_0__1_/main_gate]
 set_clock_gating_check -rise -hold 0 [get_cells                                \
-{clk_gate_h_reg_reg[0][1]/main_gate}]
+clk_gate_h_reg_reg_0__1_/main_gate]
 set_clock_gating_check -fall -hold 0 [get_cells                                \
-{clk_gate_h_reg_reg[0][1]/main_gate}]
+clk_gate_h_reg_reg_0__1_/main_gate]
 set_clock_gating_check -rise -setup 0 [get_cells                               \
-{clk_gate_h_reg_reg[0][0]/main_gate}]
+clk_gate_h_reg_reg_0__0_/main_gate]
 set_clock_gating_check -fall -setup 0 [get_cells                               \
-{clk_gate_h_reg_reg[0][0]/main_gate}]
+clk_gate_h_reg_reg_0__0_/main_gate]
 set_clock_gating_check -rise -hold 0 [get_cells                                \
-{clk_gate_h_reg_reg[0][0]/main_gate}]
+clk_gate_h_reg_reg_0__0_/main_gate]
 set_clock_gating_check -fall -hold 0 [get_cells                                \
-{clk_gate_h_reg_reg[0][0]/main_gate}]
+clk_gate_h_reg_reg_0__0_/main_gate]
 set_clock_gating_check -rise -setup 0 [get_cells                               \
 clk_gate_data_latched_reg/main_gate]
 set_clock_gating_check -fall -setup 0 [get_cells                               \
@@ -696,69 +696,69 @@ u_datapath/clk_gate_feed_j_reg/main_gate]
 set_clock_gating_check -fall -hold 0 [get_cells                                \
 u_datapath/clk_gate_feed_j_reg/main_gate]
 set_clock_gating_check -rise -setup 0 [get_cells                               \
-{u_datapath/clk_gate_o_next_y_pool_reg[7]/main_gate}]
+u_datapath/clk_gate_o_next_y_pool_reg_7_/main_gate]
 set_clock_gating_check -fall -setup 0 [get_cells                               \
-{u_datapath/clk_gate_o_next_y_pool_reg[7]/main_gate}]
+u_datapath/clk_gate_o_next_y_pool_reg_7_/main_gate]
 set_clock_gating_check -rise -hold 0 [get_cells                                \
-{u_datapath/clk_gate_o_next_y_pool_reg[7]/main_gate}]
+u_datapath/clk_gate_o_next_y_pool_reg_7_/main_gate]
 set_clock_gating_check -fall -hold 0 [get_cells                                \
-{u_datapath/clk_gate_o_next_y_pool_reg[7]/main_gate}]
+u_datapath/clk_gate_o_next_y_pool_reg_7_/main_gate]
 set_clock_gating_check -rise -setup 0 [get_cells                               \
-{u_datapath/clk_gate_o_next_y_pool_reg[6]/main_gate}]
+u_datapath/clk_gate_o_next_y_pool_reg_6_/main_gate]
 set_clock_gating_check -fall -setup 0 [get_cells                               \
-{u_datapath/clk_gate_o_next_y_pool_reg[6]/main_gate}]
+u_datapath/clk_gate_o_next_y_pool_reg_6_/main_gate]
 set_clock_gating_check -rise -hold 0 [get_cells                                \
-{u_datapath/clk_gate_o_next_y_pool_reg[6]/main_gate}]
+u_datapath/clk_gate_o_next_y_pool_reg_6_/main_gate]
 set_clock_gating_check -fall -hold 0 [get_cells                                \
-{u_datapath/clk_gate_o_next_y_pool_reg[6]/main_gate}]
+u_datapath/clk_gate_o_next_y_pool_reg_6_/main_gate]
 set_clock_gating_check -rise -setup 0 [get_cells                               \
-{u_datapath/clk_gate_o_next_y_pool_reg[5]/main_gate}]
+u_datapath/clk_gate_o_next_y_pool_reg_5_/main_gate]
 set_clock_gating_check -fall -setup 0 [get_cells                               \
-{u_datapath/clk_gate_o_next_y_pool_reg[5]/main_gate}]
+u_datapath/clk_gate_o_next_y_pool_reg_5_/main_gate]
 set_clock_gating_check -rise -hold 0 [get_cells                                \
-{u_datapath/clk_gate_o_next_y_pool_reg[5]/main_gate}]
+u_datapath/clk_gate_o_next_y_pool_reg_5_/main_gate]
 set_clock_gating_check -fall -hold 0 [get_cells                                \
-{u_datapath/clk_gate_o_next_y_pool_reg[5]/main_gate}]
+u_datapath/clk_gate_o_next_y_pool_reg_5_/main_gate]
 set_clock_gating_check -rise -setup 0 [get_cells                               \
-{u_datapath/clk_gate_o_next_y_pool_reg[4]/main_gate}]
+u_datapath/clk_gate_o_next_y_pool_reg_4_/main_gate]
 set_clock_gating_check -fall -setup 0 [get_cells                               \
-{u_datapath/clk_gate_o_next_y_pool_reg[4]/main_gate}]
+u_datapath/clk_gate_o_next_y_pool_reg_4_/main_gate]
 set_clock_gating_check -rise -hold 0 [get_cells                                \
-{u_datapath/clk_gate_o_next_y_pool_reg[4]/main_gate}]
+u_datapath/clk_gate_o_next_y_pool_reg_4_/main_gate]
 set_clock_gating_check -fall -hold 0 [get_cells                                \
-{u_datapath/clk_gate_o_next_y_pool_reg[4]/main_gate}]
+u_datapath/clk_gate_o_next_y_pool_reg_4_/main_gate]
 set_clock_gating_check -rise -setup 0 [get_cells                               \
-{u_datapath/clk_gate_o_next_y_pool_reg[3]/main_gate}]
+u_datapath/clk_gate_o_next_y_pool_reg_3_/main_gate]
 set_clock_gating_check -fall -setup 0 [get_cells                               \
-{u_datapath/clk_gate_o_next_y_pool_reg[3]/main_gate}]
+u_datapath/clk_gate_o_next_y_pool_reg_3_/main_gate]
 set_clock_gating_check -rise -hold 0 [get_cells                                \
-{u_datapath/clk_gate_o_next_y_pool_reg[3]/main_gate}]
+u_datapath/clk_gate_o_next_y_pool_reg_3_/main_gate]
 set_clock_gating_check -fall -hold 0 [get_cells                                \
-{u_datapath/clk_gate_o_next_y_pool_reg[3]/main_gate}]
+u_datapath/clk_gate_o_next_y_pool_reg_3_/main_gate]
 set_clock_gating_check -rise -setup 0 [get_cells                               \
-{u_datapath/clk_gate_o_next_y_pool_reg[2]/main_gate}]
+u_datapath/clk_gate_o_next_y_pool_reg_2_/main_gate]
 set_clock_gating_check -fall -setup 0 [get_cells                               \
-{u_datapath/clk_gate_o_next_y_pool_reg[2]/main_gate}]
+u_datapath/clk_gate_o_next_y_pool_reg_2_/main_gate]
 set_clock_gating_check -rise -hold 0 [get_cells                                \
-{u_datapath/clk_gate_o_next_y_pool_reg[2]/main_gate}]
+u_datapath/clk_gate_o_next_y_pool_reg_2_/main_gate]
 set_clock_gating_check -fall -hold 0 [get_cells                                \
-{u_datapath/clk_gate_o_next_y_pool_reg[2]/main_gate}]
+u_datapath/clk_gate_o_next_y_pool_reg_2_/main_gate]
 set_clock_gating_check -rise -setup 0 [get_cells                               \
-{u_datapath/clk_gate_o_next_y_pool_reg[1]/main_gate}]
+u_datapath/clk_gate_o_next_y_pool_reg_1_/main_gate]
 set_clock_gating_check -fall -setup 0 [get_cells                               \
-{u_datapath/clk_gate_o_next_y_pool_reg[1]/main_gate}]
+u_datapath/clk_gate_o_next_y_pool_reg_1_/main_gate]
 set_clock_gating_check -rise -hold 0 [get_cells                                \
-{u_datapath/clk_gate_o_next_y_pool_reg[1]/main_gate}]
+u_datapath/clk_gate_o_next_y_pool_reg_1_/main_gate]
 set_clock_gating_check -fall -hold 0 [get_cells                                \
-{u_datapath/clk_gate_o_next_y_pool_reg[1]/main_gate}]
+u_datapath/clk_gate_o_next_y_pool_reg_1_/main_gate]
 set_clock_gating_check -rise -setup 0 [get_cells                               \
-{u_datapath/clk_gate_o_next_y_pool_reg[0]/main_gate}]
+u_datapath/clk_gate_o_next_y_pool_reg_0_/main_gate]
 set_clock_gating_check -fall -setup 0 [get_cells                               \
-{u_datapath/clk_gate_o_next_y_pool_reg[0]/main_gate}]
+u_datapath/clk_gate_o_next_y_pool_reg_0_/main_gate]
 set_clock_gating_check -rise -hold 0 [get_cells                                \
-{u_datapath/clk_gate_o_next_y_pool_reg[0]/main_gate}]
+u_datapath/clk_gate_o_next_y_pool_reg_0_/main_gate]
 set_clock_gating_check -fall -hold 0 [get_cells                                \
-{u_datapath/clk_gate_o_next_y_pool_reg[0]/main_gate}]
+u_datapath/clk_gate_o_next_y_pool_reg_0_/main_gate]
 set_clock_gating_check -rise -setup 0 [get_cells                               \
 u_datapath/u_yt_mac/clk_gate_o_yt_final_reg/main_gate]
 set_clock_gating_check -fall -setup 0 [get_cells                               \
@@ -768,69 +768,69 @@ u_datapath/u_yt_mac/clk_gate_o_yt_final_reg/main_gate]
 set_clock_gating_check -fall -hold 0 [get_cells                                \
 u_datapath/u_yt_mac/clk_gate_o_yt_final_reg/main_gate]
 set_clock_gating_check -rise -setup 0 [get_cells                               \
-{u_datapath/u_yt_mac/clk_gate_yt_acc_reg_reg[7]/main_gate}]
+u_datapath/u_yt_mac/clk_gate_yt_acc_reg_reg_7_/main_gate]
 set_clock_gating_check -fall -setup 0 [get_cells                               \
-{u_datapath/u_yt_mac/clk_gate_yt_acc_reg_reg[7]/main_gate}]
+u_datapath/u_yt_mac/clk_gate_yt_acc_reg_reg_7_/main_gate]
 set_clock_gating_check -rise -hold 0 [get_cells                                \
-{u_datapath/u_yt_mac/clk_gate_yt_acc_reg_reg[7]/main_gate}]
+u_datapath/u_yt_mac/clk_gate_yt_acc_reg_reg_7_/main_gate]
 set_clock_gating_check -fall -hold 0 [get_cells                                \
-{u_datapath/u_yt_mac/clk_gate_yt_acc_reg_reg[7]/main_gate}]
+u_datapath/u_yt_mac/clk_gate_yt_acc_reg_reg_7_/main_gate]
 set_clock_gating_check -rise -setup 0 [get_cells                               \
-{u_datapath/u_yt_mac/clk_gate_yt_acc_reg_reg[6]/main_gate}]
+u_datapath/u_yt_mac/clk_gate_yt_acc_reg_reg_6_/main_gate]
 set_clock_gating_check -fall -setup 0 [get_cells                               \
-{u_datapath/u_yt_mac/clk_gate_yt_acc_reg_reg[6]/main_gate}]
+u_datapath/u_yt_mac/clk_gate_yt_acc_reg_reg_6_/main_gate]
 set_clock_gating_check -rise -hold 0 [get_cells                                \
-{u_datapath/u_yt_mac/clk_gate_yt_acc_reg_reg[6]/main_gate}]
+u_datapath/u_yt_mac/clk_gate_yt_acc_reg_reg_6_/main_gate]
 set_clock_gating_check -fall -hold 0 [get_cells                                \
-{u_datapath/u_yt_mac/clk_gate_yt_acc_reg_reg[6]/main_gate}]
+u_datapath/u_yt_mac/clk_gate_yt_acc_reg_reg_6_/main_gate]
 set_clock_gating_check -rise -setup 0 [get_cells                               \
-{u_datapath/u_yt_mac/clk_gate_yt_acc_reg_reg[5]/main_gate}]
+u_datapath/u_yt_mac/clk_gate_yt_acc_reg_reg_5_/main_gate]
 set_clock_gating_check -fall -setup 0 [get_cells                               \
-{u_datapath/u_yt_mac/clk_gate_yt_acc_reg_reg[5]/main_gate}]
+u_datapath/u_yt_mac/clk_gate_yt_acc_reg_reg_5_/main_gate]
 set_clock_gating_check -rise -hold 0 [get_cells                                \
-{u_datapath/u_yt_mac/clk_gate_yt_acc_reg_reg[5]/main_gate}]
+u_datapath/u_yt_mac/clk_gate_yt_acc_reg_reg_5_/main_gate]
 set_clock_gating_check -fall -hold 0 [get_cells                                \
-{u_datapath/u_yt_mac/clk_gate_yt_acc_reg_reg[5]/main_gate}]
+u_datapath/u_yt_mac/clk_gate_yt_acc_reg_reg_5_/main_gate]
 set_clock_gating_check -rise -setup 0 [get_cells                               \
-{u_datapath/u_yt_mac/clk_gate_yt_acc_reg_reg[4]/main_gate}]
+u_datapath/u_yt_mac/clk_gate_yt_acc_reg_reg_4_/main_gate]
 set_clock_gating_check -fall -setup 0 [get_cells                               \
-{u_datapath/u_yt_mac/clk_gate_yt_acc_reg_reg[4]/main_gate}]
+u_datapath/u_yt_mac/clk_gate_yt_acc_reg_reg_4_/main_gate]
 set_clock_gating_check -rise -hold 0 [get_cells                                \
-{u_datapath/u_yt_mac/clk_gate_yt_acc_reg_reg[4]/main_gate}]
+u_datapath/u_yt_mac/clk_gate_yt_acc_reg_reg_4_/main_gate]
 set_clock_gating_check -fall -hold 0 [get_cells                                \
-{u_datapath/u_yt_mac/clk_gate_yt_acc_reg_reg[4]/main_gate}]
+u_datapath/u_yt_mac/clk_gate_yt_acc_reg_reg_4_/main_gate]
 set_clock_gating_check -rise -setup 0 [get_cells                               \
-{u_datapath/u_yt_mac/clk_gate_yt_acc_reg_reg[3]/main_gate}]
+u_datapath/u_yt_mac/clk_gate_yt_acc_reg_reg_3_/main_gate]
 set_clock_gating_check -fall -setup 0 [get_cells                               \
-{u_datapath/u_yt_mac/clk_gate_yt_acc_reg_reg[3]/main_gate}]
+u_datapath/u_yt_mac/clk_gate_yt_acc_reg_reg_3_/main_gate]
 set_clock_gating_check -rise -hold 0 [get_cells                                \
-{u_datapath/u_yt_mac/clk_gate_yt_acc_reg_reg[3]/main_gate}]
+u_datapath/u_yt_mac/clk_gate_yt_acc_reg_reg_3_/main_gate]
 set_clock_gating_check -fall -hold 0 [get_cells                                \
-{u_datapath/u_yt_mac/clk_gate_yt_acc_reg_reg[3]/main_gate}]
+u_datapath/u_yt_mac/clk_gate_yt_acc_reg_reg_3_/main_gate]
 set_clock_gating_check -rise -setup 0 [get_cells                               \
-{u_datapath/u_yt_mac/clk_gate_yt_acc_reg_reg[2]/main_gate}]
+u_datapath/u_yt_mac/clk_gate_yt_acc_reg_reg_2_/main_gate]
 set_clock_gating_check -fall -setup 0 [get_cells                               \
-{u_datapath/u_yt_mac/clk_gate_yt_acc_reg_reg[2]/main_gate}]
+u_datapath/u_yt_mac/clk_gate_yt_acc_reg_reg_2_/main_gate]
 set_clock_gating_check -rise -hold 0 [get_cells                                \
-{u_datapath/u_yt_mac/clk_gate_yt_acc_reg_reg[2]/main_gate}]
+u_datapath/u_yt_mac/clk_gate_yt_acc_reg_reg_2_/main_gate]
 set_clock_gating_check -fall -hold 0 [get_cells                                \
-{u_datapath/u_yt_mac/clk_gate_yt_acc_reg_reg[2]/main_gate}]
+u_datapath/u_yt_mac/clk_gate_yt_acc_reg_reg_2_/main_gate]
 set_clock_gating_check -rise -setup 0 [get_cells                               \
-{u_datapath/u_yt_mac/clk_gate_yt_acc_reg_reg[1]/main_gate}]
+u_datapath/u_yt_mac/clk_gate_yt_acc_reg_reg_1_/main_gate]
 set_clock_gating_check -fall -setup 0 [get_cells                               \
-{u_datapath/u_yt_mac/clk_gate_yt_acc_reg_reg[1]/main_gate}]
+u_datapath/u_yt_mac/clk_gate_yt_acc_reg_reg_1_/main_gate]
 set_clock_gating_check -rise -hold 0 [get_cells                                \
-{u_datapath/u_yt_mac/clk_gate_yt_acc_reg_reg[1]/main_gate}]
+u_datapath/u_yt_mac/clk_gate_yt_acc_reg_reg_1_/main_gate]
 set_clock_gating_check -fall -hold 0 [get_cells                                \
-{u_datapath/u_yt_mac/clk_gate_yt_acc_reg_reg[1]/main_gate}]
+u_datapath/u_yt_mac/clk_gate_yt_acc_reg_reg_1_/main_gate]
 set_clock_gating_check -rise -setup 0 [get_cells                               \
-{u_datapath/u_yt_mac/clk_gate_yt_acc_reg_reg[0]/main_gate}]
+u_datapath/u_yt_mac/clk_gate_yt_acc_reg_reg_0_/main_gate]
 set_clock_gating_check -fall -setup 0 [get_cells                               \
-{u_datapath/u_yt_mac/clk_gate_yt_acc_reg_reg[0]/main_gate}]
+u_datapath/u_yt_mac/clk_gate_yt_acc_reg_reg_0_/main_gate]
 set_clock_gating_check -rise -hold 0 [get_cells                                \
-{u_datapath/u_yt_mac/clk_gate_yt_acc_reg_reg[0]/main_gate}]
+u_datapath/u_yt_mac/clk_gate_yt_acc_reg_reg_0_/main_gate]
 set_clock_gating_check -fall -hold 0 [get_cells                                \
-{u_datapath/u_yt_mac/clk_gate_yt_acc_reg_reg[0]/main_gate}]
+u_datapath/u_yt_mac/clk_gate_yt_acc_reg_reg_0_/main_gate]
 set_clock_gating_check -rise -setup 0 [get_cells                               \
 u_datapath/u_elem/clk_gate_o_next_h_reg/main_gate]
 set_clock_gating_check -fall -setup 0 [get_cells                               \
@@ -856,21 +856,21 @@ u_datapath/u_elem/clk_gate_s1_Abar_h_reg/main_gate]
 set_clock_gating_check -fall -hold 0 [get_cells                                \
 u_datapath/u_elem/clk_gate_s1_Abar_h_reg/main_gate]
 set_clock_gating_check -rise -setup 0 [get_cells                               \
-{u_datapath/u_dt_regfile/clk_gate_regfile_reg[4]/main_gate}]
+u_datapath/u_dt_regfile/clk_gate_regfile_reg_4_/main_gate]
 set_clock_gating_check -fall -setup 0 [get_cells                               \
-{u_datapath/u_dt_regfile/clk_gate_regfile_reg[4]/main_gate}]
+u_datapath/u_dt_regfile/clk_gate_regfile_reg_4_/main_gate]
 set_clock_gating_check -rise -hold 0 [get_cells                                \
-{u_datapath/u_dt_regfile/clk_gate_regfile_reg[4]/main_gate}]
+u_datapath/u_dt_regfile/clk_gate_regfile_reg_4_/main_gate]
 set_clock_gating_check -fall -hold 0 [get_cells                                \
-{u_datapath/u_dt_regfile/clk_gate_regfile_reg[4]/main_gate}]
+u_datapath/u_dt_regfile/clk_gate_regfile_reg_4_/main_gate]
 set_clock_gating_check -rise -setup 0 [get_cells                               \
-{u_datapath/u_dt_regfile/clk_gate_regfile_reg[0]/main_gate}]
+u_datapath/u_dt_regfile/clk_gate_regfile_reg_0_/main_gate]
 set_clock_gating_check -fall -setup 0 [get_cells                               \
-{u_datapath/u_dt_regfile/clk_gate_regfile_reg[0]/main_gate}]
+u_datapath/u_dt_regfile/clk_gate_regfile_reg_0_/main_gate]
 set_clock_gating_check -rise -hold 0 [get_cells                                \
-{u_datapath/u_dt_regfile/clk_gate_regfile_reg[0]/main_gate}]
+u_datapath/u_dt_regfile/clk_gate_regfile_reg_0_/main_gate]
 set_clock_gating_check -fall -hold 0 [get_cells                                \
-{u_datapath/u_dt_regfile/clk_gate_regfile_reg[0]/main_gate}]
+u_datapath/u_dt_regfile/clk_gate_regfile_reg_0_/main_gate]
 set_clock_gating_check -rise -setup 0 [get_cells                               \
 u_datapath/u_dt_regfile/clk_gate_data_negedge_reg/main_gate]
 set_clock_gating_check -fall -setup 0 [get_cells                               \
@@ -896,21 +896,21 @@ u_datapath/u_dt_proj_serial/clk_gate_o_y_reg/main_gate]
 set_clock_gating_check -fall -hold 0 [get_cells                                \
 u_datapath/u_dt_proj_serial/clk_gate_o_y_reg/main_gate]
 set_clock_gating_check -rise -setup 0 [get_cells                               \
-{u_datapath/u_c_regfile/clk_gate_regfile_reg[4]/main_gate}]
+u_datapath/u_c_regfile/clk_gate_regfile_reg_4_/main_gate]
 set_clock_gating_check -fall -setup 0 [get_cells                               \
-{u_datapath/u_c_regfile/clk_gate_regfile_reg[4]/main_gate}]
+u_datapath/u_c_regfile/clk_gate_regfile_reg_4_/main_gate]
 set_clock_gating_check -rise -hold 0 [get_cells                                \
-{u_datapath/u_c_regfile/clk_gate_regfile_reg[4]/main_gate}]
+u_datapath/u_c_regfile/clk_gate_regfile_reg_4_/main_gate]
 set_clock_gating_check -fall -hold 0 [get_cells                                \
-{u_datapath/u_c_regfile/clk_gate_regfile_reg[4]/main_gate}]
+u_datapath/u_c_regfile/clk_gate_regfile_reg_4_/main_gate]
 set_clock_gating_check -rise -setup 0 [get_cells                               \
-{u_datapath/u_c_regfile/clk_gate_regfile_reg[0]/main_gate}]
+u_datapath/u_c_regfile/clk_gate_regfile_reg_0_/main_gate]
 set_clock_gating_check -fall -setup 0 [get_cells                               \
-{u_datapath/u_c_regfile/clk_gate_regfile_reg[0]/main_gate}]
+u_datapath/u_c_regfile/clk_gate_regfile_reg_0_/main_gate]
 set_clock_gating_check -rise -hold 0 [get_cells                                \
-{u_datapath/u_c_regfile/clk_gate_regfile_reg[0]/main_gate}]
+u_datapath/u_c_regfile/clk_gate_regfile_reg_0_/main_gate]
 set_clock_gating_check -fall -hold 0 [get_cells                                \
-{u_datapath/u_c_regfile/clk_gate_regfile_reg[0]/main_gate}]
+u_datapath/u_c_regfile/clk_gate_regfile_reg_0_/main_gate]
 set_clock_gating_check -rise -setup 0 [get_cells                               \
 u_datapath/u_c_regfile/clk_gate_data_negedge_reg/main_gate]
 set_clock_gating_check -fall -setup 0 [get_cells                               \
@@ -920,21 +920,21 @@ u_datapath/u_c_regfile/clk_gate_data_negedge_reg/main_gate]
 set_clock_gating_check -fall -hold 0 [get_cells                                \
 u_datapath/u_c_regfile/clk_gate_data_negedge_reg/main_gate]
 set_clock_gating_check -rise -setup 0 [get_cells                               \
-{u_datapath/u_b_regfile/clk_gate_regfile_reg[4]/main_gate}]
+u_datapath/u_b_regfile/clk_gate_regfile_reg_4_/main_gate]
 set_clock_gating_check -fall -setup 0 [get_cells                               \
-{u_datapath/u_b_regfile/clk_gate_regfile_reg[4]/main_gate}]
+u_datapath/u_b_regfile/clk_gate_regfile_reg_4_/main_gate]
 set_clock_gating_check -rise -hold 0 [get_cells                                \
-{u_datapath/u_b_regfile/clk_gate_regfile_reg[4]/main_gate}]
+u_datapath/u_b_regfile/clk_gate_regfile_reg_4_/main_gate]
 set_clock_gating_check -fall -hold 0 [get_cells                                \
-{u_datapath/u_b_regfile/clk_gate_regfile_reg[4]/main_gate}]
+u_datapath/u_b_regfile/clk_gate_regfile_reg_4_/main_gate]
 set_clock_gating_check -rise -setup 0 [get_cells                               \
-{u_datapath/u_b_regfile/clk_gate_regfile_reg[0]/main_gate}]
+u_datapath/u_b_regfile/clk_gate_regfile_reg_0_/main_gate]
 set_clock_gating_check -fall -setup 0 [get_cells                               \
-{u_datapath/u_b_regfile/clk_gate_regfile_reg[0]/main_gate}]
+u_datapath/u_b_regfile/clk_gate_regfile_reg_0_/main_gate]
 set_clock_gating_check -rise -hold 0 [get_cells                                \
-{u_datapath/u_b_regfile/clk_gate_regfile_reg[0]/main_gate}]
+u_datapath/u_b_regfile/clk_gate_regfile_reg_0_/main_gate]
 set_clock_gating_check -fall -hold 0 [get_cells                                \
-{u_datapath/u_b_regfile/clk_gate_regfile_reg[0]/main_gate}]
+u_datapath/u_b_regfile/clk_gate_regfile_reg_0_/main_gate]
 set_clock_gating_check -rise -setup 0 [get_cells                               \
 u_datapath/u_b_regfile/clk_gate_data_negedge_reg/main_gate]
 set_clock_gating_check -fall -setup 0 [get_cells                               \
@@ -944,13 +944,13 @@ u_datapath/u_b_regfile/clk_gate_data_negedge_reg/main_gate]
 set_clock_gating_check -fall -hold 0 [get_cells                                \
 u_datapath/u_b_regfile/clk_gate_data_negedge_reg/main_gate]
 set_clock_gating_check -rise -setup 0 [get_cells                               \
-{u_datapath/u_dt_raw_regfile/clk_gate_regfile_reg[0]/main_gate}]
+u_datapath/u_dt_raw_regfile/clk_gate_regfile_reg_0_/main_gate]
 set_clock_gating_check -fall -setup 0 [get_cells                               \
-{u_datapath/u_dt_raw_regfile/clk_gate_regfile_reg[0]/main_gate}]
+u_datapath/u_dt_raw_regfile/clk_gate_regfile_reg_0_/main_gate]
 set_clock_gating_check -rise -hold 0 [get_cells                                \
-{u_datapath/u_dt_raw_regfile/clk_gate_regfile_reg[0]/main_gate}]
+u_datapath/u_dt_raw_regfile/clk_gate_regfile_reg_0_/main_gate]
 set_clock_gating_check -fall -hold 0 [get_cells                                \
-{u_datapath/u_dt_raw_regfile/clk_gate_regfile_reg[0]/main_gate}]
+u_datapath/u_dt_raw_regfile/clk_gate_regfile_reg_0_/main_gate]
 set_clock_gating_check -rise -setup 0 [get_cells                               \
 u_datapath/u_dt_raw_regfile/clk_gate_data_negedge_reg/main_gate]
 set_clock_gating_check -fall -setup 0 [get_cells                               \
@@ -968,21 +968,21 @@ u_datapath/u_x_proj_serial/clk_gate_idx_out_reg/main_gate]
 set_clock_gating_check -fall -hold 0 [get_cells                                \
 u_datapath/u_x_proj_serial/clk_gate_idx_out_reg/main_gate]
 set_clock_gating_check -rise -setup 0 [get_cells                               \
-{u_datapath/u_xt_regfile/clk_gate_regfile_reg[4]/main_gate}]
+u_datapath/u_xt_regfile/clk_gate_regfile_reg_4_/main_gate]
 set_clock_gating_check -fall -setup 0 [get_cells                               \
-{u_datapath/u_xt_regfile/clk_gate_regfile_reg[4]/main_gate}]
+u_datapath/u_xt_regfile/clk_gate_regfile_reg_4_/main_gate]
 set_clock_gating_check -rise -hold 0 [get_cells                                \
-{u_datapath/u_xt_regfile/clk_gate_regfile_reg[4]/main_gate}]
+u_datapath/u_xt_regfile/clk_gate_regfile_reg_4_/main_gate]
 set_clock_gating_check -fall -hold 0 [get_cells                                \
-{u_datapath/u_xt_regfile/clk_gate_regfile_reg[4]/main_gate}]
+u_datapath/u_xt_regfile/clk_gate_regfile_reg_4_/main_gate]
 set_clock_gating_check -rise -setup 0 [get_cells                               \
-{u_datapath/u_xt_regfile/clk_gate_regfile_reg[0]/main_gate}]
+u_datapath/u_xt_regfile/clk_gate_regfile_reg_0_/main_gate]
 set_clock_gating_check -fall -setup 0 [get_cells                               \
-{u_datapath/u_xt_regfile/clk_gate_regfile_reg[0]/main_gate}]
+u_datapath/u_xt_regfile/clk_gate_regfile_reg_0_/main_gate]
 set_clock_gating_check -rise -hold 0 [get_cells                                \
-{u_datapath/u_xt_regfile/clk_gate_regfile_reg[0]/main_gate}]
+u_datapath/u_xt_regfile/clk_gate_regfile_reg_0_/main_gate]
 set_clock_gating_check -fall -hold 0 [get_cells                                \
-{u_datapath/u_xt_regfile/clk_gate_regfile_reg[0]/main_gate}]
+u_datapath/u_xt_regfile/clk_gate_regfile_reg_0_/main_gate]
 set_clock_gating_check -rise -setup 0 [get_cells                               \
 u_datapath/u_xt_regfile/clk_gate_data_negedge_reg/main_gate]
 set_clock_gating_check -fall -setup 0 [get_cells                               \
@@ -1032,69 +1032,69 @@ u_datapath/u_proj_in_out_shared/clk_gate_o_proj_out_y_flat_reg/main_gate]
 set_clock_gating_check -fall -hold 0 [get_cells                                \
 u_datapath/u_proj_in_out_shared/clk_gate_o_proj_out_y_flat_reg/main_gate]
 set_clock_gating_check -rise -setup 0 [get_cells                               \
-{u_datapath/u_proj_in_out_shared/clk_gate_x_buf_reg[7]/main_gate}]
+u_datapath/u_proj_in_out_shared/clk_gate_x_buf_reg_7_/main_gate]
 set_clock_gating_check -fall -setup 0 [get_cells                               \
-{u_datapath/u_proj_in_out_shared/clk_gate_x_buf_reg[7]/main_gate}]
+u_datapath/u_proj_in_out_shared/clk_gate_x_buf_reg_7_/main_gate]
 set_clock_gating_check -rise -hold 0 [get_cells                                \
-{u_datapath/u_proj_in_out_shared/clk_gate_x_buf_reg[7]/main_gate}]
+u_datapath/u_proj_in_out_shared/clk_gate_x_buf_reg_7_/main_gate]
 set_clock_gating_check -fall -hold 0 [get_cells                                \
-{u_datapath/u_proj_in_out_shared/clk_gate_x_buf_reg[7]/main_gate}]
+u_datapath/u_proj_in_out_shared/clk_gate_x_buf_reg_7_/main_gate]
 set_clock_gating_check -rise -setup 0 [get_cells                               \
-{u_datapath/u_proj_in_out_shared/clk_gate_x_buf_reg[6]/main_gate}]
+u_datapath/u_proj_in_out_shared/clk_gate_x_buf_reg_6_/main_gate]
 set_clock_gating_check -fall -setup 0 [get_cells                               \
-{u_datapath/u_proj_in_out_shared/clk_gate_x_buf_reg[6]/main_gate}]
+u_datapath/u_proj_in_out_shared/clk_gate_x_buf_reg_6_/main_gate]
 set_clock_gating_check -rise -hold 0 [get_cells                                \
-{u_datapath/u_proj_in_out_shared/clk_gate_x_buf_reg[6]/main_gate}]
+u_datapath/u_proj_in_out_shared/clk_gate_x_buf_reg_6_/main_gate]
 set_clock_gating_check -fall -hold 0 [get_cells                                \
-{u_datapath/u_proj_in_out_shared/clk_gate_x_buf_reg[6]/main_gate}]
+u_datapath/u_proj_in_out_shared/clk_gate_x_buf_reg_6_/main_gate]
 set_clock_gating_check -rise -setup 0 [get_cells                               \
-{u_datapath/u_proj_in_out_shared/clk_gate_x_buf_reg[5]/main_gate}]
+u_datapath/u_proj_in_out_shared/clk_gate_x_buf_reg_5_/main_gate]
 set_clock_gating_check -fall -setup 0 [get_cells                               \
-{u_datapath/u_proj_in_out_shared/clk_gate_x_buf_reg[5]/main_gate}]
+u_datapath/u_proj_in_out_shared/clk_gate_x_buf_reg_5_/main_gate]
 set_clock_gating_check -rise -hold 0 [get_cells                                \
-{u_datapath/u_proj_in_out_shared/clk_gate_x_buf_reg[5]/main_gate}]
+u_datapath/u_proj_in_out_shared/clk_gate_x_buf_reg_5_/main_gate]
 set_clock_gating_check -fall -hold 0 [get_cells                                \
-{u_datapath/u_proj_in_out_shared/clk_gate_x_buf_reg[5]/main_gate}]
+u_datapath/u_proj_in_out_shared/clk_gate_x_buf_reg_5_/main_gate]
 set_clock_gating_check -rise -setup 0 [get_cells                               \
-{u_datapath/u_proj_in_out_shared/clk_gate_x_buf_reg[4]/main_gate}]
+u_datapath/u_proj_in_out_shared/clk_gate_x_buf_reg_4_/main_gate]
 set_clock_gating_check -fall -setup 0 [get_cells                               \
-{u_datapath/u_proj_in_out_shared/clk_gate_x_buf_reg[4]/main_gate}]
+u_datapath/u_proj_in_out_shared/clk_gate_x_buf_reg_4_/main_gate]
 set_clock_gating_check -rise -hold 0 [get_cells                                \
-{u_datapath/u_proj_in_out_shared/clk_gate_x_buf_reg[4]/main_gate}]
+u_datapath/u_proj_in_out_shared/clk_gate_x_buf_reg_4_/main_gate]
 set_clock_gating_check -fall -hold 0 [get_cells                                \
-{u_datapath/u_proj_in_out_shared/clk_gate_x_buf_reg[4]/main_gate}]
+u_datapath/u_proj_in_out_shared/clk_gate_x_buf_reg_4_/main_gate]
 set_clock_gating_check -rise -setup 0 [get_cells                               \
-{u_datapath/u_proj_in_out_shared/clk_gate_x_buf_reg[3]/main_gate}]
+u_datapath/u_proj_in_out_shared/clk_gate_x_buf_reg_3_/main_gate]
 set_clock_gating_check -fall -setup 0 [get_cells                               \
-{u_datapath/u_proj_in_out_shared/clk_gate_x_buf_reg[3]/main_gate}]
+u_datapath/u_proj_in_out_shared/clk_gate_x_buf_reg_3_/main_gate]
 set_clock_gating_check -rise -hold 0 [get_cells                                \
-{u_datapath/u_proj_in_out_shared/clk_gate_x_buf_reg[3]/main_gate}]
+u_datapath/u_proj_in_out_shared/clk_gate_x_buf_reg_3_/main_gate]
 set_clock_gating_check -fall -hold 0 [get_cells                                \
-{u_datapath/u_proj_in_out_shared/clk_gate_x_buf_reg[3]/main_gate}]
+u_datapath/u_proj_in_out_shared/clk_gate_x_buf_reg_3_/main_gate]
 set_clock_gating_check -rise -setup 0 [get_cells                               \
-{u_datapath/u_proj_in_out_shared/clk_gate_x_buf_reg[2]/main_gate}]
+u_datapath/u_proj_in_out_shared/clk_gate_x_buf_reg_2_/main_gate]
 set_clock_gating_check -fall -setup 0 [get_cells                               \
-{u_datapath/u_proj_in_out_shared/clk_gate_x_buf_reg[2]/main_gate}]
+u_datapath/u_proj_in_out_shared/clk_gate_x_buf_reg_2_/main_gate]
 set_clock_gating_check -rise -hold 0 [get_cells                                \
-{u_datapath/u_proj_in_out_shared/clk_gate_x_buf_reg[2]/main_gate}]
+u_datapath/u_proj_in_out_shared/clk_gate_x_buf_reg_2_/main_gate]
 set_clock_gating_check -fall -hold 0 [get_cells                                \
-{u_datapath/u_proj_in_out_shared/clk_gate_x_buf_reg[2]/main_gate}]
+u_datapath/u_proj_in_out_shared/clk_gate_x_buf_reg_2_/main_gate]
 set_clock_gating_check -rise -setup 0 [get_cells                               \
-{u_datapath/u_proj_in_out_shared/clk_gate_x_buf_reg[1]/main_gate}]
+u_datapath/u_proj_in_out_shared/clk_gate_x_buf_reg_1_/main_gate]
 set_clock_gating_check -fall -setup 0 [get_cells                               \
-{u_datapath/u_proj_in_out_shared/clk_gate_x_buf_reg[1]/main_gate}]
+u_datapath/u_proj_in_out_shared/clk_gate_x_buf_reg_1_/main_gate]
 set_clock_gating_check -rise -hold 0 [get_cells                                \
-{u_datapath/u_proj_in_out_shared/clk_gate_x_buf_reg[1]/main_gate}]
+u_datapath/u_proj_in_out_shared/clk_gate_x_buf_reg_1_/main_gate]
 set_clock_gating_check -fall -hold 0 [get_cells                                \
-{u_datapath/u_proj_in_out_shared/clk_gate_x_buf_reg[1]/main_gate}]
+u_datapath/u_proj_in_out_shared/clk_gate_x_buf_reg_1_/main_gate]
 set_clock_gating_check -rise -setup 0 [get_cells                               \
-{u_datapath/u_proj_in_out_shared/clk_gate_x_buf_reg[0]/main_gate}]
+u_datapath/u_proj_in_out_shared/clk_gate_x_buf_reg_0_/main_gate]
 set_clock_gating_check -fall -setup 0 [get_cells                               \
-{u_datapath/u_proj_in_out_shared/clk_gate_x_buf_reg[0]/main_gate}]
+u_datapath/u_proj_in_out_shared/clk_gate_x_buf_reg_0_/main_gate]
 set_clock_gating_check -rise -hold 0 [get_cells                                \
-{u_datapath/u_proj_in_out_shared/clk_gate_x_buf_reg[0]/main_gate}]
+u_datapath/u_proj_in_out_shared/clk_gate_x_buf_reg_0_/main_gate]
 set_clock_gating_check -fall -hold 0 [get_cells                                \
-{u_datapath/u_proj_in_out_shared/clk_gate_x_buf_reg[0]/main_gate}]
+u_datapath/u_proj_in_out_shared/clk_gate_x_buf_reg_0_/main_gate]
 set_clock_gating_check -rise -setup 0 [get_cells                               \
 u_datapath/u_proj_in_out_shared/clk_gate_o_proj_in_y_reg/main_gate]
 set_clock_gating_check -fall -setup 0 [get_cells                               \
