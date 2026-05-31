@@ -1,6 +1,6 @@
 ###################################################################
 
-# Created by write_sdc on Sun May 31 04:21:33 2026
+# Created by write_sdc on Sun May 31 11:47:01 2026
 
 ###################################################################
 set sdc_version 1.8
@@ -44,7 +44,7 @@ set_max_fanout 32 [get_ports {w_data[3]}]
 set_max_fanout 32 [get_ports {w_data[2]}]
 set_max_fanout 32 [get_ports {w_data[1]}]
 set_max_fanout 32 [get_ports {w_data[0]}]
-create_clock [get_ports clk]  -period 30  -waveform {0 15}
+create_clock [get_ports clk]  -period 40  -waveform {0 20}
 set_clock_uncertainty 0.05  [get_clocks clk]
 set_input_delay -clock clk  -max 5  [get_ports rst_n]
 set_input_delay -clock clk  -min 0  [get_ports rst_n]

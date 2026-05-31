@@ -4,7 +4,7 @@
 // Clock control for RTL and gate-level simulations.
 // `timescale is 1ns/1ps in the testbenches, so 25 means a 50 ns period.
 `ifndef TB_CLK_HALF_PERIOD
-`define TB_CLK_HALF_PERIOD 10
+`define TB_CLK_HALF_PERIOD 15
 `endif
 
 // Optional FSDB (Verdi/nWave) controls — set in each tb_dyn_*.v wrapper:

@@ -4,7 +4,7 @@ Report : power
         -analysis_effort low
 Design : mamba_core
 Version: U-2022.12
-Date   : Sun May 31 04:21:18 2026
+Date   : Sun May 31 11:46:46 2026
 ****************************************
 
 
@@ -23,7 +23,7 @@ mamba_datapath_new_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_ADDR_WIDTH9
                        enG100K           fsa0m_a_generic_core_tt1p8v25c
 SNPS_CLOCK_GATE_HIGH_mamba_core_0
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
-SNPS_CLOCK_GATE_HIGH_mamba_core_49
+SNPS_CLOCK_GATE_HIGH_mamba_core_67
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
 mamba_core_DW01_inc_J4_0
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
@@ -70,17 +70,17 @@ SNPS_CLOCK_GATE_HIGH_mamba_datapath_new_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDT
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
 mamba_datapath_new_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_ADDR_WIDTH9_DW01_inc_J3_0
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
-mamba_datapath_new_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_ADDR_WIDTH9_DW01_add_3
+mamba_datapath_new_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_ADDR_WIDTH9_DW01_add_J3_1
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
-mamba_datapath_new_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_ADDR_WIDTH9_DW01_add_4
+mamba_datapath_new_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_ADDR_WIDTH9_DW01_add_J3_2
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
 SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_ADDR_WIDTH9_0
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
-SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_ADDR_WIDTH9_272
+SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_ADDR_WIDTH9_270
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
 elementwise_mul_A_WIDTH16_B_WIDTH16_OUT_WIDTH32_0_DW_mult_tc_J8_0_DW_mult_tc_J8_2_3
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
-elementwise_mul_A_WIDTH16_B_WIDTH16_OUT_WIDTH32_2_DW_mult_tc_0
+elementwise_mul_A_WIDTH16_B_WIDTH16_OUT_WIDTH32_0_DW_mult_tc_J8_0_DW_mult_tc_J8_2_2
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
 mamba_linear_shared_mult16x10_DATA_WIDTH16_W_SHIFTED_W10_MAC_PROD_W26
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
@@ -88,25 +88,27 @@ mamba_linear_shared_mult32x17
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
 SNPS_CLOCK_GATE_HIGH_mamba_proj_in_out_shared_IN_DIM8_D_MODEL8_OUT_DIM4_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_0
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
-SNPS_CLOCK_GATE_HIGH_mamba_proj_in_out_shared_IN_DIM8_D_MODEL8_OUT_DIM4_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_5
+SNPS_CLOCK_GATE_HIGH_mamba_proj_in_out_shared_IN_DIM8_D_MODEL8_OUT_DIM4_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_13
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
 mamba_proj_in_out_shared_IN_DIM8_D_MODEL8_OUT_DIM4_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_DW01_add_J6_0
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
-mamba_proj_in_out_shared_IN_DIM8_D_MODEL8_OUT_DIM4_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_DP_OP_160J6_122_8420_2
+mamba_proj_in_out_shared_IN_DIM8_D_MODEL8_OUT_DIM4_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_DP_OP_53J6_124_2862_J6_0
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
-mamba_proj_in_out_shared_IN_DIM8_D_MODEL8_OUT_DIM4_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_DP_OP_161J6_123_8420_2
+mamba_proj_in_out_shared_IN_DIM8_D_MODEL8_OUT_DIM4_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_DP_OP_161J6_123_8420_0
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
-mamba_proj_in_out_shared_IN_DIM8_D_MODEL8_OUT_DIM4_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_DP_OP_53_134_2355_1
+mamba_proj_in_out_shared_IN_DIM8_D_MODEL8_OUT_DIM4_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_DP_OP_160J6_122_8420_0
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
 SNPS_CLOCK_GATE_LOW_regfile_WIDTH16_SIZE8_0_3
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
 SNPS_CLOCK_GATE_HIGH_regfile_WIDTH16_SIZE8_0_7
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
+SNPS_CLOCK_GATE_HIGH_regfile_WIDTH16_SIZE8_0_6
+                       enG5K             fsa0m_a_generic_core_tt1p8v25c
 SNPS_CLOCK_GATE_HIGH_mamba_linear_in1_serial_OUT_DIM17_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
 mamba_linear_in1_serial_OUT_DIM17_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_DP_OP_98J8_122_2377_J8_0
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
-mamba_linear_in1_serial_OUT_DIM17_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_DP_OP_99J8_123_9451_2
+mamba_linear_in1_serial_OUT_DIM17_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_DP_OP_99J8_123_9451_0
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
 SNPS_CLOCK_GATE_LOW_regfile_WIDTH16_SIZE1
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
@@ -114,61 +116,51 @@ SNPS_CLOCK_GATE_HIGH_regfile_WIDTH16_SIZE1
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
 SNPS_CLOCK_GATE_LOW_regfile_WIDTH16_SIZE8_0_2
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
-SNPS_CLOCK_GATE_HIGH_regfile_WIDTH16_SIZE8_0_3
-                       enG5K             fsa0m_a_generic_core_tt1p8v25c
 SNPS_CLOCK_GATE_HIGH_mamba_linear_in1_serial_OUT_DIM8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
-mamba_linear_in1_serial_OUT_DIM8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_DP_OP_61J8_124_5272_0
+mamba_linear_in1_serial_OUT_DIM8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_DP_OP_61J8_124_5272_J8_0
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
-mamba_linear_in1_serial_OUT_DIM8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_DP_OP_62J8_125_4916_3
+mamba_linear_in1_serial_OUT_DIM8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_DP_OP_62J8_125_4916_0
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
 SNPS_CLOCK_GATE_HIGH_mamba_softplus_DATA_WIDTH16
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
-elementwise_mul_A_WIDTH17_B_WIDTH16_OUT_WIDTH32_1_DW_mult_tc_1
+elementwise_mul_A_WIDTH17_B_WIDTH16_OUT_WIDTH32_0_DW_mult_tc_J8_0_DW_mult_tc_J8_1_1
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
 elementwise_mul_A_WIDTH16_B_WIDTH16_OUT_WIDTH32_0_DW_mult_tc_J8_0_DW_mult_tc_J8_2_1
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
-elementwise_mul_A_WIDTH17_B_WIDTH16_OUT_WIDTH32_0_DW_mult_tc_1
+elementwise_mul_A_WIDTH17_B_WIDTH16_OUT_WIDTH32_0_DW_mult_tc_J8_0_DW_mult_tc_J8_1_0
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
-elementwise_mul_A_WIDTH16_B_WIDTH16_OUT_WIDTH32_0_DW_mult_tc_1
+elementwise_mul_A_WIDTH16_B_WIDTH16_OUT_WIDTH32_0_DW_mult_tc_J8_0_DW_mult_tc_J8_2_0
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
 elementwise_add_A_WIDTH16_B_WIDTH16_OUT_WIDTH16
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
 SNPS_CLOCK_GATE_HIGH_pipeline_elementwise_multiplier_DATA_WIDTH16_0
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
-pipeline_elementwise_multiplier_DATA_WIDTH16_DP_OP_34J5_122_6730_1
+pipeline_elementwise_multiplier_DATA_WIDTH16_DP_OP_34J5_122_6730_J5_0
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
 SNPS_CLOCK_GATE_HIGH_pipeline_yt_mac_D_MODEL8_D_STATE8_DATA_WIDTH16_9
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
-SNPS_CLOCK_GATE_HIGH_pipeline_yt_mac_D_MODEL8_D_STATE8_DATA_WIDTH16_7
+SNPS_CLOCK_GATE_HIGH_pipeline_yt_mac_D_MODEL8_D_STATE8_DATA_WIDTH16_8
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
 pipeline_yt_mac_D_MODEL8_D_STATE8_DATA_WIDTH16_DP_OP_21J7_123_5582_J7_0
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
 pipeline_yt_mac_D_MODEL8_D_STATE8_DATA_WIDTH16_DP_OP_20J7_122_6460_J7_0
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
-mamba_linear_shared_mult16x10_DATA_WIDTH16_W_SHIFTED_W10_MAC_PROD_W26_DW_mult_tc_1
+mamba_linear_shared_mult16x10_DATA_WIDTH16_W_SHIFTED_W10_MAC_PROD_W26_DW_mult_tc_J8_0_DW_mult_tc_J8_3
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
-mamba_linear_shared_mult32x17_DW_mult_tc_2
+mamba_linear_shared_mult32x17_DW_mult_tc_J8_0
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
 elementwise_add_A_WIDTH16_B_WIDTH16_OUT_WIDTH16_DW01_add_J8_0
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
 SNPS_CLOCK_GATE_HIGH_mamba_core_1
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
-SNPS_CLOCK_GATE_HIGH_mamba_core_3
+SNPS_CLOCK_GATE_HIGH_mamba_core_2
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
 SNPS_CLOCK_GATE_HIGH_mamba_core_5
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
-SNPS_CLOCK_GATE_HIGH_mamba_core_7
-                       enG5K             fsa0m_a_generic_core_tt1p8v25c
-SNPS_CLOCK_GATE_HIGH_mamba_core_13
-                       enG5K             fsa0m_a_generic_core_tt1p8v25c
-SNPS_CLOCK_GATE_HIGH_mamba_core_36
-                       enG5K             fsa0m_a_generic_core_tt1p8v25c
-SNPS_CLOCK_GATE_HIGH_mamba_core_2
-                       enG5K             fsa0m_a_generic_core_tt1p8v25c
-SNPS_CLOCK_GATE_HIGH_mamba_core_4
-                       enG5K             fsa0m_a_generic_core_tt1p8v25c
 SNPS_CLOCK_GATE_HIGH_mamba_core_6
+                       enG5K             fsa0m_a_generic_core_tt1p8v25c
+SNPS_CLOCK_GATE_HIGH_mamba_core_7
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
 SNPS_CLOCK_GATE_HIGH_mamba_core_8
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
@@ -179,6 +171,8 @@ SNPS_CLOCK_GATE_HIGH_mamba_core_10
 SNPS_CLOCK_GATE_HIGH_mamba_core_11
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
 SNPS_CLOCK_GATE_HIGH_mamba_core_12
+                       enG5K             fsa0m_a_generic_core_tt1p8v25c
+SNPS_CLOCK_GATE_HIGH_mamba_core_13
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
 SNPS_CLOCK_GATE_HIGH_mamba_core_14
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
@@ -204,8 +198,6 @@ SNPS_CLOCK_GATE_HIGH_mamba_core_24
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
 SNPS_CLOCK_GATE_HIGH_mamba_core_25
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
-SNPS_CLOCK_GATE_HIGH_mamba_core_26
-                       enG5K             fsa0m_a_generic_core_tt1p8v25c
 SNPS_CLOCK_GATE_HIGH_mamba_core_27
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
 SNPS_CLOCK_GATE_HIGH_mamba_core_28
@@ -218,11 +210,11 @@ SNPS_CLOCK_GATE_HIGH_mamba_core_31
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
 SNPS_CLOCK_GATE_HIGH_mamba_core_32
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
-SNPS_CLOCK_GATE_HIGH_mamba_core_33
-                       enG5K             fsa0m_a_generic_core_tt1p8v25c
 SNPS_CLOCK_GATE_HIGH_mamba_core_34
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
 SNPS_CLOCK_GATE_HIGH_mamba_core_35
+                       enG5K             fsa0m_a_generic_core_tt1p8v25c
+SNPS_CLOCK_GATE_HIGH_mamba_core_36
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
 SNPS_CLOCK_GATE_HIGH_mamba_core_37
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
@@ -244,9 +236,9 @@ SNPS_CLOCK_GATE_HIGH_mamba_core_45
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
 SNPS_CLOCK_GATE_HIGH_mamba_core_46
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
-SNPS_CLOCK_GATE_HIGH_mamba_core_47
-                       enG5K             fsa0m_a_generic_core_tt1p8v25c
 SNPS_CLOCK_GATE_HIGH_mamba_core_48
+                       enG5K             fsa0m_a_generic_core_tt1p8v25c
+SNPS_CLOCK_GATE_HIGH_mamba_core_49
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
 SNPS_CLOCK_GATE_HIGH_mamba_core_50
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
@@ -268,8 +260,6 @@ SNPS_CLOCK_GATE_HIGH_mamba_core_58
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
 SNPS_CLOCK_GATE_HIGH_mamba_core_59
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
-SNPS_CLOCK_GATE_HIGH_mamba_core_60
-                       enG5K             fsa0m_a_generic_core_tt1p8v25c
 SNPS_CLOCK_GATE_HIGH_mamba_core_61
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
 SNPS_CLOCK_GATE_HIGH_mamba_core_62
@@ -282,7 +272,17 @@ SNPS_CLOCK_GATE_HIGH_mamba_core_65
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
 SNPS_CLOCK_GATE_HIGH_mamba_core_66
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
-SNPS_CLOCK_GATE_HIGH_mamba_core_67
+SNPS_CLOCK_GATE_HIGH_mamba_core_3
+                       enG5K             fsa0m_a_generic_core_tt1p8v25c
+SNPS_CLOCK_GATE_HIGH_mamba_core_4
+                       enG5K             fsa0m_a_generic_core_tt1p8v25c
+SNPS_CLOCK_GATE_HIGH_mamba_core_26
+                       enG5K             fsa0m_a_generic_core_tt1p8v25c
+SNPS_CLOCK_GATE_HIGH_mamba_core_33
+                       enG5K             fsa0m_a_generic_core_tt1p8v25c
+SNPS_CLOCK_GATE_HIGH_mamba_core_47
+                       enG5K             fsa0m_a_generic_core_tt1p8v25c
+SNPS_CLOCK_GATE_HIGH_mamba_core_60
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
 SNPS_CLOCK_GATE_HIGH_mamba_core_68
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
@@ -312,7 +312,7 @@ SNPS_CLOCK_GATE_HIGH_pipeline_yt_mac_D_MODEL8_D_STATE8_DATA_WIDTH16_5
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
 SNPS_CLOCK_GATE_HIGH_pipeline_yt_mac_D_MODEL8_D_STATE8_DATA_WIDTH16_6
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
-SNPS_CLOCK_GATE_HIGH_pipeline_yt_mac_D_MODEL8_D_STATE8_DATA_WIDTH16_8
+SNPS_CLOCK_GATE_HIGH_pipeline_yt_mac_D_MODEL8_D_STATE8_DATA_WIDTH16_7
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
 SNPS_CLOCK_GATE_HIGH_pipeline_elementwise_multiplier_DATA_WIDTH16_1
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
@@ -324,11 +324,11 @@ SNPS_CLOCK_GATE_HIGH_regfile_WIDTH16_SIZE8_0_0
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
 SNPS_CLOCK_GATE_HIGH_regfile_WIDTH16_SIZE8_0_2
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
+SNPS_CLOCK_GATE_HIGH_regfile_WIDTH16_SIZE8_0_3
+                       enG5K             fsa0m_a_generic_core_tt1p8v25c
 SNPS_CLOCK_GATE_HIGH_regfile_WIDTH16_SIZE8_0_4
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
 SNPS_CLOCK_GATE_HIGH_regfile_WIDTH16_SIZE8_0_5
-                       enG5K             fsa0m_a_generic_core_tt1p8v25c
-SNPS_CLOCK_GATE_HIGH_regfile_WIDTH16_SIZE8_0_6
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
 SNPS_CLOCK_GATE_LOW_regfile_WIDTH16_SIZE8_0_0
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
@@ -338,11 +338,7 @@ SNPS_CLOCK_GATE_HIGH_mamba_proj_in_out_shared_IN_DIM8_D_MODEL8_OUT_DIM4_DATA_WID
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
 SNPS_CLOCK_GATE_HIGH_mamba_proj_in_out_shared_IN_DIM8_D_MODEL8_OUT_DIM4_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_2
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
-SNPS_CLOCK_GATE_HIGH_mamba_proj_in_out_shared_IN_DIM8_D_MODEL8_OUT_DIM4_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_3
-                       enG5K             fsa0m_a_generic_core_tt1p8v25c
 SNPS_CLOCK_GATE_HIGH_mamba_proj_in_out_shared_IN_DIM8_D_MODEL8_OUT_DIM4_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_4
-                       enG5K             fsa0m_a_generic_core_tt1p8v25c
-SNPS_CLOCK_GATE_HIGH_mamba_proj_in_out_shared_IN_DIM8_D_MODEL8_OUT_DIM4_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_6
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
 SNPS_CLOCK_GATE_HIGH_mamba_proj_in_out_shared_IN_DIM8_D_MODEL8_OUT_DIM4_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_7
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
@@ -356,11 +352,13 @@ SNPS_CLOCK_GATE_HIGH_mamba_proj_in_out_shared_IN_DIM8_D_MODEL8_OUT_DIM4_DATA_WID
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
 SNPS_CLOCK_GATE_HIGH_mamba_proj_in_out_shared_IN_DIM8_D_MODEL8_OUT_DIM4_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_12
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
-SNPS_CLOCK_GATE_HIGH_mamba_proj_in_out_shared_IN_DIM8_D_MODEL8_OUT_DIM4_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_13
+SNPS_CLOCK_GATE_HIGH_mamba_proj_in_out_shared_IN_DIM8_D_MODEL8_OUT_DIM4_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_3
+                       enG5K             fsa0m_a_generic_core_tt1p8v25c
+SNPS_CLOCK_GATE_HIGH_mamba_proj_in_out_shared_IN_DIM8_D_MODEL8_OUT_DIM4_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_5
+                       enG5K             fsa0m_a_generic_core_tt1p8v25c
+SNPS_CLOCK_GATE_HIGH_mamba_proj_in_out_shared_IN_DIM8_D_MODEL8_OUT_DIM4_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_6
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
 SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_ADDR_WIDTH9_1
-                       enG5K             fsa0m_a_generic_core_tt1p8v25c
-SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_ADDR_WIDTH9_2
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
 SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_ADDR_WIDTH9_3
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
@@ -378,6 +376,8 @@ SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WI
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
 SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_ADDR_WIDTH9_10
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
+SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_ADDR_WIDTH9_11
+                       enG5K             fsa0m_a_generic_core_tt1p8v25c
 SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_ADDR_WIDTH9_12
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
 SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_ADDR_WIDTH9_13
@@ -387,8 +387,6 @@ SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WI
 SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_ADDR_WIDTH9_15
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
 SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_ADDR_WIDTH9_16
-                       enG5K             fsa0m_a_generic_core_tt1p8v25c
-SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_ADDR_WIDTH9_17
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
 SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_ADDR_WIDTH9_18
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
@@ -406,6 +404,8 @@ SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WI
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
 SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_ADDR_WIDTH9_25
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
+SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_ADDR_WIDTH9_26
+                       enG5K             fsa0m_a_generic_core_tt1p8v25c
 SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_ADDR_WIDTH9_27
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
 SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_ADDR_WIDTH9_28
@@ -415,8 +415,6 @@ SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WI
 SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_ADDR_WIDTH9_30
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
 SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_ADDR_WIDTH9_31
-                       enG5K             fsa0m_a_generic_core_tt1p8v25c
-SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_ADDR_WIDTH9_32
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
 SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_ADDR_WIDTH9_33
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
@@ -434,6 +432,8 @@ SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WI
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
 SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_ADDR_WIDTH9_40
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
+SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_ADDR_WIDTH9_41
+                       enG5K             fsa0m_a_generic_core_tt1p8v25c
 SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_ADDR_WIDTH9_42
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
 SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_ADDR_WIDTH9_43
@@ -441,8 +441,6 @@ SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WI
 SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_ADDR_WIDTH9_44
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
 SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_ADDR_WIDTH9_45
-                       enG5K             fsa0m_a_generic_core_tt1p8v25c
-SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_ADDR_WIDTH9_46
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
 SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_ADDR_WIDTH9_47
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
@@ -460,6 +458,8 @@ SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WI
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
 SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_ADDR_WIDTH9_54
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
+SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_ADDR_WIDTH9_55
+                       enG5K             fsa0m_a_generic_core_tt1p8v25c
 SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_ADDR_WIDTH9_56
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
 SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_ADDR_WIDTH9_57
@@ -469,8 +469,6 @@ SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WI
 SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_ADDR_WIDTH9_59
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
 SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_ADDR_WIDTH9_60
-                       enG5K             fsa0m_a_generic_core_tt1p8v25c
-SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_ADDR_WIDTH9_61
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
 SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_ADDR_WIDTH9_62
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
@@ -488,6 +486,8 @@ SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WI
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
 SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_ADDR_WIDTH9_69
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
+SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_ADDR_WIDTH9_70
+                       enG5K             fsa0m_a_generic_core_tt1p8v25c
 SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_ADDR_WIDTH9_71
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
 SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_ADDR_WIDTH9_72
@@ -495,8 +495,6 @@ SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WI
 SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_ADDR_WIDTH9_73
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
 SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_ADDR_WIDTH9_74
-                       enG5K             fsa0m_a_generic_core_tt1p8v25c
-SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_ADDR_WIDTH9_75
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
 SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_ADDR_WIDTH9_76
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
@@ -514,8 +512,6 @@ SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WI
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
 SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_ADDR_WIDTH9_83
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
-SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_ADDR_WIDTH9_84
-                       enG5K             fsa0m_a_generic_core_tt1p8v25c
 SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_ADDR_WIDTH9_85
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
 SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_ADDR_WIDTH9_86
@@ -532,9 +528,9 @@ SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WI
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
 SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_ADDR_WIDTH9_92
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
-SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_ADDR_WIDTH9_94
+SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_ADDR_WIDTH9_93
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
-SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_ADDR_WIDTH9_95
+SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_ADDR_WIDTH9_94
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
 SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_ADDR_WIDTH9_96
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
@@ -554,11 +550,11 @@ SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WI
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
 SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_ADDR_WIDTH9_104
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
+SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_ADDR_WIDTH9_105
+                       enG5K             fsa0m_a_generic_core_tt1p8v25c
 SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_ADDR_WIDTH9_106
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
 SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_ADDR_WIDTH9_107
-                       enG5K             fsa0m_a_generic_core_tt1p8v25c
-SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_ADDR_WIDTH9_108
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
 SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_ADDR_WIDTH9_109
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
@@ -582,7 +578,7 @@ SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WI
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
 SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_ADDR_WIDTH9_119
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
-SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_ADDR_WIDTH9_121
+SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_ADDR_WIDTH9_120
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
 SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_ADDR_WIDTH9_122
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
@@ -608,7 +604,7 @@ SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WI
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
 SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_ADDR_WIDTH9_133
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
-SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_ADDR_WIDTH9_135
+SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_ADDR_WIDTH9_134
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
 SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_ADDR_WIDTH9_136
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
@@ -639,8 +635,6 @@ SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WI
 SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_ADDR_WIDTH9_150
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
 SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_ADDR_WIDTH9_151
-                       enG5K             fsa0m_a_generic_core_tt1p8v25c
-SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_ADDR_WIDTH9_152
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
 SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_ADDR_WIDTH9_153
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
@@ -680,11 +674,11 @@ SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WI
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
 SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_ADDR_WIDTH9_171
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
-SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_ADDR_WIDTH9_172
-                       enG5K             fsa0m_a_generic_core_tt1p8v25c
 SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_ADDR_WIDTH9_173
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
 SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_ADDR_WIDTH9_174
+                       enG5K             fsa0m_a_generic_core_tt1p8v25c
+SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_ADDR_WIDTH9_175
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
 SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_ADDR_WIDTH9_176
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
@@ -696,7 +690,7 @@ SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WI
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
 SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_ADDR_WIDTH9_180
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
-SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_ADDR_WIDTH9_182
+SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_ADDR_WIDTH9_181
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
 SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_ADDR_WIDTH9_183
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
@@ -718,6 +712,8 @@ SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WI
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
 SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_ADDR_WIDTH9_193
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
+SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_ADDR_WIDTH9_194
+                       enG5K             fsa0m_a_generic_core_tt1p8v25c
 SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_ADDR_WIDTH9_195
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
 SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_ADDR_WIDTH9_196
@@ -725,8 +721,6 @@ SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WI
 SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_ADDR_WIDTH9_197
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
 SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_ADDR_WIDTH9_198
-                       enG5K             fsa0m_a_generic_core_tt1p8v25c
-SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_ADDR_WIDTH9_199
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
 SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_ADDR_WIDTH9_200
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
@@ -742,17 +736,17 @@ SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WI
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
 SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_ADDR_WIDTH9_206
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
-SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_ADDR_WIDTH9_207
-                       enG5K             fsa0m_a_generic_core_tt1p8v25c
 SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_ADDR_WIDTH9_208
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
-SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_ADDR_WIDTH9_211
+SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_ADDR_WIDTH9_209
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
-SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_ADDR_WIDTH9_212
+SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_ADDR_WIDTH9_211
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
 SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_ADDR_WIDTH9_213
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
 SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_ADDR_WIDTH9_214
+                       enG5K             fsa0m_a_generic_core_tt1p8v25c
+SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_ADDR_WIDTH9_215
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
 SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_ADDR_WIDTH9_216
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
@@ -774,7 +768,7 @@ SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WI
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
 SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_ADDR_WIDTH9_226
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
-SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_ADDR_WIDTH9_227
+SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_ADDR_WIDTH9_228
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
 SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_ADDR_WIDTH9_229
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
@@ -786,9 +780,9 @@ SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WI
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
 SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_ADDR_WIDTH9_233
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
-SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_ADDR_WIDTH9_234
-                       enG5K             fsa0m_a_generic_core_tt1p8v25c
 SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_ADDR_WIDTH9_235
+                       enG5K             fsa0m_a_generic_core_tt1p8v25c
+SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_ADDR_WIDTH9_236
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
 SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_ADDR_WIDTH9_237
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
@@ -798,17 +792,15 @@ SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WI
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
 SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_ADDR_WIDTH9_240
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
-SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_ADDR_WIDTH9_241
-                       enG5K             fsa0m_a_generic_core_tt1p8v25c
 SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_ADDR_WIDTH9_242
+                       enG5K             fsa0m_a_generic_core_tt1p8v25c
+SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_ADDR_WIDTH9_243
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
 SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_ADDR_WIDTH9_244
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
 SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_ADDR_WIDTH9_245
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
 SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_ADDR_WIDTH9_246
-                       enG5K             fsa0m_a_generic_core_tt1p8v25c
-SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_ADDR_WIDTH9_247
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
 SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_ADDR_WIDTH9_248
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
@@ -820,11 +812,11 @@ SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WI
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
 SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_ADDR_WIDTH9_252
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
+SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_ADDR_WIDTH9_253
+                       enG5K             fsa0m_a_generic_core_tt1p8v25c
 SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_ADDR_WIDTH9_254
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
 SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_ADDR_WIDTH9_255
-                       enG5K             fsa0m_a_generic_core_tt1p8v25c
-SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_ADDR_WIDTH9_256
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
 SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_ADDR_WIDTH9_257
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
@@ -834,13 +826,13 @@ SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WI
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
 SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_ADDR_WIDTH9_261
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
-SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_ADDR_WIDTH9_262
-                       enG5K             fsa0m_a_generic_core_tt1p8v25c
 SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_ADDR_WIDTH9_263
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
 SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_ADDR_WIDTH9_264
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
 SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_ADDR_WIDTH9_265
+                       enG5K             fsa0m_a_generic_core_tt1p8v25c
+SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_ADDR_WIDTH9_266
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
 SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_ADDR_WIDTH9_267
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
@@ -848,61 +840,69 @@ SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WI
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
 SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_ADDR_WIDTH9_269
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
-SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_ADDR_WIDTH9_270
-                       enG5K             fsa0m_a_generic_core_tt1p8v25c
 SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_ADDR_WIDTH9_271
+                       enG5K             fsa0m_a_generic_core_tt1p8v25c
+SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_ADDR_WIDTH9_272
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
 SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_ADDR_WIDTH9_273
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
 SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_ADDR_WIDTH9_274
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
-SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_ADDR_WIDTH9_11
+SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_ADDR_WIDTH9_2
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
-SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_ADDR_WIDTH9_26
+SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_ADDR_WIDTH9_17
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
-SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_ADDR_WIDTH9_41
+SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_ADDR_WIDTH9_32
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
-SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_ADDR_WIDTH9_55
+SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_ADDR_WIDTH9_46
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
-SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_ADDR_WIDTH9_70
+SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_ADDR_WIDTH9_61
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
-SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_ADDR_WIDTH9_93
+SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_ADDR_WIDTH9_75
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
-SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_ADDR_WIDTH9_105
+SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_ADDR_WIDTH9_84
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
-SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_ADDR_WIDTH9_120
+SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_ADDR_WIDTH9_95
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
-SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_ADDR_WIDTH9_134
+SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_ADDR_WIDTH9_108
+                       enG5K             fsa0m_a_generic_core_tt1p8v25c
+SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_ADDR_WIDTH9_121
+                       enG5K             fsa0m_a_generic_core_tt1p8v25c
+SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_ADDR_WIDTH9_135
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
 SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_ADDR_WIDTH9_143
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
-SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_ADDR_WIDTH9_175
+SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_ADDR_WIDTH9_152
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
-SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_ADDR_WIDTH9_181
+SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_ADDR_WIDTH9_172
+                       enG5K             fsa0m_a_generic_core_tt1p8v25c
+SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_ADDR_WIDTH9_182
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
 SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_ADDR_WIDTH9_188
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
-SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_ADDR_WIDTH9_194
+SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_ADDR_WIDTH9_199
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
-SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_ADDR_WIDTH9_209
+SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_ADDR_WIDTH9_207
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
 SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_ADDR_WIDTH9_210
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
-SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_ADDR_WIDTH9_215
+SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_ADDR_WIDTH9_212
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
 SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_ADDR_WIDTH9_221
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
-SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_ADDR_WIDTH9_228
+SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_ADDR_WIDTH9_227
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
-SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_ADDR_WIDTH9_236
+SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_ADDR_WIDTH9_234
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
-SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_ADDR_WIDTH9_243
+SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_ADDR_WIDTH9_241
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
-SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_ADDR_WIDTH9_253
+SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_ADDR_WIDTH9_247
+                       enG5K             fsa0m_a_generic_core_tt1p8v25c
+SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_ADDR_WIDTH9_256
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
 SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_ADDR_WIDTH9_260
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
-SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_ADDR_WIDTH9_266
+SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_ADDR_WIDTH9_262
                        enG5K             fsa0m_a_generic_core_tt1p8v25c
 
 
@@ -920,12 +920,12 @@ Attributes
 i - Including register clock pin internal power
 
 
-  Cell Internal Power  =   1.3768 mW   (73%)
-  Net Switching Power  = 512.9550 uW   (27%)
+  Cell Internal Power  =   1.0308 mW   (73%)
+  Net Switching Power  = 379.9420 uW   (27%)
                          ---------
-Total Dynamic Power    =   1.8898 mW  (100%)
+Total Dynamic Power    =   1.4108 mW  (100%)
 
-Cell Leakage Power     =   2.2282 uW
+Cell Leakage Power     =   2.1145 uW
 
 
                  Internal         Switching           Leakage            Total
@@ -934,10 +934,10 @@ Power Group      Power            Power               Power              Power  
 io_pad             0.0000            0.0000            0.0000            0.0000  (   0.00%)
 memory             0.0000            0.0000            0.0000            0.0000  (   0.00%)
 black_box          0.0000            0.0000            0.0000            0.0000  (   0.00%)
-clock_network      0.6763        3.7046e-02        9.2574e+04            0.7134  (  37.71%)  i
-register           0.6253        5.8946e-03        1.1098e+06            0.6323  (  33.42%)
+clock_network      0.5067        2.7564e-02        9.2590e+04            0.5344  (  37.82%)  i
+register           0.4809        3.5787e-03        1.1294e+06            0.4856  (  34.37%)
 sequential         0.0000            0.0000            0.0000            0.0000  (   0.00%)
-combinational  7.5287e-02            0.4700        1.0258e+06            0.5463  (  28.88%)
+combinational  4.3245e-02            0.3488        8.9250e+05            0.3929  (  27.81%)
 --------------------------------------------------------------------------------------------------
-Total              1.3768 mW         0.5130 mW     2.2282e+06 pW         1.8920 mW
+Total              1.0308 mW         0.3799 mW     2.1145e+06 pW         1.4129 mW
 1

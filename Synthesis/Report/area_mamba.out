@@ -3,7 +3,7 @@
 Report : area
 Design : mamba_core
 Version: U-2022.12
-Date   : Sun May 31 04:21:14 2026
+Date   : Sun May 31 11:46:41 2026
 ****************************************
 
 Information: Updating design information... (UID-85)
@@ -12,21 +12,21 @@ Library(s) Used:
     fsa0m_a_generic_core_tt1p8v25c (File: /home/raid7_2/userb12/b12193/temp/ICD_LAB_try/Synthesis/fsa0m_a_generic_core_tt1p8v25c.db)
 
 Number of ports:                        11741
-Number of nets:                         32536
-Number of cells:                        21672
-Number of combinational cells:          15906
+Number of nets:                         31568
+Number of cells:                        20610
+Number of combinational cells:          14844
 Number of sequential cells:              5323
 Number of macros/black boxes:               0
-Number of buf/inv:                       1854
-Number of references:                     107
+Number of buf/inv:                       1615
+Number of references:                     106
 
-Combinational area:             315970.403322
-Buf/Inv area:                    15002.164664
-Noncombinational area:          306530.383553
+Combinational area:             293603.085577
+Buf/Inv area:                    13799.116674
+Noncombinational area:          306521.009151
 Macro/Black Box area:                0.000000
 Net Interconnect area:      undefined  (Wire load has zero net area)
 
-Total cell area:                622500.786874
+Total cell area:                600124.094728
 Total area:                 undefined
 
 Hierarchical area distribution
@@ -37,9 +37,9 @@ Hierarchical area distribution
 Hierarchical cell                 Absolute     Percent  Combi-       Noncombi-    Black-
                                   Total        Total    national     national     boxes   Design
 --------------------------------  -----------  -------  -----------  -----------  ------  --------------------------------------------------------------------------------------------------------------------------
-mamba_core                        622500.7869    100.0    6277.7232   70839.2167  0.0000  mamba_core
+mamba_core                        600124.0947    100.0    6271.4736   70836.0919  0.0000  mamba_core
 add_x_18                             268.7328      0.0     268.7328       0.0000  0.0000  mamba_core_DW01_inc_J4_0
-add_x_4                              309.3552      0.0     309.3552       0.0000  0.0000  mamba_core_DW01_inc_J4_1
+add_x_4                              309.3552      0.1     309.3552       0.0000  0.0000  mamba_core_DW01_inc_J4_1
 clk_gate_data_latched_reg             49.9968      0.0      12.4992      37.4976  0.0000  SNPS_CLOCK_GATE_HIGH_mamba_core_68
 clk_gate_h_reg_reg[0][0]              49.9968      0.0      12.4992      37.4976  0.0000  SNPS_CLOCK_GATE_HIGH_mamba_core_67
 clk_gate_h_reg_reg[0][1]              49.9968      0.0      12.4992      37.4976  0.0000  SNPS_CLOCK_GATE_HIGH_mamba_core_66
@@ -109,9 +109,9 @@ clk_gate_weight_addr_cnt_reg          49.9968      0.0      12.4992      37.4976
 clk_gate_y_pool_reg_reg[0]            49.9968      0.0      12.4992      37.4976  0.0000  SNPS_CLOCK_GATE_HIGH_mamba_core_3
 clk_gate_y_pool_reg_reg[2]            49.9968      0.0      12.4992      37.4976  0.0000  SNPS_CLOCK_GATE_HIGH_mamba_core_2
 clk_gate_y_pool_reg_reg[5]            49.9968      0.0      12.4992      37.4976  0.0000  SNPS_CLOCK_GATE_HIGH_mamba_core_1
-u_datapath                        541355.9798     87.0   51262.3444   11105.5393  0.0000  mamba_datapath_new_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_ADDR_WIDTH9
-u_datapath/add_x_24                 2662.3297      0.4    2662.3297       0.0000  0.0000  mamba_datapath_new_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_ADDR_WIDTH9_DW01_add_3
-u_datapath/add_x_25                 2562.3361      0.4    2562.3361       0.0000  0.0000  mamba_datapath_new_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_ADDR_WIDTH9_DW01_add_4
+u_datapath                        518988.6620     86.5   50393.6500   11102.4145  0.0000  mamba_datapath_new_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_ADDR_WIDTH9
+u_datapath/add_x_24                 2346.7248      0.4    2346.7248       0.0000  0.0000  mamba_datapath_new_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_ADDR_WIDTH9_DW01_add_J3_2
+u_datapath/add_x_25                 2346.7248      0.4    2346.7248       0.0000  0.0000  mamba_datapath_new_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_ADDR_WIDTH9_DW01_add_J3_1
 u_datapath/add_x_28                  593.7120      0.1     593.7120       0.0000  0.0000  mamba_datapath_new_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_ADDR_WIDTH9_DW01_inc_J3_0
 u_datapath/clk_gate_feed_j_reg        49.9968      0.0      12.4992      37.4976  0.0000  SNPS_CLOCK_GATE_HIGH_mamba_datapath_new_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_ADDR_WIDTH9_1
 u_datapath/clk_gate_o_next_y_pool_reg[0]
@@ -130,58 +130,58 @@ u_datapath/clk_gate_o_next_y_pool_reg[6]
                                       49.9968      0.0      12.4992      37.4976  0.0000  SNPS_CLOCK_GATE_HIGH_mamba_datapath_new_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_ADDR_WIDTH9_3
 u_datapath/clk_gate_o_next_y_pool_reg[7]
                                       49.9968      0.0      12.4992      37.4976  0.0000  SNPS_CLOCK_GATE_HIGH_mamba_datapath_new_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_ADDR_WIDTH9_2
-u_datapath/u_b_regfile              8868.1824      1.4      62.4960    8649.4464  0.0000  regfile_WIDTH16_SIZE8_2
+u_datapath/u_b_regfile              8868.1824      1.5      62.4960    8649.4464  0.0000  regfile_WIDTH16_SIZE8_2
 u_datapath/u_b_regfile/clk_gate_data_negedge_reg
                                       56.2464      0.0      18.7488      37.4976  0.0000  SNPS_CLOCK_GATE_LOW_regfile_WIDTH16_SIZE8_0_2
 u_datapath/u_b_regfile/clk_gate_regfile_reg[0]
                                       49.9968      0.0      12.4992      37.4976  0.0000  SNPS_CLOCK_GATE_HIGH_regfile_WIDTH16_SIZE8_0_5
 u_datapath/u_b_regfile/clk_gate_regfile_reg[4]
                                       49.9968      0.0      12.4992      37.4976  0.0000  SNPS_CLOCK_GATE_HIGH_regfile_WIDTH16_SIZE8_0_4
-u_datapath/u_c_regfile              8868.1824      1.4      62.4960    8649.4464  0.0000  regfile_WIDTH16_SIZE8_1
+u_datapath/u_c_regfile              8868.1824      1.5      62.4960    8649.4464  0.0000  regfile_WIDTH16_SIZE8_1
 u_datapath/u_c_regfile/clk_gate_data_negedge_reg
                                       56.2464      0.0      18.7488      37.4976  0.0000  SNPS_CLOCK_GATE_LOW_regfile_WIDTH16_SIZE8_0_1
 u_datapath/u_c_regfile/clk_gate_regfile_reg[0]
                                       49.9968      0.0      12.4992      37.4976  0.0000  SNPS_CLOCK_GATE_HIGH_regfile_WIDTH16_SIZE8_0_3
 u_datapath/u_c_regfile/clk_gate_regfile_reg[4]
                                       49.9968      0.0      12.4992      37.4976  0.0000  SNPS_CLOCK_GATE_HIGH_regfile_WIDTH16_SIZE8_0_2
-u_datapath/u_dt_proj_serial        19270.6417      3.1   11080.5409    1246.7952  0.0000  mamba_linear_in1_serial_OUT_DIM8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12
+u_datapath/u_dt_proj_serial        17345.7649      2.9   10005.6097    1246.7952  0.0000  mamba_linear_in1_serial_OUT_DIM8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12
 u_datapath/u_dt_proj_serial/DP_OP_61J8_124_5272
-                                    1134.3024      0.2    1134.3024       0.0000  0.0000  mamba_linear_in1_serial_OUT_DIM8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_DP_OP_61J8_124_5272_0
+                                     987.4368      0.2     987.4368       0.0000  0.0000  mamba_linear_in1_serial_OUT_DIM8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_DP_OP_61J8_124_5272_J8_0
 u_datapath/u_dt_proj_serial/DP_OP_62J8_125_4916
-                                    5759.0064      0.9    5759.0064       0.0000  0.0000  mamba_linear_in1_serial_OUT_DIM8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_DP_OP_62J8_125_4916_3
+                                    5055.9264      0.8    5055.9264       0.0000  0.0000  mamba_linear_in1_serial_OUT_DIM8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_DP_OP_62J8_125_4916_0
 u_datapath/u_dt_proj_serial/clk_gate_o_y_reg
                                       49.9968      0.0      12.4992      37.4976  0.0000  SNPS_CLOCK_GATE_HIGH_mamba_linear_in1_serial_OUT_DIM8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12
-u_datapath/u_dt_raw_regfile         2118.6143      0.3      12.4992    1999.8719  0.0000  regfile_WIDTH16_SIZE1
+u_datapath/u_dt_raw_regfile         2118.6143      0.4      12.4992    1999.8719  0.0000  regfile_WIDTH16_SIZE1
 u_datapath/u_dt_raw_regfile/clk_gate_data_negedge_reg
                                       56.2464      0.0      18.7488      37.4976  0.0000  SNPS_CLOCK_GATE_LOW_regfile_WIDTH16_SIZE1
 u_datapath/u_dt_raw_regfile/clk_gate_regfile_reg[0]
                                       49.9968      0.0      12.4992      37.4976  0.0000  SNPS_CLOCK_GATE_HIGH_regfile_WIDTH16_SIZE1
-u_datapath/u_dt_regfile             8327.5920      1.3      62.4960    8108.8560  0.0000  regfile_WIDTH16_SIZE8_0
+u_datapath/u_dt_regfile             8315.0928      1.4      49.9968    8108.8560  0.0000  regfile_WIDTH16_SIZE8_0
 u_datapath/u_dt_regfile/clk_gate_data_negedge_reg
                                       56.2464      0.0      18.7488      37.4976  0.0000  SNPS_CLOCK_GATE_LOW_regfile_WIDTH16_SIZE8_0_0
 u_datapath/u_dt_regfile/clk_gate_regfile_reg[0]
                                       49.9968      0.0      12.4992      37.4976  0.0000  SNPS_CLOCK_GATE_HIGH_regfile_WIDTH16_SIZE8_0_0
 u_datapath/u_dt_regfile/clk_gate_regfile_reg[4]
                                       49.9968      0.0      12.4992      37.4976  0.0000  SNPS_CLOCK_GATE_HIGH_regfile_WIDTH16_SIZE8_0_1
-u_datapath/u_elem                  17920.7282      2.9    7515.1440    6240.2257  0.0000  pipeline_elementwise_multiplier_DATA_WIDTH16
+u_datapath/u_elem                  17414.5106      2.9    7377.6528    6262.0993  0.0000  pipeline_elementwise_multiplier_DATA_WIDTH16
 u_datapath/u_elem/DP_OP_34J5_122_6730
-                                    3096.6768      0.5    3096.6768       0.0000  0.0000  pipeline_elementwise_multiplier_DATA_WIDTH16_DP_OP_34J5_122_6730_1
+                                    2706.0768      0.5    2706.0768       0.0000  0.0000  pipeline_elementwise_multiplier_DATA_WIDTH16_DP_OP_34J5_122_6730_J5_0
 u_datapath/u_elem/clk_gate_o_next_h_reg
                                       49.9968      0.0      12.4992      37.4976  0.0000  SNPS_CLOCK_GATE_HIGH_pipeline_elementwise_multiplier_DATA_WIDTH16_1
 u_datapath/u_elem/clk_gate_s0_h_reg
                                       49.9968      0.0      12.4992      37.4976  0.0000  SNPS_CLOCK_GATE_HIGH_pipeline_elementwise_multiplier_DATA_WIDTH16_2
 u_datapath/u_elem/clk_gate_s1_Abar_h_reg
                                       49.9968      0.0      12.4992      37.4976  0.0000  SNPS_CLOCK_GATE_HIGH_pipeline_elementwise_multiplier_DATA_WIDTH16_0
-u_datapath/u_elem/u_add_next_h       918.6912      0.1       9.3744       0.0000  0.0000  elementwise_add_A_WIDTH16_B_WIDTH16_OUT_WIDTH16
+u_datapath/u_elem/u_add_next_h       918.6912      0.2       9.3744       0.0000  0.0000  elementwise_add_A_WIDTH16_B_WIDTH16_OUT_WIDTH16
 u_datapath/u_elem/u_add_next_h/add_x_1
-                                     909.3168      0.1     909.3168       0.0000  0.0000  elementwise_add_A_WIDTH16_B_WIDTH16_OUT_WIDTH16_DW01_add_J8_0
-u_datapath/u_proj_in_out_shared   100384.2006     16.1   30082.4498   14377.2050  0.0000  mamba_proj_in_out_shared_IN_DIM8_D_MODEL8_OUT_DIM4_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12
+                                     909.3168      0.2     909.3168       0.0000  0.0000  elementwise_add_A_WIDTH16_B_WIDTH16_OUT_WIDTH16_DW01_add_J8_0
+u_datapath/u_proj_in_out_shared    91875.3705     15.3   28141.9490   14352.2066  0.0000  mamba_proj_in_out_shared_IN_DIM8_D_MODEL8_OUT_DIM4_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12
 u_datapath/u_proj_in_out_shared/DP_OP_160J6_122_8420
-                                    5155.9200      0.8    5155.9200       0.0000  0.0000  mamba_proj_in_out_shared_IN_DIM8_D_MODEL8_OUT_DIM4_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_DP_OP_160J6_122_8420_2
+                                    4927.8096      0.8    4927.8096       0.0000  0.0000  mamba_proj_in_out_shared_IN_DIM8_D_MODEL8_OUT_DIM4_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_DP_OP_160J6_122_8420_0
 u_datapath/u_proj_in_out_shared/DP_OP_161J6_123_8420
-                                    5130.9216      0.8    5130.9216       0.0000  0.0000  mamba_proj_in_out_shared_IN_DIM8_D_MODEL8_OUT_DIM4_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_DP_OP_161J6_123_8420_2
-u_datapath/u_proj_in_out_shared/DP_OP_53_134_2355
-                                    1137.4272      0.2    1137.4272       0.0000  0.0000  mamba_proj_in_out_shared_IN_DIM8_D_MODEL8_OUT_DIM4_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_DP_OP_53_134_2355_1
+                                    4974.6816      0.8    4974.6816       0.0000  0.0000  mamba_proj_in_out_shared_IN_DIM8_D_MODEL8_OUT_DIM4_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_DP_OP_161J6_123_8420_0
+u_datapath/u_proj_in_out_shared/DP_OP_53J6_124_2862
+                                    1112.4288      0.2    1112.4288       0.0000  0.0000  mamba_proj_in_out_shared_IN_DIM8_D_MODEL8_OUT_DIM4_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_DP_OP_53J6_124_2862_J6_0
 u_datapath/u_proj_in_out_shared/add_x_30
                                     1859.2560      0.3    1859.2560       0.0000  0.0000  mamba_proj_in_out_shared_IN_DIM8_D_MODEL8_OUT_DIM4_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_DW01_add_J6_0
 u_datapath/u_proj_in_out_shared/clk_gate_o_proj_in_y_reg
@@ -213,29 +213,29 @@ u_datapath/u_proj_in_out_shared/clk_gate_x_buf_reg[6]
 u_datapath/u_proj_in_out_shared/clk_gate_x_buf_reg[7]
                                       49.9968      0.0      12.4992      37.4976  0.0000  SNPS_CLOCK_GATE_HIGH_mamba_proj_in_out_shared_IN_DIM8_D_MODEL8_OUT_DIM4_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_6
 u_datapath/u_proj_in_out_shared/u_shared_mac16x10
-                                    9786.8736      1.6       0.0000       0.0000  0.0000  mamba_linear_shared_mult16x10_DATA_WIDTH16_W_SHIFTED_W10_MAC_PROD_W26
+                                    8243.2225      1.4       0.0000       0.0000  0.0000  mamba_linear_shared_mult16x10_DATA_WIDTH16_W_SHIFTED_W10_MAC_PROD_W26
 u_datapath/u_proj_in_out_shared/u_shared_mac16x10/mult_x_1
-                                    9786.8736      1.6    9786.8736       0.0000  0.0000  mamba_linear_shared_mult16x10_DATA_WIDTH16_W_SHIFTED_W10_MAC_PROD_W26_DW_mult_tc_1
+                                    8243.2225      1.4    8243.2225       0.0000  0.0000  mamba_linear_shared_mult16x10_DATA_WIDTH16_W_SHIFTED_W10_MAC_PROD_W26_DW_mult_tc_J8_0_DW_mult_tc_J8_3
 u_datapath/u_proj_in_out_shared/u_shared_scale32x17
-                                   32154.1921      5.2       9.3744       0.0000  0.0000  mamba_linear_shared_mult32x17
+                                   27563.8611      4.6       9.3744       0.0000  0.0000  mamba_linear_shared_mult32x17
 u_datapath/u_proj_in_out_shared/u_shared_scale32x17/mult_x_1
-                                   32144.8177      5.2   32144.8177       0.0000  0.0000  mamba_linear_shared_mult32x17_DW_mult_tc_2
-u_datapath/u_shared_M1             15570.8785      2.5       9.3744       0.0000  0.0000  elementwise_mul_A_WIDTH17_B_WIDTH16_OUT_WIDTH32_1
-u_datapath/u_shared_M1/mult_x_1    15561.5041      2.5   15561.5041       0.0000  0.0000  elementwise_mul_A_WIDTH17_B_WIDTH16_OUT_WIDTH32_1_DW_mult_tc_1
-u_datapath/u_shared_M2             13652.2514      2.2       0.0000       0.0000  0.0000  elementwise_mul_A_WIDTH16_B_WIDTH16_OUT_WIDTH32_1
-u_datapath/u_shared_M2/mult_x_1    13652.2514      2.2   13652.2514       0.0000  0.0000  elementwise_mul_A_WIDTH16_B_WIDTH16_OUT_WIDTH32_0_DW_mult_tc_J8_0_DW_mult_tc_J8_2_1
-u_datapath/u_shared_M3             15445.8864      2.5       0.0000       0.0000  0.0000  elementwise_mul_A_WIDTH17_B_WIDTH16_OUT_WIDTH32_0
-u_datapath/u_shared_M3/mult_x_1    15445.8864      2.5   15445.8864       0.0000  0.0000  elementwise_mul_A_WIDTH17_B_WIDTH16_OUT_WIDTH32_0_DW_mult_tc_1
-u_datapath/u_shared_M4             14777.1792      2.4       0.0000       0.0000  0.0000  elementwise_mul_A_WIDTH16_B_WIDTH16_OUT_WIDTH32_0
-u_datapath/u_shared_M4/mult_x_1    14777.1792      2.4   14777.1792       0.0000  0.0000  elementwise_mul_A_WIDTH16_B_WIDTH16_OUT_WIDTH32_0_DW_mult_tc_1
-u_datapath/u_shared_mul0           13692.8738      2.2       0.0000       0.0000  0.0000  elementwise_mul_A_WIDTH16_B_WIDTH16_OUT_WIDTH32_3
-u_datapath/u_shared_mul0/mult_x_1  13692.8738      2.2   13692.8738       0.0000  0.0000  elementwise_mul_A_WIDTH16_B_WIDTH16_OUT_WIDTH32_0_DW_mult_tc_J8_0_DW_mult_tc_J8_2_3
-u_datapath/u_shared_mul1           16098.9696      2.6       0.0000       0.0000  0.0000  elementwise_mul_A_WIDTH16_B_WIDTH16_OUT_WIDTH32_2
-u_datapath/u_shared_mul1/mult_x_1  16098.9696      2.6   16098.9696       0.0000  0.0000  elementwise_mul_A_WIDTH16_B_WIDTH16_OUT_WIDTH32_2_DW_mult_tc_0
-u_datapath/u_softplus               8049.4849      1.3    7046.4240     953.0640  0.0000  mamba_softplus_DATA_WIDTH16
+                                   27554.4867      4.6   27554.4867       0.0000  0.0000  mamba_linear_shared_mult32x17_DW_mult_tc_J8_0
+u_datapath/u_shared_M1             13958.4818      2.3       9.3744       0.0000  0.0000  elementwise_mul_A_WIDTH17_B_WIDTH16_OUT_WIDTH32_1
+u_datapath/u_shared_M1/mult_x_1    13949.1074      2.3   13949.1074       0.0000  0.0000  elementwise_mul_A_WIDTH17_B_WIDTH16_OUT_WIDTH32_0_DW_mult_tc_J8_0_DW_mult_tc_J8_1_1
+u_datapath/u_shared_M2             13392.8930      2.2       0.0000       0.0000  0.0000  elementwise_mul_A_WIDTH16_B_WIDTH16_OUT_WIDTH32_1
+u_datapath/u_shared_M2/mult_x_1    13392.8930      2.2   13392.8930       0.0000  0.0000  elementwise_mul_A_WIDTH16_B_WIDTH16_OUT_WIDTH32_0_DW_mult_tc_J8_0_DW_mult_tc_J8_2_1
+u_datapath/u_shared_M3             13830.3649      2.3       0.0000       0.0000  0.0000  elementwise_mul_A_WIDTH17_B_WIDTH16_OUT_WIDTH32_0
+u_datapath/u_shared_M3/mult_x_1    13830.3649      2.3   13830.3649       0.0000  0.0000  elementwise_mul_A_WIDTH17_B_WIDTH16_OUT_WIDTH32_0_DW_mult_tc_J8_0_DW_mult_tc_J8_1_0
+u_datapath/u_shared_M4             13367.8946      2.2       0.0000       0.0000  0.0000  elementwise_mul_A_WIDTH16_B_WIDTH16_OUT_WIDTH32_0
+u_datapath/u_shared_M4/mult_x_1    13367.8946      2.2   13367.8946       0.0000  0.0000  elementwise_mul_A_WIDTH16_B_WIDTH16_OUT_WIDTH32_0_DW_mult_tc_J8_0_DW_mult_tc_J8_2_0
+u_datapath/u_shared_mul0           13311.6481      2.2       0.0000       0.0000  0.0000  elementwise_mul_A_WIDTH16_B_WIDTH16_OUT_WIDTH32_3
+u_datapath/u_shared_mul0/mult_x_1  13311.6481      2.2   13311.6481       0.0000  0.0000  elementwise_mul_A_WIDTH16_B_WIDTH16_OUT_WIDTH32_0_DW_mult_tc_J8_0_DW_mult_tc_J8_2_3
+u_datapath/u_shared_mul1           13396.0178      2.2       0.0000       0.0000  0.0000  elementwise_mul_A_WIDTH16_B_WIDTH16_OUT_WIDTH32_2
+u_datapath/u_shared_mul1/mult_x_1  13396.0178      2.2   13396.0178       0.0000  0.0000  elementwise_mul_A_WIDTH16_B_WIDTH16_OUT_WIDTH32_0_DW_mult_tc_J8_0_DW_mult_tc_J8_2_2
+u_datapath/u_softplus               8036.9857      1.3    7033.9248     953.0640  0.0000  mamba_softplus_DATA_WIDTH16
 u_datapath/u_softplus/clk_gate_o_y_reg
                                       49.9968      0.0      12.4992      37.4976  0.0000  SNPS_CLOCK_GATE_HIGH_mamba_softplus_DATA_WIDTH16
-u_datapath/u_weight_storage       152627.7326     24.5    6243.3504  132635.2621  0.0000  mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_ADDR_WIDTH9
+u_datapath/u_weight_storage       152587.1102     25.4    6202.7281  132635.2621  0.0000  mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_ADDR_WIDTH9
 u_datapath/u_weight_storage/clk_gate_r_BIAS_DT_PROJ_reg
                                       49.9968      0.0      12.4992      37.4976  0.0000  SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_ADDR_WIDTH9_199
 u_datapath/u_weight_storage/clk_gate_r_BIAS_DT_PROJ_reg_0
@@ -786,25 +786,25 @@ u_datapath/u_weight_storage/clk_gate_r_Z_PROJ_IN_reg
                                       49.9968      0.0      12.4992      37.4976  0.0000  SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_ADDR_WIDTH9_267
 u_datapath/u_weight_storage/clk_gate_r_Z_PROJ_OUT_reg
                                       49.9968      0.0      12.4992      37.4976  0.0000  SNPS_CLOCK_GATE_HIGH_mamba_weight_storage_D_MODEL8_D_STATE8_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_ADDR_WIDTH9_154
-u_datapath/u_x_proj_serial         23242.2625      3.7   14199.0913    1662.3936  0.0000  mamba_linear_in1_serial_OUT_DIM17_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12
+u_datapath/u_x_proj_serial         21279.8881      3.5   13461.6385    1662.3936  0.0000  mamba_linear_in1_serial_OUT_DIM17_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12
 u_datapath/u_x_proj_serial/DP_OP_98J8_122_2377
-                                    1034.3088      0.2    1034.3088       0.0000  0.0000  mamba_linear_in1_serial_OUT_DIM17_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_DP_OP_98J8_122_2377_J8_0
+                                     949.9392      0.2     949.9392       0.0000  0.0000  mamba_linear_in1_serial_OUT_DIM17_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_DP_OP_98J8_122_2377_J8_0
 u_datapath/u_x_proj_serial/DP_OP_99J8_123_9451
-                                    6296.4720      1.0    6296.4720       0.0000  0.0000  mamba_linear_in1_serial_OUT_DIM17_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_DP_OP_99J8_123_9451_2
+                                    5155.9200      0.9    5155.9200       0.0000  0.0000  mamba_linear_in1_serial_OUT_DIM17_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12_DP_OP_99J8_123_9451_0
 u_datapath/u_x_proj_serial/clk_gate_idx_out_reg
                                       49.9968      0.0      12.4992      37.4976  0.0000  SNPS_CLOCK_GATE_HIGH_mamba_linear_in1_serial_OUT_DIM17_DATA_WIDTH16_WGHT_WIDTH8_Z_WIDTH9_BIAS_WIDTH12
-u_datapath/u_xt_regfile             8868.1824      1.4      62.4960    8649.4464  0.0000  regfile_WIDTH16_SIZE8_3
+u_datapath/u_xt_regfile             8868.1824      1.5      62.4960    8649.4464  0.0000  regfile_WIDTH16_SIZE8_3
 u_datapath/u_xt_regfile/clk_gate_data_negedge_reg
                                       56.2464      0.0      18.7488      37.4976  0.0000  SNPS_CLOCK_GATE_LOW_regfile_WIDTH16_SIZE8_0_3
 u_datapath/u_xt_regfile/clk_gate_regfile_reg[0]
                                       49.9968      0.0      12.4992      37.4976  0.0000  SNPS_CLOCK_GATE_HIGH_regfile_WIDTH16_SIZE8_0_7
 u_datapath/u_xt_regfile/clk_gate_regfile_reg[4]
                                       49.9968      0.0      12.4992      37.4976  0.0000  SNPS_CLOCK_GATE_HIGH_regfile_WIDTH16_SIZE8_0_6
-u_datapath/u_yt_mac                24935.9042      4.0    4074.7392   16564.5650  0.0000  pipeline_yt_mac_D_MODEL8_D_STATE8_DATA_WIDTH16
+u_datapath/u_yt_mac                24920.2802      4.2    4074.7392   16564.5650  0.0000  pipeline_yt_mac_D_MODEL8_D_STATE8_DATA_WIDTH16
 u_datapath/u_yt_mac/DP_OP_20J7_122_6460
                                     2259.2304      0.4    2259.2304       0.0000  0.0000  pipeline_yt_mac_D_MODEL8_D_STATE8_DATA_WIDTH16_DP_OP_20J7_122_6460_J7_0
 u_datapath/u_yt_mac/DP_OP_21J7_123_5582
-                                    1587.3984      0.3    1587.3984       0.0000  0.0000  pipeline_yt_mac_D_MODEL8_D_STATE8_DATA_WIDTH16_DP_OP_21J7_123_5582_J7_0
+                                    1571.7744      0.3    1571.7744       0.0000  0.0000  pipeline_yt_mac_D_MODEL8_D_STATE8_DATA_WIDTH16_DP_OP_21J7_123_5582_J7_0
 u_datapath/u_yt_mac/clk_gate_o_yt_final_reg
                                       49.9968      0.0      12.4992      37.4976  0.0000  SNPS_CLOCK_GATE_HIGH_pipeline_yt_mac_D_MODEL8_D_STATE8_DATA_WIDTH16_1
 u_datapath/u_yt_mac/clk_gate_yt_acc_reg_reg[0]
@@ -824,6 +824,6 @@ u_datapath/u_yt_mac/clk_gate_yt_acc_reg_reg[6]
 u_datapath/u_yt_mac/clk_gate_yt_acc_reg_reg[7]
                                       49.9968      0.0      12.4992      37.4976  0.0000  SNPS_CLOCK_GATE_HIGH_pipeline_yt_mac_D_MODEL8_D_STATE8_DATA_WIDTH16_2
 --------------------------------  -----------  -------  -----------  -----------  ------  --------------------------------------------------------------------------------------------------------------------------
-Total                                                   315970.4033  306530.3836  0.0000
+Total                                                   293603.0856  306521.0092  0.0000
 
 1
